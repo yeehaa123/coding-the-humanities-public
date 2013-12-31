@@ -1,0 +1,120 @@
+@import "./bourbon/bourbon";
+@import "./neat/neat";
+
+@import "./partials/_colors";
+@import "./partials/_fonts";
+
+@import "./partials/_header";
+@import "./partials/_footer";
+
+$max-width: 1024px;
+
+body {
+  @include outer-container;
+  background: $base3;
+  color: $textColor;
+  font-family: 'abel', cursive;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5, h5, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+  
+span {
+ color: $base1;
+}
+
+.main {
+  padding-left: em(30px, 30px);
+  padding-right: em(30px, 30px);
+  @include row;
+
+  .images {
+    @include row;
+
+    .cover-image {
+     @include span-columns(12);
+    }
+
+    margin-top: em(48px, 16px);
+    margin-bottom: em(64px, 16px);
+  }
+
+  // p:first-child:first-letter {
+  //   font-size: em(48, 16px);
+  // }
+
+
+  .post-header {
+    h1 { 
+      font-size: em(24px, 16px);
+
+      span {
+        font-size: em(24px, 20px);
+      }
+    }
+    
+   .meta {
+     margin: 0;
+   }
+
+   margin-bottom: em(16px, 16px);
+  }
+  
+  .post {
+    @include columns(2);
+    @include column-gap(em(36px, 16px));
+  }
+
+  p {
+    margin-bottom: em(24px, 16px);
+  }
+  
+  .posts {
+    @include span-columns(12);
+    @include fill-parent;
+    padding-left: 0;
+  }
+  
+  .list-item {
+    @include span-columns(6);
+    @include omega(2n);
+    font-size: 1.3em; 
+    list-style: none;
+    background: $base2;
+    margin-bottom: em(30px, 30px);
+    padding: em(30px, 30px);
+    
+    span {
+      font-family: 'Abel', normal;
+      font-size: em(10px, 16px);
+      color: $base1;
+    }
+
+    a {
+      color: $base03;
+    }
+
+    &:hover {
+      a {
+        color: $base2;
+      }
+      background: $red;
+    }
+  }
+
+}
+.highlight {
+  padding: em(8px, 16px) em(24px, 16px);
+  background: $base02;
+  box-shadow: inset -10px -10px 10px -5px $base03;
+  margin-bottom: em(16px, 16px);
+}
+
+a {
+  text-decoration: none;
+}
+

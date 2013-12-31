@@ -1,0 +1,32 @@
+.site-nav {
+  @include span-columns(2);
+  @include media($mobile){
+    @include span-columns(10);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+      font-family: 'codystar';
+      background-color: $base2;
+      margin-bottom: em(8px, 16px);
+      padding-top: em(8px, 16px);
+      padding-bottom: em(8px, 16px);
+      text-align: center;
+      a {
+        color: $base03;
+      }
+
+      &:hover {
+        background-color: $red;
+
+        a {
+          color: $base3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.site-header {
+  h1 {
+    font-family: 'CodyStar', cursive;
+    font-size: 1.5em; 
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: em(15px, 30px);
+    padding-right: em(15px, 30px);
+    padding-bottom: 0.5em;
+    text-align: right;
+    letter-spacing: -1px;
+    border-bottom: 2px solid $red;
+    a {
+      color: $base03;
+      &:hover {
+        color: $red; 
+      };
+    }
+  }
+}
