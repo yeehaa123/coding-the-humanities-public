@@ -112,34 +112,37 @@ span {
   .main:after {
     clear: both; }
   /* line 40, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .main .vision {
+  .main .snippet {
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 82.94039%; }
     /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
-    .main .vision:last-child {
+    .main .snippet:last-child {
       margin-right: 0; }
     /* line 43, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-    .main .vision h2 {
+    .main .snippet h1 {
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 14.70196%;
       margin-bottom: 1em; }
       /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
-      .main .vision h2:last-child {
+      .main .snippet h1:last-child {
         margin-right: 0; }
     /* line 47, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-    .main .vision p {
+    .main .snippet ol, .main .snippet p {
+      margin-left: 17.05961%;
       margin-bottom: 1.5em; }
-    /* line 51, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-    .main .vision ul, .main .vision ol {
+    /* line 52, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    .main .snippet ul, .main .snippet ol {
+      padding-left: 20px;
       margin-bottom: 3em; }
-      /* line 53, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-      .main .vision ul p, .main .vision ol p {
+      /* line 55, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      .main .snippet ul p, .main .snippet ol p {
+        margin-left: 0%;
         margin-bottom: 0em; }
-  /* line 59, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 62, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .main .images {
     *zoom: 1;
     display: block;
@@ -152,7 +155,7 @@ span {
     /* line 23, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./bourbon/addons/clearfix */
     .main .images:after {
       clear: both; }
-    /* line 62, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 65, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .main .images .cover-image {
       display: block;
       float: left;
@@ -161,16 +164,16 @@ span {
       /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
       .main .images .cover-image:last-child {
         margin-right: 0; }
-  /* line 70, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 73, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .main .post-header {
     margin-bottom: 1em; }
-    /* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 74, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .main .post-header h1 {
       font-size: 1.5em; }
-      /* line 74, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 77, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .main .post-header h1 span {
         font-size: 1.2em; }
-  /* line 82, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 85, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .main .post {
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -179,13 +182,13 @@ span {
     -moz-column-gap: 2.25em;
     column-gap: 2.25em; }
 
-/* line 88, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 91, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .highlight {
   padding: 0.5em 1.5em;
   background: #073642;
   box-shadow: inset -10px -10px 10px -5px #002b36;
   margin-bottom: 1em; }
 
-/* line 95, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 98, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 a {
   text-decoration: none; }

@@ -6,6 +6,15 @@ docpadConfig =
   templateData:
     site:
       title: "Coding the Humanities"
+    visionSnippets: ()->
+      @getCollection('visionSnippets').toJSON()
+    pages: ()->
+      @getCollection('pages').toJSON()
+  collections:
+    visionSnippets: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'})
+    pages: ->
+      @getCollection("html").findAllLive({isPage: true})
   plugins:
     consolidate:
       handlebars: true
@@ -14,14 +23,8 @@ docpadConfig =
         getBlock: (type, additional...) ->
           additional.pop()
           @getBlock(type).add(additional).toHTML()
-        pagesMenu: ()->
-          c = @getCollection("html").findAll({isPage: true}).toJSON()
-          out = "<ul>"
-          m = c.map (page) ->
-            "<li><a href='#{page.url}'>#{page.title}</a></li>"
-          out += m.join("\n")
-          out += "</ul>"
-          out
+      partials:
+        menu: "<ul>{{#each this}}<li><a href='{{url}}'>{{title}}</a></li>{{/each}}</ul>"
     nodesass:
       neat: true
 

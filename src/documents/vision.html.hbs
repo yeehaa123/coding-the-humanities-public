@@ -1,0 +1,11 @@
+---
+title: 'Vision'
+layout: 'default'
+isPage: true
+---
+{{#each visionSnippets }}
+  <section class="snippet">
+    <h1><a href="{{url}}">{{title}}</a></h1>
+    {{{ contentRenderedWithoutLayouts }}}
+  </section>
+{{/each}}

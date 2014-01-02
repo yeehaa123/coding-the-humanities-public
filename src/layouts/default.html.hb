@@ -9,7 +9,7 @@
   </header>
   <div class="main">
     <nav class="site-nav">
-      {{{ pagesMenu }}}
+      {{> menu pages }}
     </nav>
     <div class="content">
       {{{ content }}}
