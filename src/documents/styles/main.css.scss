@@ -11,6 +11,7 @@ $mobile: new-breakpoint(max-width 700px 10);
 @import "./partials/_site-nav";
 @import "./partials/_footer";
 
+@import "./partials/_card";
 
 body {
   @include outer-container;
@@ -32,47 +33,10 @@ span {
 
 
 .main {
-  padding-left: em(30px, 30px);
-  padding-right: em(30px, 30px);
+  padding-left: em(16px, 16px);
+  padding-right: em(16px, 16px);
   @include row();
   
-  .snippet {
-    @include span-columns(10);
-    @include omega();
-    background-color: $base1;
-    padding: em(16px, 16px);
-    padding-right: em(32px, 16px);
-    border-radius: em(5px, 16px);
-    margin-top: em(8px, 16px);
-    margin-bottom: em(8px, 16px);
-
-    &:not(:first-child) {
-      @include shift(2);
-      @include media($mobile){
-        @include shift(0);
-      }
-    }
-
-    h1 {
-      @include span-columns(2);
-      margin-bottom: em(16px, 16px);
-    }
-    ol, ul, p {
-      @include shift(3);
-      margin-bottom: em(24px, 16px);
-    }
-
-    ul, ol {
-      padding-left: 20px;
-      p {
-        @include shift(0);
-        margin-bottom: em(0px, 16px);
-     }
-   }
-   @include media($mobile){
-     @include span-columns(10);
-   }
-  }
 
   .images {
     @include row;

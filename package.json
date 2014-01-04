@@ -22,6 +22,7 @@
     "docpad-plugin-consolidate": "~2.0.1",
     "docpad-plugin-marked": "~2.1.2",
     "docpad-plugin-coffeescript": "~2.2.3",
-    "docpad-plugin-tinylivereload": "~2.0.1"
+    "docpad-plugin-tinylivereload": "~2.0.1",
+    "docpad-plugin-ghpages": "~2.4.1"
   }
 }

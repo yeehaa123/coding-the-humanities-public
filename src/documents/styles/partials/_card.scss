@@ -1,0 +1,80 @@
+.card {
+  @include span-columns(10);
+  @include omega();
+  background-color: $base2;
+  padding: 0;
+  margin-bottom: em(16px, 16px);
+
+  &:not(:first-child) {
+    @include shift(2);
+    @include media($mobile){
+      @include shift(0);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  header {
+    @include span-columns(3);
+    background-color: $base02;
+    padding: em(8px, 16px) em(20px, 16px);
+
+    @include media($mobile){
+      @include span-columns(10);
+      @include omega();
+      margin-bottom: em(16px, 16px);
+    }
+
+    h1 {
+      font-size: em(18px, 16px);
+      color: $base3;
+
+    }
+  }
+
+  ol, ul, p {
+    margin: em(16px, 16px);
+    margin-bottom: em(24px, 16px);
+  }
+
+  ul, ol {
+    padding-left: 20px;
+
+    p {
+      margin-bottom: em(0px, 16px);
+    }
+  }
+
+  .profile-picture {
+    overflow: hidden;
+    max-height: 360px;
+
+    img {
+      max-width: 100%;
+      min-width: 100%;
+    }
+}
+  
+  .snippet, .content {
+    @include shift(3);
+
+    @include media($mobile){
+      @include shift(0);
+    }
+  }
+
+  @include media($mobile){
+    @include span-columns(10);
+  }
+}
+
+.snippet {
+  background-color: $base2;
+}
+
+.profile {
+    background-color: $base1;
+}
+

@@ -4,8 +4,12 @@ layout: 'default'
 isPage: true
 ---
 {{#each visionSnippets }}
-  <section class="snippet">
-    <h1><a href="{{url}}">{{title}}</a></h1>
-    {{{ contentRenderedWithoutLayouts }}}
+  <section class="card">
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <section class="snippet">
+      {{{ contentRenderedWithoutLayouts }}}
+    </section>
   </section>
 {{/each}}

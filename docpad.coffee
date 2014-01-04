@@ -8,11 +8,15 @@ docpadConfig =
       title: "Coding the Humanities"
     visionSnippets: ()->
       @getCollection('visionSnippets').toJSON()
+    peopleProfiles: ()->
+      @getCollection('peopleProfiles').toJSON()
     pages: ()->
       @getCollection('pages').toJSON()
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
+    peopleProfiles: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
   plugins:
@@ -24,7 +28,7 @@ docpadConfig =
           additional.pop()
           @getBlock(type).add(additional).toHTML()
       partials:
-        menu: "<ul>{{#each this}}<li><a href='{{url}}'>{{title}}</a></li>{{/each}}</ul>"
+        menu: "<ul>{{#each this}}<li><a href='.{{url}}'>{{title}}</a></li>{{/each}}</ul>"
     nodesass:
       neat: true
 
