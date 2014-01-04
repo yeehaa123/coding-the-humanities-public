@@ -1,0 +1,46 @@
+.post {
+  padding-left: em(16px, 16px);
+  padding-right: em(16px, 16px);
+  @include span-columns(10);
+  @include omega();
+
+
+  .cover-image {
+    @include row;
+
+    img {
+      @include span-columns(12);
+      @include omega();
+    }
+
+    margin-top: em(48px, 16px);
+    margin-bottom: em(64px, 16px);
+  }
+
+  .post-header {
+    h1 { 
+      font-size: em(24px, 16px);
+
+      span {
+        font-size: em(24px, 20px);
+      }
+    }
+
+    margin-bottom: em(16px, 16px);
+  }
+  .content {
+    @include span-columns(12);
+    @include columns(2);
+
+    p {
+      margin-bottom: em(16px, 16px);
+    } 
+
+    @include media($mobile) {
+      @include columns(1);
+    }
+  }
+  @include media($mobile) {
+    @include span-columns(10);
+  }
+}
