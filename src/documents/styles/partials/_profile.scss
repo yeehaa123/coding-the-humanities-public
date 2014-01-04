@@ -1,0 +1,17 @@
+.profile {
+
+  .profile-picture {
+    overflow: hidden;
+    max-height: 360px;
+
+    img {
+      @include filter(sepia, 30%);
+      max-width: 100%;
+      min-width: 100%;
+
+      &:hover {
+        @include filter(sepia, 100%);
+      }
+    }
+  }
+}

@@ -1,19 +1,11 @@
 @import "./bourbon/bourbon";
 @import "./neat/neat";
-
-@mixin filter($filter-type,$filter-amount) { 
-  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
-  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
-  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
-  -o-filter: $filter-type+unquote('(#{$filter-amount})');
-  filter: $filter-type+unquote('(#{$filter-amount})');
-}
-
-$max-width: 1024px;
-$mobile: new-breakpoint(max-width 700px 10);
+@import "./custom_mixins/custom_mixins";
 
 @import "./partials/_colors";
 @import "./partials/_fonts";
+
+@import "./partials/_base";
 
 @import "./partials/_header";
 @import "./partials/_site-nav";
@@ -21,23 +13,6 @@ $mobile: new-breakpoint(max-width 700px 10);
 
 @import "./partials/_card";
 
-body {
-  @include outer-container;
-  background: $base3;
-  color: $textColor;
-  font-family: 'abel', cursive;
-  line-height: 1.5em;
-  font-size: 16px;
-}
-h1, h2, h3, h4, h5, h5, p {
-  margin: 0;
-  font-weight: normal;
-}
-
-  
-span {
- color: $base1;
-}
 
 
 .main {
@@ -79,15 +54,3 @@ span {
     padding-right: em(8px, 16px); 
   }
 }
-
-.highlight {
-  padding: em(8px, 16px) em(24px, 16px);
-  background: $base02;
-  box-shadow: inset -10px -10px 10px -5px $base03;
-  margin-bottom: em(16px, 16px);
-}
-
-a {
-  text-decoration: none;
-}
-

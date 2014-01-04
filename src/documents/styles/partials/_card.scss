@@ -1,3 +1,6 @@
+@import "./partials/_profile";
+@import "./partials/_snippet";
+
 .card {
   @include span-columns(10);
   @include omega();
@@ -47,23 +50,8 @@
       margin-bottom: em(0px, 16px);
     }
   }
-
-  .profile-picture {
-    overflow: hidden;
-    max-height: 360px;
-
-    img {
-      @include filter(sepia, 30%);
-      max-width: 100%;
-      min-width: 100%;
-
-      &:hover {
-        @include filter(sepia, 100%);
-      }
-    }
-}
   
-  .snippet, .content {
+  .content {
     @include shift(3);
 
     @include media($mobile){
@@ -75,12 +63,3 @@
     @include span-columns(10);
   }
 }
-
-.snippet {
-  background-color: $base2;
-}
-
-.profile {
-    background-color: $base1;
-}
-
