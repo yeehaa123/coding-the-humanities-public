@@ -12,11 +12,16 @@ docpadConfig =
       @getCollection('peopleProfiles').toJSON()
     pages: ()->
       @getCollection('pages').toJSON()
+    posts: ()->
+      @getCollection('posts').toJSON()
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
     peopleProfiles: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
+    posts: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
+    
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
   plugins:

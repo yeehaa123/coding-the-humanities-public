@@ -4,7 +4,7 @@
 .card {
   @include span-columns(10);
   @include omega();
-  background-color: $base2;
+  background-color: $base1;
   padding: 0;
   margin-bottom: em(16px, 16px);
 
