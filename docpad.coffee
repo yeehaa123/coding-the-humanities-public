@@ -12,7 +12,7 @@ docpadConfig =
       @getCollection('pages').toJSON()
   collections:
     visionSnippets: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'})
+      @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
   plugins:

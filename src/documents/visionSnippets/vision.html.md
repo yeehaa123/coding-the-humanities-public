@@ -1,5 +1,6 @@
 ---
 title: 'Vision'
+order_prop: 1
 ---
 
 Students and scholars in the humanities generally rely on prefabricated tools to guide and instruct their learning and research. We are reluctant to engage with technology through coding. This remains a major distinction between the humanities and the sciences. The sciences design, create and maintain their own digital research environments and tools, while the humanities make do with prefabricated, and often inappropriate, tools. 

@@ -2,8 +2,8 @@
   h1 {
     font-family: 'CodyStar', cursive;
     font-size: 1.5em; 
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: em(8px, 16px);
+    margin-bottom: em(8px, 16px); 
     padding-left: em(15px, 30px);
     padding-right: em(15px, 30px);
     padding-bottom: 0.5em;
