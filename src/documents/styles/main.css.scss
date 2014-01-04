@@ -1,6 +1,14 @@
 @import "./bourbon/bourbon";
 @import "./neat/neat";
 
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
 $max-width: 1024px;
 $mobile: new-breakpoint(max-width 700px 10);
 
@@ -64,6 +72,11 @@ span {
   .post {
     @include columns(2);
     @include column-gap(em(36px, 16px));
+  }
+
+  @include media($mobile){
+    padding-left: em(8px, 16px); 
+    padding-right: em(8px, 16px); 
   }
 }
 
