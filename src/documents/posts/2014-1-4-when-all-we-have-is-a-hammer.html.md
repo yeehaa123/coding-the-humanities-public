@@ -3,7 +3,7 @@ layout: "default"
 subtitle: Things the Humanities can Learn from Software Development I 
 title: When All We Have Is A Hammer 
 author: Yeehaa 
-cover-image: /images/hammer.svg
+cover-image: ./images/hammer.svg
 date: 2013-12-11 21:57:27
 ---
 

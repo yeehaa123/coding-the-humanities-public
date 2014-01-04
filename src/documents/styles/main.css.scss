@@ -12,18 +12,23 @@
 @import "./partials/_footer";
 
 @import "./partials/_card";
-
+@import "./partials/_profile";
+@import "./partials/_snippet";
 
 
 .main {
+  padding-top: em(8px, 16px);
   padding-left: em(16px, 16px);
   padding-right: em(16px, 16px);
   @include row();
   
 
   .post {
+    padding-left: em(16px, 16px);
+    padding-right: em(16px, 16px);
     @include span-columns(10);
     @include omega();
+
   
     .cover-image {
       @include row;
