@@ -6,22 +6,25 @@ docpadConfig =
   templateData:
     site:
       title: "Coding the Humanities"
-    visionSnippets: ()->
+    visionSnippets: ->
       @getCollection('visionSnippets').toJSON()
-    peopleProfiles: ()->
+    peopleProfiles: ->
       @getCollection('peopleProfiles').toJSON()
-    pages: ()->
+    learnResources: ->
+      @getCollection('learnResources').toJSON()
+    pages: ->
       @getCollection('pages').toJSON()
-    posts: ()->
+    posts: ->
       @getCollection('posts').toJSON()
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
     peopleProfiles: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
+    learnResources: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'learnResources'},{difficulty_level: 1})
     posts: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
-    
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
   plugins:

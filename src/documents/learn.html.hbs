@@ -1,0 +1,27 @@
+---
+title: 'Learn'
+layout: 'default'
+isPage: true
+---
+{{#each learnResources }}
+  <section class="card snippet">
+    <header class="card-header">
+      <h1>{{name}}</h1>
+    </header>
+    <section class="card-content">
+      {{#each resources}}
+        <h2>{{ @key }}</h2>
+          {{#each this}}
+            <h3>{{title}}</h3>
+            {{#each this}}
+            <ul>
+              {{#each this}}
+                <li>{{@key}}: {{this}}</li>
+              {{/each}}
+            </ul>
+            {{/each}}
+          {{/each}}
+      {{/each}}
+    </section>
+  </section>
+{{/each}}
