@@ -4,9 +4,10 @@
 .card {
   @include span-columns(10);
   @include omega();
-  background-color: $base1;
-  padding: 0;
-  margin-bottom: em(16px, 16px);
+  background-color: $cardBackgroundColor;
+  color: $cardTextColor;
+  padding: em(0);
+  margin-bottom: em(24);
 
   &:not(:first-child) {
     @include shift(2);
@@ -19,43 +20,40 @@
     margin-bottom: 0;
   }
 
-  header {
+
+  .card-header {
     @include span-columns(3);
-    background-color: $base02;
-    padding: em(8px, 16px) em(20px, 16px);
+    background-color: $labelColor;
+    padding: em(8) em(20);
 
     @include media($mobile){
       @include span-columns(10);
       @include omega();
-      margin-bottom: em(16px, 16px);
+      margin-bottom: em(16);
     }
 
     h1 {
-      font-size: em(18px, 16px);
-      color: $base3;
+      font-size: em(18);
+      color: $labelTextColor;
       text-align: center;
-
     }
   }
 
-  ol, ul, p {
-    margin: em(16px, 16px);
-    margin-bottom: em(24px, 16px);
-  }
-
-  ul, ol {
-    padding-left: 20px;
-
-    p {
-      margin-bottom: em(0px, 16px);
-    }
-  }
-  
-  .content {
+  .card-content {
     @include shift(3);
+    padding: em(16) em(36) em(16) em(0);
+
+    a {
+      color: $cardLinkColor;
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
 
     @include media($mobile){
       @include shift(0);
+      padding: em(16)
     }
   }
 

@@ -1,20 +1,14 @@
 .site-header {
   h1 {
-    font-family: 'CodyStar', cursive;
-    font-size: 1.5em; 
-    margin-top: em(8px, 16px);
-    margin-bottom: em(8px, 16px); 
-    padding-left: em(15px, 30px);
-    padding-right: em(15px, 30px);
-    padding-bottom: 0.5em;
+    font-family: $accentFont;
+    font-size: em(24, 16);  
+    margin-top: em(8, 24);
+    margin-bottom: em(8, 24); 
+    padding-left: em(15, 24);
+    padding-right: em(15, 24);
+    padding-bottom: em(8, 24);
     text-align: right;
-    letter-spacing: -1px;
-    border-bottom: 2px solid $red;
-    a {
-      color: $base03;
-      &:hover {
-        color: $red; 
-      };
-    }
+    letter-spacing: em(-1, 24);
+    border-bottom: em(2, 24) solid $accentColor;
   }
 }

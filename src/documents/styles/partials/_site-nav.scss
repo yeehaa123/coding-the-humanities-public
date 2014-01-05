@@ -8,21 +8,18 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-bottom: em(16px, 16px);
+    margin-bottom: em(16);
 
     li{
-      font-family: 'codystar';
+      font-family: $accentFont;
       background-color: $base2;
-      margin-bottom: em(8px, 16px);
-      padding-top: em(8px, 16px);
-      padding-bottom: em(8px, 16px);
+      margin-bottom: em(8);
+      padding-top: em(8);
+      padding-bottom: em(8);
       text-align: center;
-      a {
-        color: $base03;
-      }
 
       &:hover {
-        background-color: $red;
+        background-color: $accentColor;
 
         a {
           color: $base3;

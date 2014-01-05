@@ -19,15 +19,11 @@
 
 
 .main {
-  padding-top: em(8px, 16px);
-  padding-left: em(16px, 16px);
-  padding-right: em(16px, 16px);
+  padding: em(8) em(16);
   @include row();
-  
-
 
   @include media($mobile){
-    padding-left: em(8px, 16px); 
-    padding-right: em(8px, 16px); 
+    padding: em(8);
+    padding-top: em(0);
   }
 }

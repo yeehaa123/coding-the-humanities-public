@@ -1,32 +1,44 @@
-$max-width: 1024px;
-$mobile: new-breakpoint(max-width 700px 10);
+$max-width: em(1024);
+$mobile: new-breakpoint(max-width em(700) 10);
 
 body {
   @include outer-container;
-  background: $base3;
+  background: $backgroundColor;
   color: $textColor;
-  font-family: 'abel', cursive;
-  line-height: 1.5em;
-  font-size: 16px;
+  font-family: $baseFont;
+  line-height: em(24);
+  font-size: em(16);
 }
 h1, h2, h3, h4, h5, h5, p {
   margin: 0;
   font-weight: normal;
 }
-
-  
-span {
- color: $base1;
+p {
+  margin-bottom: em(16);
 }
 
-.highlight {
-  padding: em(8px, 16px) em(24px, 16px);
-  background: $base02;
-  box-shadow: inset -10px -10px 10px -5px $base03;
-  margin-bottom: em(16px, 16px);
+ul, ol {
+  padding-left: em(20);
+
+  p {
+    margin-bottom: em(8);
+  }
 }
 
 a {
   text-decoration: none;
+  color: $linkColor;
+
+  &:hover {
+    color: $accentColor;
+  }
 }
+
+.highlight {
+  padding: em(8px, 16px) em(24px, 16px);
+  background: $cardBackgroundColor;
+  box-shadow: inset -10px -10px 10px -5px $base03;
+  margin-bottom: em(16px, 16px);
+}
+
 

@@ -1,4 +1,4 @@
 footer {
-  margin-top: 0.5em;
-  border-top: 2px solid $red;
+  margin-top: em(8);
+  border-top: em(2) solid $accentColor;
 }

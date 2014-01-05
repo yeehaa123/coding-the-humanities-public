@@ -1,10 +1,9 @@
 .profile {
-  @include span-columns(9);
-  @include shift(1);
+  @include span-columns(10);
   @include omega();
   
   &:not(:first-child) {
-    @include shift(3);
+    @include shift(2);
   }
   
   .profile-picture {
