@@ -1,13 +1,13 @@
 ---
-name: 'HTML' 
-difficulty_level: 0
+name: 'CSS' 
+difficulty_level: 1
 resources:
   online: 
-    - title: "Deep Dive HTML"
-      url: "http://teamtreehouse.com/html#introduction"
+    - title: "CSS Cross-Country"
+      url: "https://www.codeschool.com/courses/css-cross-country"
       site:
-        name: "Team Treehouse"
-        url: "http://teamtreehouse.com/"
+        name: "Code School"
+        url: "http://www.codeschool.com"
     - title: "Web Fundamentals"
       url: "http://www.codecademy.com/tracks/web"
       site:

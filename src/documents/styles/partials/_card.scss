@@ -5,6 +5,7 @@
   @include span-columns(10);
   @include omega();
   background-color: $cardBackgroundColor;
+  background-color: $base00;
   color: $cardTextColor;
   padding: em(0);
   margin-bottom: em(24);
@@ -38,6 +39,21 @@
       text-align: center;
     }
   }
+  
+  $labelColors: $green, $yellow, $blue, $red, $green;
+
+  @for $i from 0 to 3 {
+    &.level-#{$i} {
+      .card-header {
+        background-color: nth($labelColors, $i + 1);
+      }
+      th {
+        background-color: nth($labelColors, $i + 1);
+        color: $base3;
+      }
+    }
+  }
+
 
   .card-content {
     @include shift(3);
@@ -58,7 +74,7 @@
 
     table {
       @include span-columns(12);
-      background-color: $base3;
+      background-color: $base2;
       margin-bottom: em(16);
     }
     
@@ -66,12 +82,12 @@
       padding: em(5);
     }
     tr:nth-child(odd) {
-      background-color: $base2;
+      background-color: $base3;
     }
-    th {
-      background-color: $base02;
-      color: $base3;
-    }
+    // th {
+    //   background-color: $base02;
+    //   color: $base3;
+    // }
   }
 
   @include media($mobile){
