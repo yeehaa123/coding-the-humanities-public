@@ -4,24 +4,23 @@ layout: 'default'
 isPage: true
 ---
 {{#each learnResources }}
-  <section class="card snippet">
+  <section class="card">
     <header class="card-header">
       <h1>{{name}}</h1>
     </header>
     <section class="card-content">
-      {{#each resources}}
-        <h2>{{ @key }}</h2>
+      <table>
+        {{#each resources}}
+          <tr>
+            <th>{{@key}}</th>
+          <tr>
           {{#each this}}
-            <h3>{{title}}</h3>
-            {{#each this}}
-            <ul>
-              {{#each this}}
-                <li>{{@key}}: {{this}}</li>
-              {{/each}}
-            </ul>
-            {{/each}}
+            <tr>
+              <td><a href="{{info.url}}">{{title}}</a></td>
+            </tr>
           {{/each}}
-      {{/each}}
+        {{/each}}
+      </table>
     </section>
   </section>
 {{/each}}

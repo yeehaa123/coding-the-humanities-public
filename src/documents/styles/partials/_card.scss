@@ -55,6 +55,23 @@
       @include shift(0);
       padding: em(16)
     }
+
+    table {
+      @include span-columns(12);
+      background-color: $base3;
+      margin-bottom: em(16);
+    }
+    
+    th, td {
+      padding: em(5);
+    }
+    tr:nth-child(odd) {
+      background-color: $base2;
+    }
+    th {
+      background-color: $base02;
+      color: $base3;
+    }
   }
 
   @include media($mobile){
