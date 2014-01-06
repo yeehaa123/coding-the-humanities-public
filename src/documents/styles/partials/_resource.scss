@@ -1,0 +1,47 @@
+.resource {
+  $labelColors: $absoluteBeginnerColor, $beginnerColor, $advancedBeginnerColor, $intermediateColor, $advancedColor, $expertColor;
+  background-color: $base1;
+
+  table {
+    @include span-columns(12);
+    background-color: $base2;
+    margin-bottom: em(32);
+    @include media($mobile){
+      margin-top: em(16);
+    }
+  }
+  header {
+    span {
+      display: none;
+      @include media($mobile){
+        display: inline;
+      }
+    }
+  }
+
+  th, td {
+    padding: em(8);
+  }
+  tr:nth-child(odd) {
+    background-color: $base3;
+  }
+  tr:nth-child(even) {
+    background-color: $base2;
+  }
+  th {
+    background-color: $base02;
+    color: $base3;
+  }
+
+  @for $i from 1 to 7 {
+    &.level-#{$i} {
+      $level-color: nth($labelColors, $i); 
+      .card-header {
+        background-color: $level-color;
+      }
+      th {
+        background-color: $level-color;
+      }
+    }
+  }
+}

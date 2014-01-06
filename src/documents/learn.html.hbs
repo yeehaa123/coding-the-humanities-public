@@ -4,9 +4,9 @@ layout: 'default'
 isPage: true
 ---
 {{#each learnResources }}
-  <section class="card level-{{difficulty_level}}">
+  <section class="card resource level-{{difficulty_level}}">
     <header class="card-header">
-      <h1>{{name}}</h1>
+      <h1>{{name}}<span> - Level {{difficulty_level}}</span></h1>
     </header>
     <section class="card-content">
       <table>
@@ -17,11 +17,13 @@ isPage: true
           {{#each this}}
             <tr>
               <td><a href="{{url}}">{{title}}</a></td>
+              {{#if author}}
+                <td><a href="{{author.url}}">{{author.name}}</a></td>
+              {{/if}}
               {{#if site}}
                 <td colspan="2"><a href="{{site.url}}">{{site.name}}</a></td>
               {{else}}
                 <td><a href="{{publisher.url}}">{{publisher.name}}</a></td>
-                <td><a href="{{author.url}}">{{author.name}}</a></td>
               {{/if}}
             </tr>
           {{/each}}
