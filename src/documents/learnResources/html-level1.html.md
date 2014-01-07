@@ -20,3 +20,6 @@ resources:
      publisher: 
        name: "John Wiley & Sons"
 ---
+
+HyperText Markup Language (HTML) is the main markup language for creating web pages and other information that can be displayed in a web browser. It is one of the fundamental building blocks of the web. It adds explicit structure to documents to make parsing of the content easier.
+
