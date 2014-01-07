@@ -21,22 +21,6 @@
     
   }
 
-  footer {
-    @include span-columns(3);
-    background-color: $labelColor;
-    margin-top: em(0);
-    padding: em(8) em(20);
-    border: none;
-    @include media($mobile) {
-      display: none
-    }
-
-    h1 {
-      font-size: em(18);
-      color: $labelTextColor;
-      text-align: center;
-    }
-  }
   section {
     @include shift(3);
     padding-left: em(24);
