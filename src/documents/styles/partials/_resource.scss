@@ -1,10 +1,9 @@
 .resource {
-  background-color: $base1;
 
   table {
     @include span-columns(12);
     background-color: $base2;
-    margin-bottom: em(24);
+    margin-bottom: em(20);
     margin-top: em(16);
     @include media($mobile){
       margin-bottom: em(24);
