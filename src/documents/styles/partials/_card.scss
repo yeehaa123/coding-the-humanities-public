@@ -1,6 +1,7 @@
 .card {
   @include span-columns(10);
   @include omega();
+  position: relative;
   background-color: $cardBackgroundColor;
   color: $cardTextColor;
   padding: em(0);
@@ -20,7 +21,7 @@
 
   header {
     @include span-columns(3);
-    background-color: $labelColor;
+    background-color: $base02;
     padding: em(8) em(20);
 
     @include media($mobile){
@@ -34,8 +35,11 @@
       color: $labelTextColor;
       text-align: center;
     }
+    div {
+      color: $base02;
+      text-align: center;
+    }
   }
-  
 
   section {
     @include shift(3);
