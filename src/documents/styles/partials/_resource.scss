@@ -1,21 +1,52 @@
 .resource {
-  $labelColors: $absoluteBeginnerColor, $beginnerColor, $advancedBeginnerColor, $intermediateColor, $advancedColor, $expertColor;
   background-color: $base1;
 
   table {
     @include span-columns(12);
     background-color: $base2;
-    margin-bottom: em(32);
+    margin-bottom: em(24);
+    margin-top: em(16);
     @include media($mobile){
-      margin-top: em(16);
+      margin-bottom: em(24);
+      margin-top: em(8);
     }
   }
+
   header {
+    @include omega();
     span {
       display: none;
-      @include media($mobile){
-        display: inline;
+      @include media($mobile) {
+        display: inline-block;
       }
+    }
+    
+  }
+
+  footer {
+    @include span-columns(3);
+    @include shift(9);
+    background-color: $labelColor;
+    margin-top: em(0);
+    padding: em(8) em(20);
+    border: none;
+    @include media($mobile) {
+      display: none
+    }
+
+    h1 {
+      font-size: em(18);
+      color: $labelTextColor;
+      text-align: center;
+    }
+  }
+  section {
+    @include shift(3);
+    padding-left: em(24);
+    @include media($mobile) {
+      @include shift(0);
+      @include span-columns(10);
+      padding: em(0) em(16);
     }
   }
 
@@ -33,10 +64,10 @@
     color: $base3;
   }
 
-  @for $i from 1 to 7 {
-    &.level-#{$i} {
-      $level-color: nth($labelColors, $i); 
-      .card-header {
+  @for $i from 0 to 7 {
+    &.level#{$i} {
+      $level-color: nth($labelColors, $i + 1); 
+      .card-header, .card-footer{
         background-color: $level-color;
       }
       th {

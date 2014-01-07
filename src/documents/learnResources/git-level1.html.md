@@ -1,6 +1,6 @@
 ---
 name: 'Git' 
-difficulty_level: 1
+difficulty_level: 0
 resources:
   online: 
     - title: "Try Git"

@@ -19,7 +19,6 @@
     "start": "node_modules/docpad/bin/docpad-server"
   },
   "devDependencies": {
-    "docpad-plugin-consolidate": "~2.0.1",
     "docpad-plugin-marked": "~2.1.2",
     "docpad-plugin-coffeescript": "~2.2.3",
     "docpad-plugin-tinylivereload": "~2.0.1",

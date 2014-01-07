@@ -28,8 +28,6 @@ docpadConfig =
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
   plugins:
-    consolidate:
-      handlebars: true
     handlebars:
       helpers:
         getBlock: (type, additional...) ->
@@ -37,6 +35,10 @@ docpadConfig =
           @getBlock(type).add(additional).toHTML()
       partials:
         menu: "<ul>{{#each this}}<li><a href='.{{url}}'>{{title}}</a></li>{{/each}}</ul>"
+        cell: "{{#if this}}<td>{{> linkedTitleOrName}}</td>{{/if}}"
+        cellDouble: "{{#if this}}<td colspan='2'>{{> linkedTitleOrName}}</td>{{/if}}"
+        linkedTitleOrName: "<a href='{{url}}'>{{> titleOrName}}</a>"
+        titleOrName: "{{#if title}}{{title}}{{else}}{{name}}{{/if}}"
     nodesass:
       neat: true
 

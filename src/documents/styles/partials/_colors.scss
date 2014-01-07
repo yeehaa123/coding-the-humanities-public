@@ -28,9 +28,20 @@ $cardLinkColor: $linkColor;
 $labelColor: $base02;
 $labelTextColor: $base3;
 
+$level0: $base01;
 $absoluteBeginnerColor: $green;
 $beginnerColor: $cyan;
 $advancedBeginnerColor: $blue;
 $intermediateColor: $violet;
 $advancedColor: $magenta;
 $expertColor: $base03;
+
+$level0: $base01;
+$level1: $green;
+$level2: $cyan;
+$level3: $blue;
+$level4: $violet;
+$level5: $magenta;
+$level6: $base03;
+
+$labelColors: $level0, $level1, $level2, $level3, $level4, $level5, $level6;
