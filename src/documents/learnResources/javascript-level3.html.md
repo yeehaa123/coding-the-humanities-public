@@ -32,4 +32,4 @@ resources:
 
 ---
 
-JavaScript (JS) has become one of the most popular programming languages on the web. It is a high-level language that is relatively easy to read and understand by human users. It’s great advantage is that it’s integrated in web browsers, so you don’t have to install separate programming software for it. With JS you can create scripts with which you can make interactive web pages but you can also access data from remote databases and do something interesting and fun with that data.
+JavaScript (JS) has become one of the most popular programming languages on the web. It is a high-level language that is relatively easy to read and understand by human users. It's great advantage is that it's integrated in web browsers, so you don't have to install separate programming software for it. With JS you can create scripts with which you can make interactive web pages but you can also access data from remote databases and do something interesting and fun with that data.

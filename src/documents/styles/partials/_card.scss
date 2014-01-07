@@ -22,7 +22,6 @@
   header {
     @include span-columns(3);
     background-color: $base02;
-    padding: em(8) em(20);
 
     @include media($mobile){
       @include span-columns(10);
@@ -32,9 +31,11 @@
 
     h1 {
       font-size: em(18);
+      padding: em(8, 18) em(20, 18);
       color: $labelTextColor;
       text-align: center;
     }
+
     div {
       color: $base02;
       text-align: center;

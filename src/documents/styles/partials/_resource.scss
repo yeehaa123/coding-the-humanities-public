@@ -18,7 +18,16 @@
         display: inline-block;
       }
     }
-    
+    div {
+      padding: em(24, 36);
+      font-family: $accentFont;
+      background-color: $base3;
+      color: $base3;
+      font-size: em(36);
+      @include media($mobile) {
+        display: none;
+      }
+    }
   }
 
   section {
@@ -50,11 +59,21 @@
   @for $i from 0 to 7 {
     &.level#{$i} {
       $level-color: nth($labelColors, $i + 1); 
-      .card-header, .card-footer{
+      header div {
         background-color: $level-color;
+      }
+      table {
+        a:hover {
+          color: $level-color;
+        }
       }
       th {
         background-color: $level-color;
+      }
+      @include media($mobile) {
+        header {
+          background-color: $level-color;
+        }
       }
     }
   }
