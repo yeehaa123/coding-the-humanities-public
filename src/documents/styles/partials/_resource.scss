@@ -3,7 +3,7 @@
   table {
     @include span-columns(12);
     background-color: $base2;
-    margin-bottom: em(20);
+    margin-bottom: em(32);
     @include media($mobile){
       margin-bottom: em(24);
       margin-top: em(8);
@@ -23,7 +23,6 @@
 
   footer {
     @include span-columns(3);
-    @include shift(9);
     background-color: $labelColor;
     margin-top: em(0);
     padding: em(8) em(20);
@@ -48,7 +47,7 @@
     }
 
     p {
-      padding: em(8) em(8);
+      padding: em(0) em(8);
     }
   }
 

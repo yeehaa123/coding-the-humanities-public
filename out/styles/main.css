@@ -315,7 +315,7 @@ footer {
   margin-right: 2.35765%;
   width: 100%;
   background-color: #eee8d5;
-  margin-bottom: 1.25em; }
+  margin-bottom: 2em; }
   /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
   .resource table:last-child {
     margin-right: 0; }
@@ -338,7 +338,6 @@ footer {
   float: left;
   margin-right: 2.35765%;
   width: 23.23176%;
-  margin-left: 76.76824%;
   background-color: #073642;
   margin-top: 0em;
   padding: 0.5em 1.25em;
@@ -349,12 +348,12 @@ footer {
   @media screen and (max-width: 43.75em) {
     .resource footer {
       display: none; } }
-  /* line 35, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+  /* line 34, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
   .resource footer h1 {
     font-size: 1.125em;
     color: #fdf6e3;
     text-align: center; }
-/* line 41, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 40, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource section {
   margin-left: 25.58941%;
   padding-left: 1.5em; }
@@ -369,59 +368,59 @@ footer {
       /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
       .resource section:last-child {
         margin-right: 0; } }
-  /* line 50, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+  /* line 49, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
   .resource section p {
-    padding: 0.5em 0.5em; }
-/* line 55, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+    padding: 0em 0.5em; }
+/* line 54, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource th, .resource td {
   padding: 0.5em; }
-/* line 58, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 57, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource tr {
   background-color: #fdf6e3; }
-/* line 62, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 61, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource th {
   background-color: #073642;
   color: #fdf6e3; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level0 .card-header, .resource.level0 .card-footer {
   background-color: #586e75; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level0 th {
   background-color: #586e75; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level1 .card-header, .resource.level1 .card-footer {
   background-color: #859900; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level1 th {
   background-color: #859900; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level2 .card-header, .resource.level2 .card-footer {
   background-color: #2aa198; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level2 th {
   background-color: #2aa198; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level3 .card-header, .resource.level3 .card-footer {
   background-color: #268bd2; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level3 th {
   background-color: #268bd2; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level4 .card-header, .resource.level4 .card-footer {
   background-color: #6c71c4; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level4 th {
   background-color: #6c71c4; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level5 .card-header, .resource.level5 .card-footer {
   background-color: #d33682; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level5 th {
   background-color: #d33682; }
-/* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level6 .card-header, .resource.level6 .card-footer {
   background-color: #002b36; }
-/* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
+/* line 71, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_resource */
 .resource.level6 th {
   background-color: #002b36; }
 
