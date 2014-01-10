@@ -1,5 +1,5 @@
 $(document).ready ->
-  $.get "/test.json", (data) ->
+  $.get "./test.json", (data) ->
     $data = $(data)
     $chart = $('.chart')
     $data.each (i, item) ->
