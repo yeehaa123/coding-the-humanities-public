@@ -2,7 +2,7 @@
 name: 'HTML' 
 difficulty_level: 1
 resources:
-  online: 
+  online:
     - title: "Deep Dive HTML"
       url: "http://teamtreehouse.com/html#introduction"
       site:
@@ -13,12 +13,12 @@ resources:
       site:
         name: "Codecademy"
         url: "http://codecademy.com"
-  books:
-   - title: "HTML & CSS. Design and Build Websites"
-     author:
-       name: "Jon Duckett"
-     publisher: 
-       name: "John Wiley & Sons"
+  print:
+    - title: "HTML & CSS. Design and Build Websites"
+      author:
+        name: "Jon Duckett"
+      publisher: 
+        name: "John Wiley & Sons"
 ---
 
 HyperText Markup Language (HTML) is the main markup language for creating web pages and other information that can be displayed in a web browser. It is one of the fundamental building blocks of the web. It adds explicit structure to identify elements in a document such as titles, sections, tables etc, which tells the browser how to display each element. It also helps both humans and computers to interpret the content.

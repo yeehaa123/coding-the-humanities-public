@@ -4,28 +4,29 @@ layout: 'default'
 isPage: true
 ---
 {{#each learnResources }}
-  <section class="card resource {{name}} level{{difficulty_level}}">
-    <header class="card-header">
-      <h1>{{name}}<span> - Level {{difficulty_level}}</span></h1>
-      <div>{{difficulty_level}}</div>
-    </header>
-    <section class="card-content">
-      {{{ contentRenderedWithoutLayouts }}}
-      <table>
-        {{#each resources}}
-          <tr>
-            <th colspan="3">{{@key}}</th>
-          <tr>
+<section class="card resource {{name}} level{{difficulty_level}}">
+  <header class="card-header">
+    <h1>{{name}} <span>- Level {{difficulty_level}}</span></h1>
+    <div>{{difficulty_level}}</div>
+  </header>
+  <section class="card-content">
+    {{{ contentRenderedWithoutLayouts }}}
+    <table>
+      {{#each resources}}
+      <tr>
+        <th colspan="3">{{@key}}</th>
+        <tr>
           {{#each this}}
-            <tr>
-              {{> cell}}
-              {{> cell author}}
-              {{> cellDouble site}}
-              {{> cell publisher}}
-            </tr>
+          <tr>
+            {{> cell}}
+            {{> cell author}}
+            {{> cellDouble site}}
+            {{> cell publisher}}
+          </tr>
           {{/each}}
-        {{/each}}
-      </table>
-    </section>
+        </tr>
+      {{/each}}
+    </table>
   </section>
+</section>
 {{/each}}

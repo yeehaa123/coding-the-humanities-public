@@ -10,10 +10,10 @@
 @import "./partials/_header";
 @import "./partials/_site-nav";
 @import "./partials/_footer";
-
-@import "./partials/_post";
-
 @import "./partials/_card";
+@import "./partials/_post";
+@import "./partials/_table";
+
 @import "./partials/_profile";
 @import "./partials/_snippet";
 @import "./partials/_resource";
@@ -26,5 +26,16 @@
   @include media($mobile){
     padding: em(8);
     padding-top: em(0);
+  }
+}
+
+.chart {
+  @include span-columns(9);
+  @include omega();
+  
+  div {
+    background-color: $red;
+    padding: em(10);
+    margin-bottom: em(10);
   }
 }

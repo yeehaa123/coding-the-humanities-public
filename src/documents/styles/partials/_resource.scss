@@ -1,28 +1,20 @@
 .resource {
 
-  table {
-    @include span-columns(12);
-    background-color: $base2;
-    margin-bottom: em(32);
-    @include media($mobile){
-      margin-bottom: em(24);
-      margin-top: em(8);
-    }
-  }
-
   header {
     @include omega();
+
     span {
       display: none;
       @include media($mobile) {
         display: inline-block;
       }
     }
+
     div {
       padding: em(24, 36);
       font-family: $accentFont;
-      background-color: $base3;
-      color: $base3;
+      background-color: $base01;
+      color: $inverseTextColor; 
       font-size: em(36);
       @include media($mobile) {
         display: none;
@@ -44,32 +36,23 @@
     }
   }
 
-  th, td {
-    padding: em(8);
-  }
-  tr {
-    background-color: $base3;
-  }
-
-  th {
-    background-color: $base02;
-    color: $base3;
-  }
-
   @for $i from 0 to 7 {
     &.level#{$i} {
       $level-color: nth($labelColors, $i + 1); 
+
       header div {
         background-color: $level-color;
       }
+
       table {
         a:hover {
           color: $level-color;
         }
+        th {
+          background-color: $level-color;
+        }
       }
-      th {
-        background-color: $level-color;
-      }
+
       @include media($mobile) {
         header {
           background-color: $level-color;
