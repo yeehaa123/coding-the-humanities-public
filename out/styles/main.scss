@@ -118,3 +118,7 @@ a {
   text-decoration: none;
 }
 
+#chart {
+  @include span-columns(10);
+  @include omega();
+}

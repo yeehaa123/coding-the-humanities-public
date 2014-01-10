@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href='http://fonts.googleapis.com/css?family=Abel|Codystar' rel='stylesheet' type='text/css'>
   {{{ getBlock "styles" "styles/main.css" }}}
+  {{{ getBlock "scripts" "./vendor/jquery.js" }}}
+  {{{ getBlock "scripts" "./scripts/script.js" }}}
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +21,4 @@
   </div>
   <footer></footer>
 </body>
-{{{ getBlock "scripts" "/vendor/jquery.js" }}}
-{{{ getBlock "scripts" "/scripts/script.js" }}}
 </html>

@@ -1,3 +1,4 @@
+_ = require('underscore')
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
@@ -16,6 +17,18 @@ docpadConfig =
       @getCollection('pages').toJSON()
     posts: ->
       @getCollection('posts').toJSON()
+    getAsJson: (sth) ->
+      c = @getCollection(sth)
+      JSON.stringify(c)
+    getResourcesAsJSON: ->
+      c = @getCollection('learnResources').map (r) -> 
+        r = r.pick('name', 'difficulty_level', 'resources')
+        count = 0
+        for k,v of r.resources
+          count += v.length
+        r.resourceCount = count
+        r
+      JSON.stringify(c)
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
