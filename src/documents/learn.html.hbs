@@ -3,8 +3,8 @@ title: 'Learn'
 layout: 'default'
 isPage: true
 ---
-{{#each learnResources }}
-<section class="card resource {{name}} level{{difficulty_level}}">
+{{#each learnTopics }}
+<section class="card topic" data-topic="{{name}}" data-difficulty="level{{difficulty_level}}">
   <header class="card-header">
     <h1>{{name}} <span>- Level {{difficulty_level}}</span></h1>
     <div>{{difficulty_level}}</div>

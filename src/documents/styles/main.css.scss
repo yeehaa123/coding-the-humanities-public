@@ -16,7 +16,8 @@
 
 @import "./partials/_profile";
 @import "./partials/_snippet";
-@import "./partials/_resource";
+@import "./partials/_topic";
+@import "./partials/_chart";
 
 
 .main {
@@ -29,20 +30,11 @@
   }
 }
 
-.chart {
+.slides {
   @include span-columns(9);
-  @include omega();
-  
-  div {
-    padding: em(10);
-    margin-bottom: em(10);
-    width: attr(data-count, integer);
-  }
-
-  @for $i from 0 to 7 {
-    div[data-difficulty=level#{$i}] {
-      $level-color: nth($labelColors, $i + 1);
-      background-color: $level-color;
-    }
-  }
+  height: 80%;
+  overflow: hidden;
+}
+.slide {
+  width: 600px;
 }

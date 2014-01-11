@@ -1,0 +1,63 @@
+.topic {
+
+  header {
+    @include omega();
+
+    span {
+      display: none;
+      @include media($mobile) {
+        display: inline-block;
+      }
+    }
+
+    div {
+      padding: em(24, 36);
+      font-family: $accentFont;
+      background-color: $base01;
+      color: $inverseTextColor; 
+      font-size: em(36);
+      @include media($mobile) {
+        display: none;
+      }
+    }
+  }
+
+  section {
+    @include shift(3);
+    padding-left: em(24);
+    @include media($mobile) {
+      @include shift(0);
+      @include span-columns(10);
+      padding: em(0) em(16);
+    }
+
+    p {
+      padding: em(0) em(8);
+    }
+  }
+
+  @for $i from 0 to 7 {
+    &[data-difficulty=level#{$i}] {
+      $level-color: nth($labelColors, $i + 1); 
+
+      header div {
+        background-color: $level-color;
+      }
+
+      table {
+        a:hover {
+          color: $level-color;
+        }
+        th {
+          background-color: $level-color;
+        }
+      }
+
+      @include media($mobile) {
+        header {
+          background-color: $level-color;
+        }
+      }
+    }
+  }
+}
