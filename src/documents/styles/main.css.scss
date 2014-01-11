@@ -34,8 +34,15 @@
   @include omega();
   
   div {
-    background-color: $red;
     padding: em(10);
     margin-bottom: em(10);
+    width: attr(data-count, integer);
+  }
+
+  @for $i from 0 to 7 {
+    div[data-difficulty=level#{$i}] {
+      $level-color: nth($labelColors, $i + 1);
+      background-color: $level-color;
+    }
   }
 }
