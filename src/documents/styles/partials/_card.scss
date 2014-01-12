@@ -19,7 +19,7 @@
   }
 
 
-  header {
+  header, .label {
     @include span-columns(3);
     background-color: $base02;
 

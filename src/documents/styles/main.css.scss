@@ -31,10 +31,65 @@
 }
 
 .slides {
-  @include span-columns(9);
-  height: 80%;
+  height: 90%;
   overflow: hidden;
+  margin-bottom: 0;
 }
+
 .slide {
-  width: 600px;
+  padding: 100px 0;
+  header {
+    position: fixed;
+    top: 0;
+    h1 {
+      font-size: em(24);
+    }
+    h2 {
+      text-align: center;
+      color: $base3;
+    }
+  }
+
+  p, li {
+    font-size: em(32);
+  }
+
+  h1 {
+    font-size: em(36);
+    line-height: em(36, 36);
+  }
+
+  li {
+    line-height: em(24);
+
+  }
+
+  section {
+    padding: 100px 0;
+  }
+
+  ul {
+    li {
+      p {
+        font-size: em(24);
+      }
+    }
+  }
+  
+  width: em(800); 
+  height: em(600);
+  &:not(.active) {
+    opacity: 0.5;
+  }
+  &.title {
+    padding: 100px  0;
+    header {
+      position: relative;
+      padding: em(30) 0;
+      width: 100%;
+      h1 {
+        font-size: em(48);
+      }
+    }
+  }
 }

@@ -11,8 +11,10 @@ docpadConfig =
       @getCollection('visionSnippets').toJSON()
     peopleProfiles: ->
       @getCollection('peopleProfiles').toJSON()
-    learnResources: ->
-      @getCollection('learnResources').toJSON()
+    learnTopics: ->
+      @getCollection('learnTopics').toJSON()
+    presentationThatCamp: ->
+      @getCollection('presentationThatCamp').toJSON()
     pages: ->
       @getCollection('pages').toJSON()
     posts: ->
@@ -20,8 +22,8 @@ docpadConfig =
     getAsJson: (sth) ->
       c = @getCollection(sth)
       JSON.stringify(c)
-    getResourcesAsJSON: ->
-      c = @getCollection('learnResources').map (r) -> 
+    getTopicsAsJSON: ->
+      c = @getCollection('learnTopics').map (r) -> 
         r = r.pick('name', 'difficulty_level', 'resources')
         count = 0
         for k,v of r.resources
@@ -34,7 +36,9 @@ docpadConfig =
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
     peopleProfiles: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
-    learnResources: ->
+    presentationThatCamp: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'thatCamp'}, {order_prop: 1})
+    learnTopics: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'learnResources'},{difficulty_level: 1})
     posts: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
@@ -46,6 +50,10 @@ docpadConfig =
         getBlock: (type, additional...) ->
           additional.pop()
           @getBlock(type).add(additional).toHTML()
+        position: (index) ->
+          index * 850
+        parameterize: (string) ->
+          string.toLowerCase().split(" ").join("-")
       partials:
         menu: "<ul>{{#each this}}<li><a href='.{{url}}'>{{title}}</a></li>{{/each}}</ul>"
         cell: "{{#if this}}<td>{{> linkedTitleOrName}}</td>{{/if}}"
