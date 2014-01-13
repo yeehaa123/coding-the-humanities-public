@@ -1,6 +1,6 @@
 ---
 title: "Brief Survey"
-section-title: "Programming and the Humanities"
+type: "normal"
 order_prop: 40
 ---
 

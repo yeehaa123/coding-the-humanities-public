@@ -40,6 +40,7 @@
   padding: 100px 0;
 
   header {
+    background-color: $base02;
     @include span-columns(3);
     position: fixed;
     top: 0;
@@ -111,6 +112,7 @@
     }
   }
 }
+
 .normal {
   h1 {
     font-size: em(24);
