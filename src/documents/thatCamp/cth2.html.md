@@ -10,5 +10,6 @@ type: "normal"
 + programmatic approach to digital research
 + 7 steps of data visualisation
 + Today we address 2 of them
++ acquiring data and visualising data
 
 
