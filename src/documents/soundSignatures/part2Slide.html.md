@@ -1,6 +1,7 @@
 ---
 title: "Code as Imperative"
 type: "section-title"
-order_prop: 20
+section: 2
+order_prop: 60
 ---
 

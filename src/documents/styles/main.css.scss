@@ -49,10 +49,8 @@
     }
 
     h2 {
-      font-size: em(18);
       text-align: center;
       color: $base3;
-      padding: em(9) 0;
     }
   }
 
@@ -114,7 +112,14 @@
   }
 }
 .normal {
+  h1 {
+    font-size: em(24);
+    padding: em(24) 0;
+  }
+
   h2 {
+    font-size: em(18);
     background-color: $base02;
+    padding: em(9) 0;
   }
 }

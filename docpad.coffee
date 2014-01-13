@@ -64,6 +64,7 @@ docpadConfig =
         cellDouble: "{{#if this}}<td colspan='2'>{{> linkedTitleOrName}}</td>{{/if}}"
         linkedTitleOrName: "<a href='{{url}}'>{{> titleOrName}}</a>"
         titleOrName: "{{#if title}}{{title}}{{else}}{{name}}{{/if}}"
+        slideSection: "{{#if section}}section{{section}}{{/if}}"
     nodesass:
       neat: true
 
