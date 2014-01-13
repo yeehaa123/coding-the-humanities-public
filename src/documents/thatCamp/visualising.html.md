@@ -1,6 +1,6 @@
 ---
-title: "Visualising Data"
-section-title: "Coding the Humanities"
+title: "Bar Chart"
+section-title: "Hands-On"
 section: 2
 type: "normal"
 order_prop: 85

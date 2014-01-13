@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Console"
+title: "Console"
 section-title: "Hands-On"
 order_prop: 76
 section: 2
