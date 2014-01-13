@@ -1,6 +1,8 @@
 ---
 title: "Web as Data"
-section-title: "Coding the Humanities"
+section-title: "Vision"
+type: "normal"
+section: 1
 order_prop: 71
 ---
 

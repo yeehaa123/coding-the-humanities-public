@@ -1,6 +1,6 @@
 ---
 title: "Coding"
-section-title: "Relevance"
+section-title: "Vision"
 order_prop: 60
 section: 1
 type: "normal"

@@ -1,6 +1,6 @@
 ---
 title: "Motivation"
-section-title: "Relevance"
+section-title: "Vision"
 section: 1
 type: "normal"
 order_prop: 50

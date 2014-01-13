@@ -1,6 +1,8 @@
 ---
 title: "HTML Example"
-section-title: "Coding the Humanities"
+section-title: "Vision"
+section: 1
+type: "normal"
 order_prop: 74
 ---
 
