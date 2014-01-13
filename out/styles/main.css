@@ -558,7 +558,7 @@ table {
       color: #fdf6e3; }
   /* line 59, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide p, .slide li {
-    font-size: 2em; }
+    font-size: 32px; }
   /* line 63, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide h1 {
     font-size: 2.25em;
@@ -568,7 +568,7 @@ table {
     line-height: 1.5em; }
   /* line 73, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide section {
-    padding: 50px 0;
+    padding: 70px 0;
     padding-right: 1.875em; }
   /* line 78, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide img {
