@@ -1,7 +1,7 @@
 ---
 title: "Motivation"
 section-title: "Coding the Humanities"
-order_prop: 3
+order_prop: 50
 ---
 
 + Why are we doing this?

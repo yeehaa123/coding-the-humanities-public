@@ -1,7 +1,7 @@
 ---
 title: "Programme"
 section-title: "Programming and the Humanities"
-order_prop: 4
+order_prop: 20
 ---
 
 + Part 1: Intro, survey, relevance

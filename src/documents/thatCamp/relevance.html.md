@@ -1,7 +1,7 @@
 ---
 title: "Brief Survey"
 section-title: "Programming and the Humanities"
-order_prop: 3
+order_prop: 40
 ---
 
 + what do you hope to get from this? 
