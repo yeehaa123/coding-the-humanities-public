@@ -1,6 +1,6 @@
 ---
-title: "Programming and the Humanities" 
+title: "Hands-on Javascript"
 type: "section-title"
-order_prop: 1
+order_prop: 81
 ---
 

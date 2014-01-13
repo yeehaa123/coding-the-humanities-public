@@ -1,7 +1,7 @@
 ---
-title: "II. Hands-on JavaScript" 
+title: "Relevance" 
 type: "section-title"
 section: 2
-order_prop: 51
+order_prop: 21
 ---
 

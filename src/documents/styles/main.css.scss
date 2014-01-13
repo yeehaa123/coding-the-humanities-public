@@ -37,11 +37,12 @@
 }
 
 .slide {
-  padding: 100px 0;
+  padding: 50px 0;
 
   header {
     background-color: $base02;
     @include span-columns(3);
+    @include omega();
     position: fixed;
     top: 0;
 
@@ -70,7 +71,14 @@
   }
 
   section {
-    padding: 100px 0;
+    padding: 50px 0;
+    padding-right: em(30);
+  }
+
+  img {
+    margin-left: em(-75);
+    padding-top: em(40);
+    width: em(330); 
   }
 
   ul {

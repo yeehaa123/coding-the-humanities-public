@@ -1,6 +1,6 @@
 ---
 title: "Motivation"
-section-title: "Coding the Humanities"
+section-title: "Relevance"
 section: 1
 type: "normal"
 order_prop: 50

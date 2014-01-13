@@ -533,7 +533,7 @@ table {
 
 /* line 39, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .slide {
-  padding: 100px 0;
+  padding: 50px 0;
   width: 50em;
   height: 37.5em; }
   /* line 42, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
@@ -543,64 +543,71 @@ table {
     float: left;
     margin-right: 2.35765%;
     width: 23.23176%;
+    margin-right: 0;
     position: fixed;
     top: 0; }
     /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
     .slide header:last-child {
       margin-right: 0; }
-    /* line 48, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 49, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide header h1 {
       font-size: 1.5em; }
-    /* line 52, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 53, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide header h2 {
       text-align: center;
       color: #fdf6e3; }
-  /* line 58, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 59, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide p, .slide li {
     font-size: 2em; }
-  /* line 62, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 63, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide h1 {
     font-size: 2.25em;
     line-height: 1em; }
-  /* line 67, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide li {
     line-height: 1.5em; }
-  /* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 73, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide section {
-    padding: 100px 0; }
+    padding: 50px 0;
+    padding-right: 1.875em; }
   /* line 78, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide img {
+    margin-left: -4.6875em;
+    padding-top: 2.5em;
+    width: 20.625em; }
+  /* line 86, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide ul li p {
     font-size: 1.5em; }
-  /* line 86, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 94, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide:not(.active) {
     opacity: 0.3; }
-  /* line 89, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 97, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide.title, .slide.section-title {
     padding: 100px 0; }
-    /* line 91, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 99, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide.title header, .slide.section-title header {
       position: relative;
       padding: 1.875em 0;
       width: 100%; }
-      /* line 95, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 103, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .slide.title header h1, .slide.section-title header h1 {
         font-size: 3em; }
-      /* line 98, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 106, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .slide.title header h2, .slide.section-title header h2 {
         text-align: center;
         color: #93a1a1; }
-  /* line 105, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 113, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide.section-title header, .slide.section1 header {
     background-color: #859900; }
-  /* line 110, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 118, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide.section-title:nth-of-type(2n+1) header, .slide.section2 header {
     background-color: #268bd2; }
 
-/* line 117, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 125, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .normal h1 {
   font-size: 1.5em;
   padding: 1.5em 0; }
-/* line 122, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 130, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .normal h2 {
   font-size: 1.125em;
   background-color: #073642;
