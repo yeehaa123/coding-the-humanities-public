@@ -594,10 +594,10 @@ table {
         text-align: center;
         color: #93a1a1; }
   /* line 109, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section-title header, .slide.section1 header {
+  .slide.section1 header {
     background-color: #859900; }
   /* line 114, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section-title:nth-of-type(2n+1) header, .slide.section2 header {
+  .slide.section2 header {
     background-color: #268bd2; }
 
 /* line 121, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */

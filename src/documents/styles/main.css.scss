@@ -105,12 +105,12 @@
       }
     }
   }
-  &.section-title, &.section1 {
+  &.section1 {
     header {
       background-color: $green;
     }
   }
-  &.section-title:nth-of-type(2n + 1), &.section2 {
+  &.section2 {
     header {
       background-color: $blue;
     }
