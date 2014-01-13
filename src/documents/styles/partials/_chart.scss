@@ -5,6 +5,7 @@
   div {
     padding: em(10);
     margin-bottom: em(10);
+    background-color: $base01; 
   }
 
   @for $i from 0 to 7 {

@@ -92,14 +92,11 @@
       }
     }
   }
-  &.section-title {
-    header {
-      background-color: $green;
-    }
-  }
-  &.section-title:nth-of-type(2n + 1) {
-    header {
-      background-color: $blue;
+  @for $i from 1 through length($labelColors) {
+    &.section-title:nth-of-type(#{$i}) {
+      header {
+        background: nth($labelColors, $i); 
+      }
     }
   }
 }

@@ -5,7 +5,6 @@ isPage: true
 ---
 
 <div class="slides impress-not-supported">
-
   <div id="impress">
     {{#each presentationThatCamp}}
     <section class="card step slide {{type}}" id="{{parameterize title}}" data-x="{{position @index}}">
@@ -24,5 +23,4 @@ isPage: true
   {{{ getBlock "scripts" "./vendor/jquery.js" }}}
   {{{ getBlock "scripts" "./vendor/impress.js" }}}
   {{{ getBlock "scripts" "./scripts/slideshow.js" }}}
-
 </div>
