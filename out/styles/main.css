@@ -472,40 +472,40 @@ table {
     background-color: #002b36; } }
 
 /* line 1, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-.chart {
+.chart, #chart {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 74.41059%;
   margin-right: 0; }
   /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
-  .chart:last-child {
+  .chart:last-child, #chart:last-child {
     margin-right: 0; }
   /* line 5, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div {
+  .chart div, #chart div {
     padding: 0.625em;
     margin-bottom: 0.625em;
     background-color: #586e75; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level0] {
+  .chart div[data-difficulty=level0], #chart div[data-difficulty=level0] {
     background-color: #586e75; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level1] {
+  .chart div[data-difficulty=level1], #chart div[data-difficulty=level1] {
     background-color: #859900; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level2] {
+  .chart div[data-difficulty=level2], #chart div[data-difficulty=level2] {
     background-color: #2aa198; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level3] {
+  .chart div[data-difficulty=level3], #chart div[data-difficulty=level3] {
     background-color: #268bd2; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level4] {
+  .chart div[data-difficulty=level4], #chart div[data-difficulty=level4] {
     background-color: #6c71c4; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level5] {
+  .chart div[data-difficulty=level5], #chart div[data-difficulty=level5] {
     background-color: #d33682; }
   /* line 11, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./partials/_chart */
-  .chart div[data-difficulty=level6] {
+  .chart div[data-difficulty=level6], #chart div[data-difficulty=level6] {
     background-color: #002b36; }
 
 /* line 23, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
@@ -536,50 +536,67 @@ table {
   padding: 100px 0;
   width: 50em;
   height: 37.5em; }
-  /* line 41, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 42, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide header {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
     position: fixed;
     top: 0; }
-    /* line 44, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 33, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/./neat/grid/span-columns */
+    .slide header:last-child {
+      margin-right: 0; }
+    /* line 47, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide header h1 {
       font-size: 1.5em; }
-    /* line 47, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 51, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide header h2 {
+      font-size: 1.125em;
       text-align: center;
-      color: #93a1a1; }
-  /* line 53, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      color: #fdf6e3;
+      padding: 0.5625em 0; }
+  /* line 59, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide p, .slide li {
     font-size: 2em; }
-  /* line 57, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 63, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide h1 {
     font-size: 2.25em;
     line-height: 1em; }
-  /* line 62, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 68, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide li {
     line-height: 1.5em; }
-  /* line 67, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 73, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide section {
     padding: 100px 0; }
-  /* line 73, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 79, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide ul li p {
     font-size: 1.5em; }
-  /* line 81, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 87, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide:not(.active) {
-    opacity: 0.5; }
-  /* line 84, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    opacity: 0.3; }
+  /* line 90, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide.title, .slide.section-title {
     padding: 100px 0; }
-    /* line 86, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 92, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide.title header, .slide.section-title header {
       position: relative;
       padding: 1.875em 0;
       width: 100%; }
-      /* line 90, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 96, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .slide.title header h1, .slide.section-title header h1 {
         font-size: 3em; }
-  /* line 96, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section-title header {
+      /* line 99, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      .slide.title header h2, .slide.section-title header h2 {
+        text-align: center;
+        color: #93a1a1; }
+  /* line 106, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section-title header, .slide.section1 header {
     background-color: #859900; }
-  /* line 101, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section-title:nth-of-type(2n+1) header {
+  /* line 111, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section-title:nth-of-type(2n+1) header, .slide.section2 header {
     background-color: #268bd2; }
+
+/* line 117, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+.normal h2 {
+  background-color: #073642; }

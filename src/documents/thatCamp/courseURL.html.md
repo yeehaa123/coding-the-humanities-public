@@ -1,6 +1,6 @@
 ---
 title: "Course Link"
-type: "slide"
+type: "normal"
 order_prop: 99
 ---
 

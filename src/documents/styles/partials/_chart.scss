@@ -1,4 +1,4 @@
-.chart {
+.chart, #chart {
   @include span-columns(9);
   @include omega();
   
