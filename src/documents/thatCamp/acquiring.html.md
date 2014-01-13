@@ -1,6 +1,8 @@
 ---
 title: "Acquiring Data"
-section-title: "Coding the Humanities"
+section-title: "Hands-On"
+section: 2
+type: "normal"
 order_prop: 81
 ---
 

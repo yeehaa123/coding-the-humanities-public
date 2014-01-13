@@ -57,22 +57,18 @@
   }
 
   p, li {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: em(28);
+    padding-right: em(36);
   }
 
   h1 {
     font-size: em(36);
-    line-height: em(36, 36);
   }
 
-  li {
-    line-height: em(24);
-
-  }
 
   section {
     padding: 70px 0;
-    padding-right: em(30);
   }
 
   img {

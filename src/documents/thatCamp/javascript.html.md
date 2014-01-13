@@ -1,6 +1,8 @@
 ---
-title: "Why JavaScript?"
-section-title: "Coding the Humanities"
+title: "JavaScript?"
+section-title: "Hands-On"
+section: 2
+type: "normal"
 order_prop: 78
 ---
 
