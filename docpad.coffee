@@ -15,6 +15,8 @@ docpadConfig =
       @getCollection('learnTopics').toJSON()
     presentationThatCamp: ->
       @getCollection('presentationThatCamp').toJSON()
+    presentationSoundSignatures: ->
+      @getCollection('presentationSoundSignatures').toJSON()
     pages: ->
       @getCollection('pages').toJSON()
     posts: ->
@@ -38,6 +40,8 @@ docpadConfig =
       @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
     presentationThatCamp: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'thatCamp'}, {order_prop: 1})
+    presentationSoundSignatures: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'soundSignatures'}, {order_prop: 1})
     learnTopics: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'learnResources'},{difficulty_level: 1})
     posts: ->

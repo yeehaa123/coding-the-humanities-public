@@ -1,0 +1,28 @@
+---
+title: "THATCamp"
+layout: 'default'
+isPage: true
+---
+
+<div class="slides impress-not-supported">
+
+  <div id="impress">
+    {{#each presentationThatCamp}}
+    <section class="card step slide {{type}}" id="{{parameterize title}}" data-x="{{position @index}}">
+      <header>
+        <h1>{{title}}</h1>
+        {{#if subtitle}}
+          <h2>{{subtitle}}</h2>
+        {{/if}}
+      </header>
+      <section>
+        {{{ contentRenderedWithoutLayouts }}}
+      </section>
+    </section>
+    {{/each}}
+  </div>
+  {{{ getBlock "scripts" "./vendor/jquery.js" }}}
+  {{{ getBlock "scripts" "./vendor/impress.js" }}}
+  {{{ getBlock "scripts" "./scripts/slideshow.js" }}}
+
+</div>

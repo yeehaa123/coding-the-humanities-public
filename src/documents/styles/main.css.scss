@@ -46,7 +46,7 @@
     }
     h2 {
       text-align: center;
-      color: $base3;
+      color: $base1;
     }
   }
 
@@ -81,7 +81,7 @@
   &:not(.active) {
     opacity: 0.5;
   }
-  &.title {
+  &.title, &.section-title {
     padding: 100px  0;
     header {
       position: relative;
@@ -90,6 +90,11 @@
       h1 {
         font-size: em(48);
       }
+    }
+  }
+  &.section-title {
+    header {
+      background: $green;
     }
   }
 }
