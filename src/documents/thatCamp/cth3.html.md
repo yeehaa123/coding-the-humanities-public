@@ -7,6 +7,7 @@ type: "normal"
 ---
 
 + 7 steps of data visualisation
++ today we discuss only 2
   1. acquiring data
   2. visualising data
 
