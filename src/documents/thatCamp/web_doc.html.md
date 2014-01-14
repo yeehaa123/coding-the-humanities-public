@@ -10,5 +10,5 @@ order_prop: 71
 + HyperText Markup Language
 + Pages are documents with elements
 + DOM: Document Object Model
-
++ + See [learn page](http://yeehaa123.github.io/coding-the-humanities-public/learn.html) on this site
 
