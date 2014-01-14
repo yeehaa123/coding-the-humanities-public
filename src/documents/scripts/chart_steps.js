@@ -4,7 +4,10 @@ var content = $.get('./huygens.json');
 
 var data = JSON.parse(content.responseText);
 
-var publishers = data.publishers;
+var $publishers = $(data.publishers);
 
-publishers.forEach(function(item) { chart.append('<div style="background-color: #268bd2; width:' + item.book_count * 10 + '">' + item.publisher + '</div>'); });
+$publishers.each(function(i, item) { chart.append('<div data-count=' + item.book_count + '>' + item.publisher + '</div>'); });
+
+$('#chart div').each(function(i, el) { $(el).width($(el).data('count') * 30)})
+
 

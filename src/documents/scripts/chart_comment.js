@@ -11,13 +11,18 @@ var content = $.get('./huygens.json');
 var data = JSON.parse(content.responseText);
 
 // get the list of publishers from the data variable
-// and store it in variable publishers
-var publishers = data.publishers;
+// and store it in a jQuery variable $publishers
+var $publishers = $(data.publishers);
 
 // loop through all the publishers with forEach
 // temporarily store each publisher in variable item
 // and append a div element to the chart with the
 // name of the publisher as text and the book count
-// as the width of the div element
-publishers.forEach(function(item) { chart.append('<div style="background-color: #268bd2; width:' + item.book_count * 10 + '">' + item.publisher + '</div>'); });
+// as a data attribute
+$publishers.each(function(i, item) { chart.append('<div data-count=' + item.book_count + '>' + item.publisher + '</div>'); });
+
+// loop through the div elements and adjust the width 
+// based on the book count
+$('#chart div').each(function(i, el) { $(el).width($(el).data('count') * 30)})
+
 
