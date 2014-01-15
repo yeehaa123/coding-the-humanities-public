@@ -1,7 +1,7 @@
 ---
-title: "Code as Imperative"
+title: "Analog Signal Processing"
 type: "section-title"
 section: 2
-order_prop: 60
+order_prop: 27
 ---
 

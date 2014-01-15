@@ -1,0 +1,15 @@
+---
+title: "Phonograph"
+section-title: "Signal Processing"
+type: "normal"
+section: 2
+order_prop: 36
+---
+
+> The phonograph does not hear as do ears that have been 
+> trained immediately to filter voices, words, and sounds 
+> out of noise; it registers acoustic events as such. 
+> Articulateness becomes a second-order exception in a
+> spectrum of noise.
+
+(Kittler 23)
