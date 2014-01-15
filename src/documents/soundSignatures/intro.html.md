@@ -1,5 +1,5 @@
 ---
-title: "Intro"
+title: "Introduction"
 type: "normal"
 order_prop: 11
 ---
