@@ -1,6 +1,6 @@
 ---
 title: "Numbers"
-section-title: "Signals as Imperative"
+section-title: "Data as Imperative"
 type: "normal"
 section: 4
 order_prop: 71

@@ -1,5 +1,6 @@
 ---
-title: "imperative"
+title: "Imperatives"
+section-title: "Data as Imperative"
 type: "normal"
 section: 4
 order_prop: 66
