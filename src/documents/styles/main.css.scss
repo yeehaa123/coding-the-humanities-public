@@ -66,8 +66,59 @@
     font-size: em(36);
   }
 
+  .dom-diagram, .synth-svg, .synth-gif, .dsp-svg {
+    margin: 0;
+  }
+  .synth-gif {
+    padding-top: 20px;
+  }
 
+  .dsp-svg {
+    padding-top: 80px;
+  }
+
+  .dom-diagram {
+    margin-left: -80px;
+    margin-top: -20px;
+    width: 700px;
+  }
+
+  blockquote {
+    p {
+      padding-right: em(40);
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: em(24);
+    }
+    + p {
+      padding-right: em(60);
+      font-size: 24px;
+      text-align: right;
+    }
+    + p + p {
+      padding-right: em(60);
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  code {
+    font-size: 20px;
+  }
+  
+  ol {
+    list-style-type: upper-roman;
+  }
+  
+  table {
+    margin-left: -60px;
+    font-size: 24px;
+    table-layout: fixed;
+    tr {
+      height: 80px;
+    }
+  }
   section {
+    @include shift(2);
     padding: 80px 0;
   }
 
@@ -106,13 +157,25 @@
     }
   }
   &.section1 {
-    header {
+    header, th {
       background-color: $green;
     }
+
   }
   &.section2 {
-    header {
+    header, th {
       background-color: $blue;
+    }
+  }
+  &.section3 {
+    header, th {
+      background-color: $cyan;
+    }
+  }
+
+  &.section4 {
+    header, th {
+      background-color: $violet;
     }
   }
 

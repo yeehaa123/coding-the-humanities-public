@@ -564,47 +564,98 @@ table {
   /* line 65, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide h1 {
     font-size: 2.25em; }
-  /* line 70, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 69, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide .dom-diagram, .slide .synth-svg, .slide .synth-gif, .slide .dsp-svg {
+    margin: 0; }
+  /* line 72, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide .synth-gif {
+    padding-top: 20px; }
+  /* line 76, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide .dsp-svg {
+    padding-top: 80px; }
+  /* line 80, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide .dom-diagram {
+    margin-left: -80px;
+    margin-top: -20px;
+    width: 700px; }
+  /* line 87, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide blockquote p {
+    padding-right: 2.5em;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.5em; }
+  /* line 93, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide blockquote + p {
+    padding-right: 3.75em;
+    font-size: 24px;
+    text-align: right; }
+  /* line 98, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide blockquote + p + p {
+    padding-right: 3.75em;
+    font-size: 18px;
+    text-align: center; }
+  /* line 104, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide code {
+    font-size: 20px; }
+  /* line 108, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide ol {
+    list-style-type: upper-roman; }
+  /* line 112, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide table {
+    margin-left: -60px;
+    font-size: 24px;
+    table-layout: fixed; }
+    /* line 116, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    .slide table tr {
+      height: 80px; }
+  /* line 120, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide section {
+    margin-left: 17.05961%;
     padding: 80px 0; }
-  /* line 74, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 125, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide img {
     margin-left: -4.6875em;
     padding-top: 2.5em;
     width: 20.625em; }
-  /* line 82, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 133, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide ul li p {
     font-size: 1.5em; }
-  /* line 90, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 141, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide:not(.active) {
     opacity: 0.3; }
-  /* line 93, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  /* line 144, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
   .slide.title, .slide.section-title {
     padding: 100px 0; }
-    /* line 95, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+    /* line 146, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
     .slide.title header, .slide.section-title header {
       position: relative;
       padding: 1.875em 0;
       width: 100%; }
-      /* line 99, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 150, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .slide.title header h1, .slide.section-title header h1 {
         font-size: 3em; }
-      /* line 102, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+      /* line 153, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
       .slide.title header h2, .slide.section-title header h2 {
         text-align: center;
         color: #93a1a1; }
-  /* line 109, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section1 header {
+  /* line 160, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section1 header, .slide.section1 th {
     background-color: #859900; }
-  /* line 114, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
-  .slide.section2 header {
+  /* line 166, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section2 header, .slide.section2 th {
     background-color: #268bd2; }
+  /* line 171, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section3 header, .slide.section3 th {
+    background-color: #2aa198; }
+  /* line 177, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+  .slide.section4 header, .slide.section4 th {
+    background-color: #6c71c4; }
 
-/* line 121, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 185, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .normal h1 {
   font-size: 1.5em;
   padding: 1.5em 0; }
-/* line 125, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
+/* line 189, /home/yeehaa/Documents/Projects/coding-the-humanities/src/documents/styles/main.css.scss */
 .normal h2 {
   font-size: 1.125em;
   background-color: #073642;
