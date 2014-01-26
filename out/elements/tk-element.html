@@ -1,0 +1,40 @@
+<link rel="import" href="../app/bower_components/polymer/polymer.html">
+<link rel="import" href="./rijks-thumbnail.html">
+<link rel="import" href="./rijks-search.html">
+<link rel="import" href="./rijks-search-options.html">
+
+<polymer-element name="rijks-search-widget">
+  <template>
+    <rijks-search-options query="{{ query}}"></rijks-search-options>
+    <rijks-search query="{{ query }}" list="{{resp}}"></rijks-search>
+    <table>
+      <tr>
+        <th>title</th>
+        <th>artist</th>
+        <th>thumbnail</th>
+      </tr>
+      <template repeat="{{ artwork in resp.artObjects }}">
+        <tr>
+          <td>
+            {{ artwork.title }}
+          </td>
+          <td>
+            {{ artwork.principalOrFirstMaker }}
+          </td>
+          <td>
+            <rijks-thumbnail artwork="{{artwork}}"></rijks-thumbnail>
+          </td>
+        </tr>
+      </template>
+    </table>
+  </template>
+  <script>
+    Polymer('rijks-search-widget', {
+      query: "Vermeer",
+      resp: null,
+      respChanged: function(){
+        console.log(this.resp);
+      }
+    });
+  </script>
+</polymer-element>

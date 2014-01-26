@@ -19,3 +19,8 @@ table {
     color: $base3;
   }
 }
+
+rijks-search-widget {
+  @include span-columns(10);
+  @include omega();
+}
