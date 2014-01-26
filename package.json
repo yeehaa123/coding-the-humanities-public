@@ -19,10 +19,13 @@
     "start": "node_modules/docpad/bin/docpad-server"
   },
   "devDependencies": {
-    "docpad-plugin-marked": "~2.1.2",
+    "docpad-plugin-marked": "~2.2.0",
     "docpad-plugin-coffeescript": "~2.2.3",
     "docpad-plugin-tinylivereload": "~2.0.1",
-    "docpad-plugin-ghpages": "~2.4.1",
-    "docpad-plugin-eco": "~2.0.3"
+    "docpad-plugin-ghpages": "~2.4.3",
+    "docpad-plugin-yamljs": "~2.0.0",
+    "docpad": "~6.60.3",
+    "docpad-plugin-handlebars": "~2.3.0",
+    "docpad-plugin-nodesass": "~2.2.1"
   }
 }
