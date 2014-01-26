@@ -1,10 +1,20 @@
-<polymer-element name="rijks-search-options" attributes="query" noscript>
+<polymer-element name="rijks-search-options" attributes="query imageOnly">
   <template>
     <form>
       <fieldset>
         <label for="term">Search Term:</label>
         <input name="term" value="{{ query }}"></input>
       </fieldset>
+      <fieldset>
+        <label for="image-only">Image Only:</label>
+        <input type="checkbox" name="image-only" checked="{{ imageOnly }}"></input>
+      </fieldset>
     </form>
   </template>
+  <script>
+   Polymer('rijks-search-options', {
+      query: "Goya",
+      imageOnly: true 
+   });
+  </script>
 </polymer-element>

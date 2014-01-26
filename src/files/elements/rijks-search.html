@@ -2,9 +2,9 @@
 <link rel="import" href="../app/bower_components/polymer-ajax/polymer-ajax.html">
 <script src="../app/bower_components/underscore/underscore.js"></script>
 
-<polymer-element name="rijks-search" attributes="query list">
+<polymer-element name="rijks-search" attributes="query imageOnly list">
   <template>
-  <polymer-ajax url="{{baseUrl}}?{{key}}&format=json&q={{ serviceQuery }}" auto="{{auto}}" handleAs="json" response="{{response}}"></polymer-ajax>
+  <polymer-ajax url="{{baseUrl}}?{{key}}&format=json&q={{ serviceQuery }}&imgonly={{ imageOnly }}" auto="{{auto}}" handleAs="json" response="{{response}}"></polymer-ajax>
   </template>
   <script>
     Polymer('rijks-search', {
