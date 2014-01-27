@@ -1,0 +1,21 @@
+<link rel="import" href="../app/bower_components/polymer/polymer.html">
+<link rel="import" href="./rijks-thumbnail.html">
+<link rel="import" href="./rijks-search.html">
+<link rel="import" href="./rijks-search-options.html">
+<link rel="import" href="./rijks-results-table.html">
+
+<polymer-element name="rijks-search-widget">
+  <template>
+    <rijks-search-options query="{{ query }}" imageOnly="{{ imageOnly }}"></rijks-search-options>
+    <rijks-search query="{{ query }}" imageOnly="{{ imageOnly }}" list="{{ resp }}"></rijks-search>
+    <rijks-results-table results="{{ results }}"></rijks-results-table>
+  </template>
+  <script>
+    Polymer('rijks-search-widget', {
+      resp: null,
+      respChanged: function(){
+        this.results = this.resp.artObjects;
+      }
+    });
+  </script>
+</polymer-element>
