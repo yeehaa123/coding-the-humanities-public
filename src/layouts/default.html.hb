@@ -4,8 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href='http://fonts.googleapis.com/css?family=Abel|Codystar' rel='stylesheet' type='text/css'>
   {{{ getBlock "styles" "styles/main.css" }}}
-  {{{ getBlock "scripts" "./app/bower_components/platform/platform.js" }}}
-  {{{ getBlock "scripts" "./vendor/jquery.js" }}}
   {{{ getBlock "scripts" "./scripts/script.js" }}}
 </head>
 <body>

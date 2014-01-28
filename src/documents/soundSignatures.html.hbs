@@ -5,7 +5,9 @@ isPage: true
 ---
 
 {{#each presentationSoundSignatures }}
-<section class="card step slide {{type}} {{>slideSection}}" id="{{parameterize title}}" data-x="{{position @index}}">
+<section class="card step slide {{type}} {{>slideSection}}" 
+         id="{{parameterize title}}" 
+         data-x="{{position @index}}">
   <header>
     <h1>{{title}}</h1>
     {{#if subtitle}}

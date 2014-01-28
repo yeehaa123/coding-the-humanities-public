@@ -17,6 +17,24 @@ docpadConfig =
       @getCollection('presentationThatCamp').toJSON()
     presentationSoundSignatures: ->
       @getCollection('presentationSoundSignatures').toJSON()
+    presentationSoundSignaturesTitles: ->
+      sections = []
+      @getCollection('presentationSoundSignatures').each (slide) ->
+        if slide["attributes"]["type"] is "section-title"
+          sections.push 
+            section: slide["attributes"]["section"], 
+            title: slide["attributes"]["title"]
+      sections
+    presentationRijks: ->
+      @getCollection('presentationRijks').toJSON()
+    presentationRijksSectionTitles: ->
+      sections = []
+      @getCollection('presentationRijks').each (slide) ->
+        if slide["attributes"]["type"] is "section-title"
+          sections.push 
+            section: slide["attributes"]["section"], 
+            title: slide["attributes"]["title"]
+      sections
     pages: ->
       @getCollection('pages').toJSON()
     posts: ->
@@ -33,6 +51,7 @@ docpadConfig =
         r.resourceCount = count
         r
       JSON.stringify(c)
+
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
@@ -40,6 +59,8 @@ docpadConfig =
       @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
     presentationThatCamp: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'thatCamp'}, {order_prop: 1})
+    presentationRijks: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'rijks'}, {order_prop: 1})
     presentationSoundSignatures: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'soundSignatures'}, {order_prop: 1})
     learnTopics: ->
@@ -48,6 +69,7 @@ docpadConfig =
       @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
+
   plugins:
     handlebars:
       helpers:
@@ -65,6 +87,7 @@ docpadConfig =
         linkedTitleOrName: "<a href='{{url}}'>{{> titleOrName}}</a>"
         titleOrName: "{{#if title}}{{title}}{{else}}{{name}}{{/if}}"
         slideSection: "{{#if section}}section{{section}}{{/if}}"
+
     nodesass:
       neat: true
 

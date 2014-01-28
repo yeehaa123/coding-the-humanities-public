@@ -1,0 +1,24 @@
+---
+title: "Rijks"
+layout: 'presentation'
+isPage: true
+---
+
+{{#each presentationRijks }}
+<section class="card step slide {{type}} {{>slideSection}}" 
+         id="{{parameterize title}}" 
+         data-x="{{position @index}}">
+  <header>
+    <h1>{{title}}</h1>
+    {{#if subtitle}}
+    <h2>{{subtitle}}</h2>
+    {{/if}}
+    {{#if section-title}}
+    <h2>{{section-title}}</h2>
+    {{/if}}
+  </header>
+  <section>
+    {{{ contentRenderedWithoutLayouts }}}
+  </section>
+</section>
+{{/each}}
