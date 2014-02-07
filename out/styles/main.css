@@ -444,20 +444,25 @@ rijks-search-widget {
     font-size: 28px;
     line-height: 1.75em;
     padding-right: 2.25em; }
-  .slide h1 {
-    font-size: 2.25em; }
   .slide .dom-diagram, .slide .synth-svg, .slide .synth-gif, .slide .dsp-svg {
     margin: 0; }
   .slide .synth-gif {
     padding-top: 20px; }
   .slide .dsp-svg {
     padding-top: 80px; }
+  .slide .json, .slide .whale {
+    margin-top: -55px;
+    margin-left: -60px;
+    width: 650px; }
   .slide .dom-diagram {
     margin-left: -80px;
     margin-top: -20px;
     width: 700px; }
+  .slide blockquote strong {
+    color: #dc322f; }
   .slide blockquote p {
     padding-right: 2.5em;
+    margin-top: 60px;
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.5em; }
@@ -538,13 +543,18 @@ rijks-search-widget {
     .programme a > h2.section4 {
       background-color: #6c71c4; }
 
-.normal h1 {
-  font-size: 1.5em;
-  padding: 1.5em 0; }
-.normal h2 {
+.quote header h1, .normal header h1 {
+  font-size: 1.5em; }
+.quote header h2, .normal header h2 {
   font-size: 1.125em;
   background-color: #073642;
   padding: 0.5625em 0; }
+.quote h1, .normal h1 {
+  font-size: 3em;
+  padding: 2.5em 0.625em; }
+  .quote h1 span, .normal h1 span {
+    color: #dc322f;
+    margin: 0.3125em; }
 
 .main {
   padding: 0.5em 1em;

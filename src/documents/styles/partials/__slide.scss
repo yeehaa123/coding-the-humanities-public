@@ -31,10 +31,6 @@
     padding-right: em(36);
   }
 
-  h1 {
-    font-size: em(36);
-  }
-
   .dom-diagram, .synth-svg, .synth-gif, .dsp-svg {
     margin: 0;
   }
@@ -46,6 +42,12 @@
     padding-top: 80px;
   }
 
+  .json, .whale {
+    margin-top: -55px;
+    margin-left: -60px;
+    width: 650px;
+  }
+
   .dom-diagram {
     margin-left: -80px;
     margin-top: -20px;
@@ -53,8 +55,13 @@
   }
 
   blockquote {
+    strong {
+      color: $red;
+    }
+
     p {
       padding-right: em(40);
+      margin-top: 60px;
       margin-bottom: 20px;
       font-size: 24px;
       line-height: em(24);
@@ -185,14 +192,26 @@
   }
 }
 
-.normal {
+.quote, .normal {
+  header {
+    h1 {
+      font-size: em(24);
+    }
+    h2 {
+      font-size: em(18);
+      background-color: $base02;
+      padding: em(9) 0;
+    }
+  }
+
   h1 {
-    font-size: em(24);
-    padding: em(24) 0;
+    font-size: em(48);
+    padding: em(40) em(10);
+
+    span {
+      color: $red;
+      margin: em(5);
+    }
   }
-  h2 {
-    font-size: em(18);
-    background-color: $base02;
-    padding: em(9) 0;
-  }
+
 }
