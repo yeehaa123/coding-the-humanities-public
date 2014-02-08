@@ -6,12 +6,20 @@
     margin-bottom: em(8, 24); 
     padding-left: em(15, 24);
     padding-right: em(15, 24);
-    padding-bottom: em(8, 24);
-    text-align: right;
+    float: right;
     letter-spacing: em(-1, 24);
-    border-bottom: em(2, 24) solid $accentColor;
     @include media($mobile) {
       font-size: em(20, 16);
+    }
+  }
+  @include clearfix;
+  
+  border-bottom: em(2, 16) solid $accentColor;
+
+  .menu-button {
+    @include media($large) {
+      float: left;
+      display: none;
     }
   }
 }

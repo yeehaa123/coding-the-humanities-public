@@ -7,7 +7,13 @@
   <script defer="defer"  src="./scripts/script.js"></script>
 </head>
 <body>
+  <div class="sidebar">
+    <nav class="main-nav">
+      <ul><li><a href='./index.html'>Blog</a></li><li><a href='./learn.html'>Learn</a></li><li><a href='./people.html'>People</a></li><li><a href='./rijks-presentation.html'>Rijks</a></li><li><a href='./soundSignatures.html'>Sound Signatures</a></li><li><a href='./thatCamp.html'>THATCamp</a></li><li><a href='./vision.html'>Vision</a></li></ul>
+    </nav>
+  </div>
   <header class="site-header">
+    <button class="menu-button">Menu</button>
     <h1><a href="./">Coding the Humanities</a></h1>
   </header>
   <div class="main">
@@ -45,7 +51,7 @@
     
   <a href="#/visualisation"><h2 class="section1">Visualisation</h2></a>
 
-  <a href="#/collaboration"><h2 class="section2">Collaboration</h2></a>
+  <a href="#/languages"><h2 class="section2">Languages</h2></a>
 
   <a href="#/rijksmuseum-api"><h2 class="section3">Rijksmuseum API</h2></a>
 
@@ -131,11 +137,30 @@ meaningful way.</p>
   </section>
 </section>
 
-<section class="card step slide section-title section2" 
-         id="collaboration" 
+<section class="card step slide normal section1" 
+         id="pictures" 
          data-x="5950">
   <header>
-    <h1>Collaboration</h1>
+    <h1>Pictures</h1>
+    
+    
+    <h2>Visualisation</h2>
+    
+  </header>
+  <section>
+    <blockquote>
+<p>The purpose of <strong>visualization</strong> is insight, not pictures</p>
+</blockquote>
+<p>Ben Shneiderman</p>
+
+  </section>
+</section>
+
+<section class="card step slide section-title section2" 
+         id="languages" 
+         data-x="6800">
+  <header>
+    <h1>Languages</h1>
     
     
   </header>
@@ -144,9 +169,42 @@ meaningful way.</p>
   </section>
 </section>
 
+<section class="card step slide normal section2" 
+         id="code" 
+         data-x="7650">
+  <header>
+    <h1>Code</h1>
+    
+    
+    <h2>Languages</h2>
+    
+  </header>
+  <section>
+    <h1 id="imperative-span-8674-span-declarative">Imperative <span>&#8674;</span> Declarative</h1>
+
+  </section>
+</section>
+
+<section class="card step slide normal section2" 
+         id="imperative-language" 
+         data-x="8500">
+  <header>
+    <h1>Imperative Language</h1>
+    
+    
+    <h2>Languages</h2>
+    
+  </header>
+  <section>
+    <h2 id="10-span-print-yeehaa-span-">10 <span>Print &quot;Yeehaa&quot;</span></h2>
+<h2 id="20-span-goto-10-span-">20 <span>GOTO 10</span></h2>
+
+  </section>
+</section>
+
 <section class="card step slide section-title section3" 
          id="rijksmuseum-api" 
-         data-x="6800">
+         data-x="9350">
   <header>
     <h1>Rijksmuseum API</h1>
     
@@ -159,7 +217,7 @@ meaningful way.</p>
 
 <section class="card step slide normal section3" 
          id="javascript" 
-         data-x="7650">
+         data-x="10200">
   <header>
     <h1>JavaScript</h1>
     
@@ -180,5 +238,16 @@ meaningful way.</p>
     </div>
   </div>
   <footer></footer>
+  <script defer="defer"  src="./app/bower_components/classie/classie.js"></script>
+  <script>
+    var sidebar = document.querySelector('.sidebar'),
+        menuButton = document.querySelector('.menu-button'),
+        body = document.querySelector('body');  
+    menuButton.onclick = function() {
+      classie.toggle(this, 'active');
+      classie.toggle(body, 'pushed');
+      classie.toggle(sidebar, 'open');
+    }
+  </script>
 </body>
 </html>

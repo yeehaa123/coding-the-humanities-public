@@ -44,20 +44,30 @@ a {
   box-shadow: inset -10px -10px 10px -5px #002b36;
   margin-bottom: 1em; }
 
-.site-header h1 {
-  font-family: 'codystar', cursive;
-  font-size: 1.5em;
-  margin-top: 0.33333em;
-  margin-bottom: 0.33333em;
-  padding-left: 0.625em;
-  padding-right: 0.625em;
-  padding-bottom: 0.33333em;
-  text-align: right;
-  letter-spacing: -0.04167em;
-  border-bottom: 0.08333em solid #dc322f; }
-  @media screen and (max-width: 43.75em) {
-    .site-header h1 {
-      font-size: 1.25em; } }
+.site-header {
+  *zoom: 1;
+  border-bottom: 0.125em solid #dc322f; }
+  .site-header h1 {
+    font-family: 'codystar', cursive;
+    font-size: 1.5em;
+    margin-top: 0.33333em;
+    margin-bottom: 0.33333em;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    float: right;
+    letter-spacing: -0.04167em; }
+    @media screen and (max-width: 43.75em) {
+      .site-header h1 {
+        font-size: 1.25em; } }
+  .site-header:before, .site-header:after {
+    content: " ";
+    display: table; }
+  .site-header:after {
+    clear: both; }
+  @media screen and (min-width: 93.75em) {
+    .site-header .menu-button {
+      float: left;
+      display: none; } }
 
 .site-nav {
   display: block;
@@ -556,6 +566,16 @@ rijks-search-widget {
     color: #dc322f;
     margin: 0.3125em; }
 
+body {
+  position: relative;
+  overflow-x: hidden;
+  left: 0; }
+  @media screen and (max-width: 93.75em) {
+    body.pushed {
+      left: 14.375em;
+      margin-left: 0.5em;
+      margin-right: 0; } }
+
 .main {
   padding: 0.5em 1em;
   *zoom: 1;
@@ -569,3 +589,27 @@ rijks-search-widget {
     .main {
       padding: 0.5em;
       padding-top: 0em; } }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14.375em;
+  height: 100%;
+  background-color: #002b36; }
+  .sidebar .main-nav {
+    width: 90%; }
+    .sidebar .main-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .sidebar .main-nav ul li {
+        font-family: 'codystar', cursive;
+        margin: 0.625em; }
+        .sidebar .main-nav ul li a {
+          color: #fdf6e3; }
+  .sidebar.open {
+    left: 0; }
+  @media screen and (max-width: 93.75em) {
+    .sidebar {
+      left: -14.375em; } }

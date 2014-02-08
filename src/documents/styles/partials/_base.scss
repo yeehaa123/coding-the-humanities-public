@@ -1,5 +1,7 @@
 $max-width: em(1024);
 $mobile: new-breakpoint(max-width em(700) 10);
+$medium: new-breakpoint(max-width em(1500) 10);
+$large: new-breakpoint(min-width em(1500) 10);
 
 body {
   @include outer-container;
