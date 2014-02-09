@@ -474,8 +474,7 @@ rijks-search-widget {
     color: #dc322f; }
   .slide blockquote p {
     padding-right: 2.5em;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     font-size: 24px;
     line-height: 1.5em; }
   .slide blockquote + p {
