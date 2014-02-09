@@ -6,7 +6,7 @@
   <link  rel="stylesheet" href="styles/main.css" />
   <script defer="defer"  src="./scripts/script.js"></script>
 </head>
-<body>
+<body class="default">
   <div class="menu-panel default">
     <nav class="main-nav">
       <ul><li><a href='./index.html'>Blog</a></li><li><a href='./learn.html'>Learn</a></li><li><a href='./people.html'>People</a></li><li><a href='./rijks-presentation.html'>Rijks</a></li><li><a href='./soundSignatures.html'>Sound Signatures</a></li><li><a href='./thatCamp.html'>THATCamp</a></li><li><a href='./vision.html'>Vision</a></li></ul>
@@ -419,8 +419,9 @@
     menuButton.onclick = function() {
       classie.toggle(this, 'active');
       classie.toggle(body, 'pushed');
+      classie.toggle(body, 'default');
       classie.toggle(menuPanel, 'open');
-      classie.toggle(menuPanel, 'closed');
+      classie.toggle(menuPanel, 'default');
     }
   </script>
 </body>

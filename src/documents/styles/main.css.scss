@@ -23,7 +23,10 @@
 body {
   position: relative;
   overflow-x: hidden;
-  left: 0;
+
+  &.default {
+    left: 0;
+  }
 
   @include media($medium) {
     &.pushed {
@@ -85,15 +88,14 @@ body {
     left: 0;
   }
 
-  &.open, &.default {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
   @include media($medium) {
     left: em(-230);
   }
 
 }
 
+.open, .default, .pushed {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

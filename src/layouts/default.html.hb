@@ -6,7 +6,7 @@
   {{{ getBlock "styles" "styles/main.css" }}}
   {{{ getBlock "scripts" "./scripts/script.js" }}}
 </head>
-<body>
+<body class="default">
   <div class="menu-panel default">
     <nav class="main-nav">
       {{> menu pages }}
@@ -28,8 +28,9 @@
     menuButton.onclick = function() {
       classie.toggle(this, 'active');
       classie.toggle(body, 'pushed');
+      classie.toggle(body, 'default');
       classie.toggle(menuPanel, 'open');
-      classie.toggle(menuPanel, 'closed');
+      classie.toggle(menuPanel, 'default');
     }
   </script>
 </body>

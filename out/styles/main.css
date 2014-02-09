@@ -567,8 +567,9 @@ rijks-search-widget {
 
 body {
   position: relative;
-  overflow-x: hidden;
-  left: 0; }
+  overflow-x: hidden; }
+  body.default {
+    left: 0; }
   @media screen and (max-width: 93.75em) {
     body.pushed {
       left: 14.375em;
@@ -617,10 +618,11 @@ body {
           background-color: #dc322f; }
   .menu-panel.open {
     left: 0; }
-  .menu-panel.open, .menu-panel.default {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
   @media screen and (max-width: 93.75em) {
     .menu-panel {
       left: -14.375em; } }
+
+.open, .default, .pushed {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
