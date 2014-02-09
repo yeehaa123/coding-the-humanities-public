@@ -48,7 +48,8 @@ a {
   *zoom: 1;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  border-bottom: 0.125em solid #dc322f; }
+  border-bottom: 0.125em solid #dc322f;
+  margin-bottom: 0.5em; }
   .site-header h1 {
     font-family: 'codystar', cursive;
     font-size: 1.5em;
@@ -592,6 +593,7 @@ body {
       padding-top: 0em; } }
 
 .sidebar {
+  z-index: 99999999;
   position: fixed;
   top: 0;
   left: 0;

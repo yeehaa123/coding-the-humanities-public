@@ -18,7 +18,9 @@
   </header>
   <div class="main">
     <nav class="site-nav">
-      {{> menu pages }}
+      <ul>
+       <li>HELLO</li>
+      </ul>
     </nav>
     <div class="content">
       {{{ content }}}
