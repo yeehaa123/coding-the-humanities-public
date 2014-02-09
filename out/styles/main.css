@@ -601,14 +601,18 @@ body {
   height: 100%;
   background-color: #002b36; }
   .sidebar .main-nav {
-    width: 90%; }
+    color: #fdf6e3; }
     .sidebar .main-nav ul {
       list-style-type: none;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      width: 100%;
+      height: 100%; }
       .sidebar .main-nav ul li {
-        font-family: 'codystar', cursive;
-        margin: 0.625em; }
+        margin: 0.625em 0;
+        padding: 0.625em;
+        background-color: #073642;
+        font-family: 'codystar', cursive; }
         .sidebar .main-nav ul li a {
           color: #fdf6e3; }
   .sidebar.open {
