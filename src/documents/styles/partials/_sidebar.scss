@@ -1,0 +1,26 @@
+.sidebar {
+  @include span-columns(2);
+  @include media($mobile){
+    @include span-columns(10);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: em(16);
+    padding: em(16, 16);
+    background-color: $base2;
+
+    li {
+      font-family: $baseFont; 
+      font-size: em(14, 16);
+      color: $base01;
+      margin-bottom: em(4,14);
+
+      span {
+        color: $base1;
+      }
+    }
+  }
+}

@@ -3,7 +3,13 @@ title: 'Vision'
 layout: 'default'
 isPage: true
 ---
-{{#each visionSnippets }}
+<nav class="sidebar">
+  <ul>
+    <li>placeholder</li>
+  </ul>
+</nav>
+<section class="content">
+  {{#each visionSnippets }}
   <section class="card snippet">
     <header>
       <h1>{{title}}</h1>
@@ -12,4 +18,5 @@ isPage: true
       {{{ contentRenderedWithoutLayouts }}}
     </section>
   </section>
-{{/each}}
+  {{/each}}
+</section>

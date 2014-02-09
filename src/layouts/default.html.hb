@@ -7,7 +7,7 @@
   {{{ getBlock "scripts" "./scripts/script.js" }}}
 </head>
 <body>
-  <div class="sidebar">
+  <div class="menu-panel default">
     <nav class="main-nav">
       {{> menu pages }}
     </nav>
@@ -17,26 +17,19 @@
     <h1><a href="./">Coding the Humanities</a></h1>
   </header>
   <div class="main">
-    <nav class="site-nav">
-      <ul>
-       <li>Yeehaa</li>
-       <li>23/12/2013</li>
-      </ul>
-    </nav>
-    <div class="content">
-      {{{ content }}}
-    </div>
+    {{{ content }}}
   </div>
   <footer></footer>
   {{{ getBlock "scripts" "./app/bower_components/classie/classie.js" }}}
   <script>
-    var sidebar = document.querySelector('.sidebar'),
+    var menuPanel = document.querySelector('.menu-panel'),
         menuButton = document.querySelector('.menu-button'),
         body = document.querySelector('body');  
     menuButton.onclick = function() {
       classie.toggle(this, 'active');
       classie.toggle(body, 'pushed');
-      classie.toggle(sidebar, 'open');
+      classie.toggle(menuPanel, 'open');
+      classie.toggle(menuPanel, 'closed');
     }
   </script>
 </body>

@@ -3,30 +3,37 @@ title: 'Learn'
 layout: 'default'
 isPage: true
 ---
-{{#each learnTopics }}
-<section class="card topic" data-topic="{{name}}" data-difficulty="level{{difficulty_level}}">
-  <header class="card-header">
-    <h1>{{name}} <span>- Level {{difficulty_level}}</span></h1>
-    <div>{{difficulty_level}}</div>
-  </header>
-  <section class="card-content">
-    {{{ contentRenderedWithoutLayouts }}}
-    <table>
-      {{#each resources}}
-      <tr>
-        <th colspan="3">{{@key}}</th>
+<nav class="sidebar">
+  <ul>
+    <li>PLACEHOLDER</li>
+  </ul>
+</nav>
+<section class="content">
+  {{#each learnTopics }}
+  <section class="card topic" data-topic="{{name}}" data-difficulty="level{{difficulty_level}}">
+    <header class="card-header">
+      <h1>{{name}} <span>- Level {{difficulty_level}}</span></h1>
+      <div>{{difficulty_level}}</div>
+    </header>
+    <section class="card-content">
+      {{{ contentRenderedWithoutLayouts }}}
+      <table>
+        {{#each resources}}
         <tr>
-          {{#each this}}
+          <th colspan="3">{{@key}}</th>
           <tr>
-            {{> cell}}
-            {{> cell author}}
-            {{> cellDouble site}}
-            {{> cell publisher}}
+            {{#each this}}
+            <tr>
+              {{> cell}}
+              {{> cell author}}
+              {{> cellDouble site}}
+              {{> cell publisher}}
+            </tr>
+            {{/each}}
           </tr>
-          {{/each}}
-        </tr>
-      {{/each}}
-    </table>
+        {{/each}}
+      </table>
+    </section>
   </section>
+  {{/each}}
 </section>
-{{/each}}

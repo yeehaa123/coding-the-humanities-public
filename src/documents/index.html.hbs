@@ -3,8 +3,15 @@ title: "Blog"
 layout: "default"
 isPage: true
 ---
-
 {{#each posts}}
+<nav class="sidebar">
+  <ul>
+    <li><span>Author: </span>{{author}}</li>
+    <li><span>Date of Publication: </span>{{publicationDate date}}</li>
+    <li><span>Tags: </span>{{tagString tags}}</li>
+  </ul>
+</nav>
+<article class="content">
   <section class="post">
     <header>
       <h1>{{title}}</h1>
@@ -16,4 +23,5 @@ isPage: true
       {{{ contentRenderedWithoutLayouts }}}
     </section>
   </section>
+</article>
 {{/each}} 

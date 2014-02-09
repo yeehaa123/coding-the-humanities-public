@@ -8,7 +8,7 @@
 @import "./partials/_base";
 
 @import "./partials/_header";
-@import "./partials/_site-nav";
+@import "./partials/_sidebar";
 @import "./partials/_footer";
 @import "./partials/_card";
 @import "./partials/_post";
@@ -44,7 +44,7 @@ body {
   }
 }
 
-.sidebar {
+.menu-panel {
   z-index: 99999999;
   position: fixed;
   top: 0;
@@ -59,6 +59,7 @@ body {
     ul {
       list-style-type: none;
       margin: 0;
+      margin-top: em(50);
       padding: 0;
       width: 100%;
       height: 100%;
@@ -72,12 +73,22 @@ body {
         a {
           color: $base3;
         }
+        
+        &:hover {
+          background-color: $red;
+        }
       }
     }
   }
 
   &.open {
     left: 0;
+  }
+
+  &.open, &.default {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   @include media($medium) {

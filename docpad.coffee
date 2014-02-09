@@ -1,4 +1,6 @@
 _ = require('underscore')
+moment = require('moment')
+
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
@@ -80,6 +82,10 @@ docpadConfig =
           index * 850
         parameterize: (string) ->
           string.toLowerCase().split(" ").join("-")
+        tagString: (tags) ->
+          tags.join(", ")
+        publicationDate: (date) ->
+          moment(date).format('LL')
       partials:
         menu: "<ul>{{#each this}}<li><a href='.{{url}}'>{{title}}</a></li>{{/each}}</ul>"
         cell: "{{#if this}}<td>{{> linkedTitleOrName}}</td>{{/if}}"
@@ -87,7 +93,6 @@ docpadConfig =
         linkedTitleOrName: "<a href='{{url}}'>{{> titleOrName}}</a>"
         titleOrName: "{{#if title}}{{title}}{{else}}{{name}}{{/if}}"
         slideSection: "{{#if section}}section{{section}}{{/if}}"
-
     nodesass:
       neat: true
 

@@ -3,16 +3,23 @@ title: 'People'
 layout: 'default'
 isPage: true
 ---
-{{#each peopleProfiles }}
-  <section class="card profile">
-    <div class="profile-picture">
-      <img src="{{ profile_picture }}"></img>
-    </div>
-    <header>
-      <h1>{{title}}</h1>
-    </header>
-    <section>
-      {{{ contentRenderedWithoutLayouts }}}
+<nav class="sidebar">
+  <ul>
+    <li>placeholder</li>
+  </ul>
+</nav>
+<section class="content">
+  {{#each peopleProfiles }}
+    <section class="card profile">
+      <div class="profile-picture">
+        <img src="{{ profile_picture }}"></img>
+      </div>
+      <header>
+        <h1>{{title}}</h1>
+      </header>
+      <section>
+        {{{ contentRenderedWithoutLayouts }}}
+      </section>
     </section>
-  </section>
-{{/each}}
+  {{/each}}
+</section>

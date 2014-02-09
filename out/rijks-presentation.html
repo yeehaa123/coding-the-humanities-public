@@ -7,7 +7,7 @@
   <script defer="defer"  src="./scripts/script.js"></script>
 </head>
 <body>
-  <div class="sidebar">
+  <div class="menu-panel default">
     <nav class="main-nav">
       <ul><li><a href='./index.html'>Blog</a></li><li><a href='./learn.html'>Learn</a></li><li><a href='./people.html'>People</a></li><li><a href='./rijks-presentation.html'>Rijks</a></li><li><a href='./soundSignatures.html'>Sound Signatures</a></li><li><a href='./thatCamp.html'>THATCamp</a></li><li><a href='./vision.html'>Vision</a></li></ul>
     </nav>
@@ -17,14 +17,7 @@
     <h1><a href="./">Coding the Humanities</a></h1>
   </header>
   <div class="main">
-    <nav class="site-nav">
-      <ul>
-       <li>Yeehaa</li>
-       <li>23/12/2013</li>
-      </ul>
-    </nav>
-    <div class="content">
-      <div class="slides impress-not-supported">
+    <div class="slides impress-not-supported">
   <div id="impress">
     
 <section class="card step slide title " 
@@ -238,18 +231,18 @@ meaningful way.</p>
   <script defer="defer"  src="./app/bower_components/impress.js/js/impress.js"></script>
   <script defer="defer"  src="./scripts/slideshow.js"></script>
 </div>
-    </div>
   </div>
   <footer></footer>
   <script defer="defer"  src="./app/bower_components/classie/classie.js"></script>
   <script>
-    var sidebar = document.querySelector('.sidebar'),
+    var menuPanel = document.querySelector('.menu-panel'),
         menuButton = document.querySelector('.menu-button'),
         body = document.querySelector('body');  
     menuButton.onclick = function() {
       classie.toggle(this, 'active');
       classie.toggle(body, 'pushed');
-      classie.toggle(sidebar, 'open');
+      classie.toggle(menuPanel, 'open');
+      classie.toggle(menuPanel, 'closed');
     }
   </script>
 </body>

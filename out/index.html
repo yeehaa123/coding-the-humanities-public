@@ -7,7 +7,7 @@
   <script defer="defer"  src="./scripts/script.js"></script>
 </head>
 <body>
-  <div class="sidebar">
+  <div class="menu-panel default">
     <nav class="main-nav">
       <ul><li><a href='./index.html'>Blog</a></li><li><a href='./learn.html'>Learn</a></li><li><a href='./people.html'>People</a></li><li><a href='./rijks-presentation.html'>Rijks</a></li><li><a href='./soundSignatures.html'>Sound Signatures</a></li><li><a href='./thatCamp.html'>THATCamp</a></li><li><a href='./vision.html'>Vision</a></li></ul>
     </nav>
@@ -17,14 +17,15 @@
     <h1><a href="./">Coding the Humanities</a></h1>
   </header>
   <div class="main">
-    <nav class="site-nav">
-      <ul>
-       <li>Yeehaa</li>
-       <li>23/12/2013</li>
-      </ul>
-    </nav>
-    <div class="content">
-      
+    
+<nav class="sidebar">
+  <ul>
+    <li><span>Author: </span>Yeehaa</li>
+    <li><span>Date of Publication: </span>December 11 2013</li>
+    <li><span>Tags: </span>tools, code, office, automation, word, office, workflow, editor</li>
+  </ul>
+</nav>
+<article class="content">
   <section class="post">
     <header>
       <h1>When All We Have Is A Hammer</h1>
@@ -43,19 +44,20 @@
 
     </section>
   </section>
+</article>
 
-    </div>
   </div>
   <footer></footer>
   <script defer="defer"  src="./app/bower_components/classie/classie.js"></script>
   <script>
-    var sidebar = document.querySelector('.sidebar'),
+    var menuPanel = document.querySelector('.menu-panel'),
         menuButton = document.querySelector('.menu-button'),
         body = document.querySelector('body');  
     menuButton.onclick = function() {
       classie.toggle(this, 'active');
       classie.toggle(body, 'pushed');
-      classie.toggle(sidebar, 'open');
+      classie.toggle(menuPanel, 'open');
+      classie.toggle(menuPanel, 'closed');
     }
   </script>
 </body>

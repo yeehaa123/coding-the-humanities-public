@@ -12,7 +12,8 @@
     "hogan.js": "~2.0.0",
     "handlebars": "~1.2.1",
     "docpad-plugin-handlebars": "~2.2.2",
-    "docpad-plugin-yamljs": "~2.0.0"
+    "docpad-plugin-yamljs": "~2.0.0",
+    "moment": "~2.5.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
