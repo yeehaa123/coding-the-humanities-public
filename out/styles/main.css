@@ -46,14 +46,14 @@ a {
 
 .site-header {
   *zoom: 1;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
   border-bottom: 0.125em solid #dc322f; }
   .site-header h1 {
     font-family: 'codystar', cursive;
     font-size: 1.5em;
     margin-top: 0.33333em;
     margin-bottom: 0.33333em;
-    padding-left: 0.625em;
-    padding-right: 0.625em;
     float: right;
     letter-spacing: -0.04167em; }
     @media screen and (max-width: 43.75em) {
@@ -64,10 +64,11 @@ a {
     display: table; }
   .site-header:after {
     clear: both; }
-  @media screen and (min-width: 93.75em) {
-    .site-header .menu-button {
-      float: left;
-      display: none; } }
+  .site-header .menu-button {
+    float: left; }
+    @media screen and (min-width: 93.75em) {
+      .site-header .menu-button {
+        display: none; } }
 
 .site-nav {
   display: block;

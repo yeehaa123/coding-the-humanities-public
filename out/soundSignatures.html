@@ -13,7 +13,7 @@
     </nav>
   </div>
   <header class="site-header">
-    <button class="menu-button">Menu</button>
+    <img src="./images/menu-button.svg" class="menu-button"></h2>
     <h1><a href="./">Coding the Humanities</a></h1>
   </header>
   <div class="main">

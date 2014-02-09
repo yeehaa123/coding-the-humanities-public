@@ -4,8 +4,6 @@
     font-size: em(24, 16); 
     margin-top: em(8, 24);
     margin-bottom: em(8, 24); 
-    padding-left: em(15, 24);
-    padding-right: em(15, 24);
     float: right;
     letter-spacing: em(-1, 24);
     @include media($mobile) {
@@ -14,11 +12,13 @@
   }
   @include clearfix;
   
+  padding-left: em(15, 16);
+  padding-right: em(15, 16);
   border-bottom: em(2, 16) solid $accentColor;
 
   .menu-button {
+    float: left;
     @include media($large) {
-      float: left;
       display: none;
     }
   }
