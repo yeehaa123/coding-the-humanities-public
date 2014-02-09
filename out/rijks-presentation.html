@@ -19,7 +19,8 @@
   <div class="main">
     <nav class="site-nav">
       <ul>
-       <li>HELLO</li>
+       <li>Yeehaa</li>
+       <li>23/12/2013</li>
       </ul>
     </nav>
     <div class="content">
