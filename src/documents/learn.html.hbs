@@ -9,7 +9,7 @@ isPage: true
   </ul>
 </nav>
 <section class="content">
-  {{#each learnTopics }}
+  {{#each pages.data.learnTopics }}
   <section class="card topic" data-topic="{{name}}" data-difficulty="level{{difficulty_level}}">
     <header class="card-header">
       <h1>{{name}} <span>- Level {{difficulty_level}}</span></h1>

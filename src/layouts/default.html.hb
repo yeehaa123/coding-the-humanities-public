@@ -9,7 +9,11 @@
 <body class="default">
   <div class="menu-panel default">
     <nav class="main-nav">
-      {{> menu pages }}
+      <ul>
+        {{#each pages.all}}
+        <li><a href=".{{url}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
     </nav>
   </div>
   <header class="site-header">

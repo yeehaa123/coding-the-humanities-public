@@ -5,13 +5,13 @@ isPage: true
 ---
 <nav class="sidebar">
   <ul class="menu">
-    {{#each peopleProfiles}}
+    {{#each pages.data.peopleProfiles}}
     <a href="#{{ parameterize title }}"><li>{{title}}</li></a>
     {{/each}}
   </ul>
 </nav>
 <section class="content">
-  {{#each peopleProfiles }}
+  {{#each pages.data.peopleProfiles }}
   <section id="{{ parameterize title }}" class="card profile">
       <div class="profile-picture">
         <img src="{{ profile_picture }}"></img>

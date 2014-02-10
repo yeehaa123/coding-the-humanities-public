@@ -5,13 +5,13 @@ isPage: true
 ---
 <nav class="sidebar">
   <ul class="menu">
-    {{#each visionSnippets}}
+    {{#each pages.data.visionSnippets}}
     <a href="#{{ parameterize title }}"><li>{{title}}</li></a>
     {{/each}}
   </ul>
 </nav>
 <section class="content">
-  {{#each visionSnippets }}
+  {{#each pages.data.visionSnippets }}
   <section id="{{parameterize title}}" class="card snippet">
     <header>
       <h1>{{title}}</h1>

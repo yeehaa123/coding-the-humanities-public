@@ -1,26 +1,15 @@
 _ = require('underscore')
-moment = require('moment')
+pages = require('./config/pages')()
 presentations = require('./config/presentations')()
+collections = require('./config/collections')()
+handlebars = require('./config/handlebars')()
 
-# DocPad Configuration File
-# http://docpad.org/docs/config
-
-# Define the DocPad Configuration
 docpadConfig = 
   templateData:
     site:
       title: "Coding the Humanities"
-    visionSnippets: ->
-      @getCollection('visionSnippets').toJSON()
-    peopleProfiles: ->
-      @getCollection('peopleProfiles').toJSON()
-    learnTopics: ->
-      @getCollection('learnTopics').toJSON()
     presentations: presentations.templateData
-    pages: ->
-      @getCollection('pages').toJSON()
-    posts: ->
-      @getCollection('posts').toJSON()
+    pages: pages.all
     getAsJson: (sth) ->
       c = @getCollection(sth)
       JSON.stringify(c)
@@ -33,48 +22,10 @@ docpadConfig =
         r.resourceCount = count
         r
       JSON.stringify(c)
-  collections:
-    visionSnippets: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
-    peopleProfiles: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'peopleProfiles'},{order_prop: 1})
-    presentationThatCamp: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'thatCamp'}, {order_prop: 1})
-    presentationRijks: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'rijks'}, {order_prop: 1})
-    presentationSoundSignatures: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'soundSignatures'}, {order_prop: 1})
-    learnTopics: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'learnResources'},{difficulty_level: 1})
-    posts: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
-    pages: ->
-      @getCollection("html").findAllLive({isPage: true})
-    presentations: ->
-      @getCollection("html").findAllLive({isPresentation: true})
+  collections: collections.all
   plugins:
-    handlebars:
-      helpers:
-        getBlock: (type, additional...) ->
-          additional.pop()
-          @getBlock(type).add(additional).toHTML()
-        position: (index) ->
-          index * 850
-        parameterize: (string) ->
-          string.toLowerCase().split(" ").join("-")
-        tagString: (tags) ->
-          tags.join(", ")
-        publicationDate: (date) ->
-          moment(date).format('LL')
-      partials:
-        menu: "<ul>{{#each this}}<li><a href='.{{url}}'>{{title}}</a></li>{{/each}}</ul>"
-        cell: "{{#if this}}<td>{{> linkedTitleOrName}}</td>{{/if}}"
-        cellDouble: "{{#if this}}<td colspan='2'>{{> linkedTitleOrName}}</td>{{/if}}"
-        linkedTitleOrName: "<a href='{{url}}'>{{> titleOrName}}</a>"
-        titleOrName: "{{#if title}}{{title}}{{else}}{{name}}{{/if}}"
-        slideSection: "{{#if section}}section{{section}}{{/if}}"
+    handlebars: handlebars
     nodesass:
       neat: true
 
-# Export the DocPad Configuration
 module.exports = docpadConfig
