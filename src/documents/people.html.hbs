@@ -4,13 +4,15 @@ layout: 'default'
 isPage: true
 ---
 <nav class="sidebar">
-  <ul>
-    <li>placeholder</li>
+  <ul class="menu">
+    {{#each peopleProfiles}}
+    <a href="#{{ parameterize title }}"><li>{{title}}</li></a>
+    {{/each}}
   </ul>
 </nav>
 <section class="content">
   {{#each peopleProfiles }}
-    <section class="card profile">
+  <section id="{{ parameterize title }}" class="card profile">
       <div class="profile-picture">
         <img src="{{ profile_picture }}"></img>
       </div>

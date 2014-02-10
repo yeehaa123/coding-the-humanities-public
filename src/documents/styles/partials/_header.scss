@@ -22,5 +22,9 @@
     @include media($large) {
       display: none;
     }
+
+    &:hover {
+      background-color: $red;
+    }
   }
 }

@@ -1,5 +1,6 @@
 _ = require('underscore')
 moment = require('moment')
+presentations = require('./config/presentations')()
 
 # DocPad Configuration File
 # http://docpad.org/docs/config
@@ -15,28 +16,7 @@ docpadConfig =
       @getCollection('peopleProfiles').toJSON()
     learnTopics: ->
       @getCollection('learnTopics').toJSON()
-    presentationThatCamp: ->
-      @getCollection('presentationThatCamp').toJSON()
-    presentationSoundSignatures: ->
-      @getCollection('presentationSoundSignatures').toJSON()
-    presentationSoundSignaturesTitles: ->
-      sections = []
-      @getCollection('presentationSoundSignatures').each (slide) ->
-        if slide["attributes"]["type"] is "section-title"
-          sections.push 
-            section: slide["attributes"]["section"], 
-            title: slide["attributes"]["title"]
-      sections
-    presentationRijks: ->
-      @getCollection('presentationRijks').toJSON()
-    presentationRijksSectionTitles: ->
-      sections = []
-      @getCollection('presentationRijks').each (slide) ->
-        if slide["attributes"]["type"] is "section-title"
-          sections.push 
-            section: slide["attributes"]["section"], 
-            title: slide["attributes"]["title"]
-      sections
+    presentations: presentations.templateData
     pages: ->
       @getCollection('pages').toJSON()
     posts: ->
@@ -53,7 +33,6 @@ docpadConfig =
         r.resourceCount = count
         r
       JSON.stringify(c)
-
   collections:
     visionSnippets: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'visionSnippets'},{order_prop: 1})
@@ -71,7 +50,8 @@ docpadConfig =
       @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
-
+    presentations: ->
+      @getCollection("html").findAllLive({isPresentation: true})
   plugins:
     handlebars:
       helpers:

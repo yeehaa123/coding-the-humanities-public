@@ -9,17 +9,34 @@
     margin: 0;
     padding: 0;
     margin-bottom: em(16);
-    padding: em(16, 16);
-    background-color: $base2;
+
+    &.metadata {
+      background-color: $base2;
+      padding: em(16, 16);
+    }
 
     li {
       font-family: $baseFont; 
       font-size: em(14, 16);
       color: $base01;
-      margin-bottom: em(4,14);
+      margin-bottom: em(8,14);
 
       span {
         color: $base1;
+      }
+
+    }
+    &.menu {
+      li {
+        text-align: center;
+        font-size: em(14, 16);
+        background-color: $base2;
+        padding: em(14, 14);
+      }
+      
+      li:hover {
+        background-color: $red;
+        color: $base3;
       }
     }
   }

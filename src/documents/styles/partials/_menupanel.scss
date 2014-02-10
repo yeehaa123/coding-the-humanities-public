@@ -1,0 +1,52 @@
+.menu-panel {
+  z-index: 99999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: em(230);
+  height: 100%;
+  background-color: $base03;
+  
+  .main-nav {
+    color: $base3;
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: em(50);
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      
+      li {
+        margin: em(10) 0;
+        padding: em(10);
+        background-color: $base02;
+        font-family: $accentFont;
+
+        a {
+          color: $base3;
+        }
+        
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  &.open {
+    left: 0;
+  }
+
+  @include media($medium) {
+    left: em(-230);
+  }
+
+}
+
+.open, .default, .pushed {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

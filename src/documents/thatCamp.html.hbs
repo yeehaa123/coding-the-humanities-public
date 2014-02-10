@@ -1,10 +1,10 @@
 ---
 title: "THATCamp"
 layout: 'presentation'
-isPage: true
+isPresentation: true
 ---
 
-{{#each presentationThatCamp}}
+{{#each presentations.thatCamp.slides}}
 <section class="card step slide {{type}} {{#if section}}section{{section}}{{/if}}" id="{{parameterize title}}" data-x="{{position @index}}">
   <header>
     <h1>{{title}}</h1>

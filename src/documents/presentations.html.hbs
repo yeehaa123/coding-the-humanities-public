@@ -1,0 +1,21 @@
+---
+title: 'Presentations'
+layout: 'default'
+isPage: true
+---
+<nav class="sidebar">
+  <ul class="menu">
+    {{#each presentations.all}}
+    <a href="#{{ parameterize title }}"><li>{{title}}</li></a>
+    {{/each}}
+  </ul>
+</nav>
+<section class="content">
+  {{#each presentations.all}}
+  <section id="{{parameterize title}}" class="card presentations">
+    <header>
+      <a href='.{{url}}'><h1>{{title}}</h1></a>
+    </header>
+  </section>
+  {{/each}}
+</section>
