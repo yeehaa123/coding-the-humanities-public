@@ -168,6 +168,8 @@ footer {
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-right: 0;
+  *zoom: 1;
+  display: block;
   position: relative;
   background-color: #93a1a1;
   color: #073642;
@@ -175,6 +177,11 @@ footer {
   margin-bottom: 1.5em; }
   .card:last-child {
     margin-right: 0; }
+  .card:before, .card:after {
+    content: " ";
+    display: table; }
+  .card:after {
+    clear: both; }
   .card:not(:first-child) {
     margin-left: 17.05961%; }
     @media screen and (max-width: 43.75em) {
@@ -292,6 +299,7 @@ table {
   float: left;
   margin-right: 2.35765%;
   width: 100%;
+  display: table;
   background-color: #eee8d5;
   margin-bottom: 2em; }
   table:last-child {

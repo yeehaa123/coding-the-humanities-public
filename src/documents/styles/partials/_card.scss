@@ -4,6 +4,7 @@
 .card {
   @include span-columns(10);
   @include omega();
+  @include row;
   position: relative;
   background-color: $cardBackgroundColor;
   color: $cardTextColor;

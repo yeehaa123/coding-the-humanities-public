@@ -21,16 +21,15 @@ isPage: true
         {{#each resources}}
         <tr>
           <th colspan="3">{{@key}}</th>
-          <tr>
-            {{#each this}}
-            <tr>
-              {{> cell}}
-              {{> cell author}}
-              {{> cellDouble site}}
-              {{> cell publisher}}
-            </tr>
-            {{/each}}
-          </tr>
+        </tr>
+        {{#each this}}
+        <tr>
+          {{> cell}}
+          {{> cell author}}
+          {{> cellDouble site}}
+          {{> cell publisher}}
+        </tr>
+        {{/each}}
         {{/each}}
       </table>
     </section>

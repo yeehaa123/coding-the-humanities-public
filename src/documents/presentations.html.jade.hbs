@@ -1,0 +1,16 @@
+---
+title: Presentations
+layout: default
+isPage: true
+---
+
+!= partial("./presentations/sidebar.html.jade.hbs")
+
+section.content
+  {{#each presentations.all}}
+  section(id="{{parameterize title}}", class="card presentation")
+    header
+      a(href='.{{url}}') <h1>{{title}}</h1>
+    section
+      {{description}}
+  {{/each}}

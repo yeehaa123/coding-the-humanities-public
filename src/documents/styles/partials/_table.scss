@@ -1,12 +1,14 @@
 table {
   @include span-columns(12);
+  display: table;
   background-color: $base2;
   margin-bottom: em(32);
+
   @include media($mobile){
     margin-bottom: em(24);
     margin-top: em(8);
   }
-  
+
   th, td {
     padding: em(8);
   }

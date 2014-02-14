@@ -1,0 +1,5 @@
+nav.sidebar
+  ul.menu
+    {{#each presentations.all}}
+    a(href="#{{ parameterize title }}") <li>{{title}}</li>
+    {{/each}}
