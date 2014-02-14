@@ -1,0 +1,19 @@
+---
+title: "Blog"
+layout: "default"
+isPage: true
+---
+{{#each pages.data.posts}}
+nav.sidebar
+  ul.metadata
+    li <span>Author: </span>{{author}}
+    li <span>Date of Publication: </span>{{publicationDate date}}
+    li <span>Tags: </span>{{tagString tags}}
+article.content
+  section.post
+    header
+      h1 {{title}}
+    div.cover-image
+      img(src="{{cover-image}}")
+    != partial("./post-content.html.hbs", {{{toJSON this}}})
+{{/each}} 

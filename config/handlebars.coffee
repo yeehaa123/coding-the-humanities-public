@@ -13,6 +13,8 @@ module.exports = ->
       tags.join(", ")
     publicationDate: (date) ->
       moment(date).format('LL')
+    toJSON: (context) ->
+      JSON.stringify(context)
   partials:
     cell: "{{#if this}}<td>{{> linkedTitleOrName}}</td>{{/if}}"
     cellDouble: "{{#if this}}<td colspan='2'>{{> linkedTitleOrName}}</td>{{/if}}"

@@ -1,3 +1,6 @@
+.presentation-card {
+  @include row;
+}
 .card {
   @include span-columns(10);
   @include omega();

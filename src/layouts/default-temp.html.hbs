@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>{{ document.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href='http://fonts.googleapis.com/css?family=Abel|Codystar' rel='stylesheet' type='text/css'>
+  {{{ getBlock "styles" "styles/main.css" }}}
+</head>
+<body class="default">
+  <div class="menu-panel default">
+    <nav class="main-nav">
+      <ul>
+        {{#each pages.all}}
+        <li><a href=".{{url}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+  <header class="site-header">
+    <img src="./images/menu-button.svg" class="menu-button"></h2>
+    <h1><a href="./">Coding the Humanities</a></h1>
+  </header>
+  <div class="main">
+    {{{ content }}}
+  </div>
+  <footer></footer>
+</body>
+{{{ getBlock "scripts" "./app/bower_components/classie/classie.js" }}}
+{{{ getBlock "scripts" "./menu-panel.js" }}}
+</html>

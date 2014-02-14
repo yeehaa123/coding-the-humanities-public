@@ -106,9 +106,9 @@ a {
       left: -14.375em; } }
 
 .open, .default, .pushed {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out; }
 
 .sidebar {
   display: block;
@@ -152,6 +152,15 @@ a {
 footer {
   margin-top: 0.5em;
   border-top: 0.125em solid #dc322f; }
+
+.presentation-card {
+  *zoom: 1;
+  display: block; }
+  .presentation-card:before, .presentation-card:after {
+    content: " ";
+    display: table; }
+  .presentation-card:after {
+    clear: both; }
 
 .card {
   display: block;
@@ -346,6 +355,9 @@ rijks-search-widget {
         margin-right: 0; }
       .profile:not(:first-child) {
         margin-left: 0%; } }
+
+.presentation-card {
+  margin-bottom: 1.5em; }
 
 .snippet {
   background-color: #eee8d5; }
