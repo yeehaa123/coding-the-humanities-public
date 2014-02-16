@@ -1,0 +1,106 @@
+<link rel="import", href="../app/bower_components/polymer/polymer.html">
+<link rel="import", href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<script src="../app/bower_components/d3/d3.js"></script>
+
+<polymer-element name="cth-chart">
+  <template>
+    <div id="el"></div>
+    <polymer-ajax url="test.json" auto response="{{resp}}"></polymer-ajax>
+
+  </template>
+  <script>
+    Polymer("cth-chart", {
+      resp: [{resourceCount: 5}],
+      svg: null,
+      init: function() {
+        var width = this.width = this.$.el.clientWidth;
+        this.height = this.width / 3;
+        var respLength = this.resp.length;
+        var barSize = this.barSize = function(){
+          return width / respLength;
+        };
+        
+        console.log(barSize());
+        
+        this.svg = d3.select(this.$.el)
+                     .append('svg')
+                     .attr("width", this.width)
+                     .attr("height", this.height);
+
+        var yScale = this.yScale = d3.scale.linear()
+                         .domain([0, d3.max(this.resp, function(d){
+                           return d.resourceCount;
+                         })])
+                         .range([0, this.height]);
+
+        console.log(d3.max(this.resp, function(d){
+                           return d.resourceCount;
+                         }));
+
+        var barScale = this.barScale = d3.scale.linear()
+                           .domain([0, d3.max(this.resp, function(d){
+                             return d.resourceCount;
+                           })])
+                          .range([this.height, 0]);
+
+        var circles = this.svg
+                          .selectAll("rect")
+                          .data(this.resp)
+                          .enter()
+                          .append("rect")
+                          .attr("x", function(d,i){
+                            return i * barSize(); 
+                          })
+                          .attr("y", function(d){
+                            return barScale(d.resourceCount);
+                          })
+                          .attr("width", barSize() * 0.9)
+                          .attr("height", function(d){
+                            return yScale(d.resourceCount);
+                          })
+                          .attr("fill", "teal")
+                         
+      },
+      ready: function() {
+        this.init();
+      },
+      respChanged: function() {
+        var barScale = this.barScale,
+            yScale = this.yScale;
+            width = this.width;
+       
+        var barSize = this.width / this.resp.length;
+        console.log(this.resp);
+
+        bars = this.svg.selectAll("rect")
+          .data(this.resp)
+
+        bars.enter()
+          .append("rect")
+          .attr("x", function(d,i){
+            return width + barSize; 
+          })
+          .attr("y", function(d){
+            return barScale(d.resourceCount);
+          })
+          .attr("width", barSize * 0.9)
+          .attr("height", function(d){
+            return yScale(d.resourceCount);
+          });
+        
+        bars.transition()
+          .duration(500)
+          .attr("x", function(d,i){
+            return i * barSize; 
+          })
+          .attr("y", function(d){
+            return barScale(d.resourceCount);
+          })
+          .attr("width", barSize * 0.9)
+          .attr("height", function(d){
+            return yScale(d.resourceCount);
+          });
+      } 
+    })
+  </script>
+</polymer-element>

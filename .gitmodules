@@ -1,0 +1,3 @@
+[submodule "src/files/rijks"]
+	path = src/files/rijks
+	url = git@github.com:yeehaa123/rijks-polymer-elements.git

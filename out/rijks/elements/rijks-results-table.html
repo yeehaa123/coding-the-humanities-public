@@ -1,0 +1,24 @@
+<polymer-element name="rijks-results-table" attributes="results" noscript>
+  <template>
+    <table>
+      <tr>
+        <th>title</th>
+        <th>artist</th>
+        <th>thumbnail</th>
+      </tr>
+      <template repeat="{{ artwork in results }}">
+        <tr>
+          <td>
+            {{ artwork.title }}
+          </td>
+          <td>
+            {{ artwork.principalOrFirstMaker }}
+          </td>
+          <td>
+            <rijks-thumbnail artwork="{{ artwork }}"></rijks-thumbnail>
+          </td>
+        </tr>
+      </template>
+    </table>
+  </template>
+</polymer-element>

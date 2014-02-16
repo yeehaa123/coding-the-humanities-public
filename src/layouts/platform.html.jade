@@ -1,0 +1,9 @@
+!!!
+html
+  != partial("./head-platform.html.jade.hbs")
+  body.default
+    != partial("./menu-panel.html.jade.hbs")
+    != partial("./site-header.html.jade.hbs")
+    != partial("./page-content.html.hbs", this)
+    != partial("./site-footer.html.jade")
+  != partial("./scripts.html.jade")
