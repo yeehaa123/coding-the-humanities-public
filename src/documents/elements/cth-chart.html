@@ -1,12 +1,11 @@
 <link rel="import", href="../app/bower_components/polymer/polymer.html">
 <link rel="import", href="../app/bower_components/polymer-ajax/polymer-ajax.html">
-<script src="../app/bower_components/d3/d3.js"></script>
 
-<polymer-element name="cth-chart">
+<polymer-element name="cth-chart"
+                 attributes="yValue">
   <template>
     <div id="el"></div>
     <polymer-ajax url="test.json" auto response="{{resp}}"></polymer-ajax>
-
   </template>
   <script>
     var chart = {
@@ -17,9 +16,9 @@
         return chart.width / chart.data.length;
       },
       init: function(config) {
-        console.log(config);
         chart.width = config.el.clientWidth;
         chart.data = config.data; 
+        chart.yValue = config.yValue;
         
         chart.svg = d3.select(config.el)
           .append('svg')
@@ -28,13 +27,13 @@
 
         chart.yScale = d3.scale.linear()
           .domain([0, d3.max(chart.data, function(d){
-            return d.resourceCount;
+            return d[chart.yValue];
            })])
            .range([0, chart.height()]);
 
         chart.barScale = d3.scale.linear()
           .domain([0, d3.max(chart.data, function(d){
-            return d.resourceCount;
+            return d[chart.yValue];
            })])
           .range([chart.height(), 0]);
 
@@ -46,11 +45,11 @@
             return i * chart.barSize(); 
           })
          .attr("y", function(d){
-           return chart.barScale(d.resourceCount);
+           return chart.barScale(d[chart.yValue]);
          })
          .attr("width", chart.barSize() * 0.9)
          .attr("height", function(d){
-           return chart.yScale(d.resourceCount);
+           return chart.yScale(d[chart.yValue]);
          })
          .attr("fill", "teal")
       },
@@ -66,11 +65,11 @@
             return chart.width + chart.barSize(); 
           })
           .attr("y", function(d){
-            return chart.barScale(d.resourceCount);
+            return chart.barScale(d[chart.yValue]);
           })
           .attr("width", chart.barSize() * 0.9)
           .attr("height", function(d){
-            return chart.yScale(d.resourceCount);
+            return chart.yScale(d[chart.yValue]);
           })
           .attr("fill", "teal");
         
@@ -80,11 +79,11 @@
             return i * chart.barSize(); 
           })
           .attr("y", function(d){
-            return chart.barScale(d.resourceCount);
+            return chart.barScale(d[chart.yValue]);
           })
           .attr("width", chart.barSize() * 0.9)
           .attr("height", function(d){
-            return chart.yScale(d.resourceCount);
+            return chart.yScale(d[chart.yValue]);
           });
       }
     };
@@ -92,8 +91,7 @@
     Polymer("cth-chart", {
       resp: [{resourceCount: 5}],
       ready: function() {
-        console.log(this.$.el)
-        chart.init({el: this.$.el, data: this.resp});
+        chart.init({el: this.$.el, data: this.resp, yValue: this.yValue});
       },
       respChanged: function(){
         chart.redraw({data: this.resp});

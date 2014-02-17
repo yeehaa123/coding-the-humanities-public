@@ -1,11 +1,10 @@
 <link rel="import", href="../app/bower_components/polymer/polymer.html">
-<link rel="import", href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<script src="../app/bower_components/d3/d3.js"></script>
 
-<polymer-element name="cth-chart"
+<polymer-element name="cth-barchart"
                  attributes="yValue">
   <template>
     <div id="el"></div>
-    <polymer-ajax url="test.json" auto response="{{resp}}"></polymer-ajax>
   </template>
   <script>
     var chart = {
@@ -88,10 +87,10 @@
       }
     };
 
-    Polymer("cth-chart", {
-      resp: [{resourceCount: 5}],
+    Polymer("cth-barchart", {
+      data: [{resourceCount: 5}],
       ready: function() {
-        chart.init({el: this.$.el, data: this.resp, yValue: this.yValue});
+        chart.init({el: this.$.el, data: this.data, yValue: this.yValue});
       },
       respChanged: function(){
         chart.redraw({data: this.resp});
