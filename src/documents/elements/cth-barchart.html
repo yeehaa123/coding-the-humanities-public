@@ -2,8 +2,11 @@
 <script src="../app/bower_components/d3/d3.js"></script>
 
 <polymer-element name="cth-barchart"
-                 attributes="yValue">
+                 attributes="yValue chartData width">
   <template>
+    <style>
+      :host { display: block; };
+    </style>
     <div id="el"></div>
   </template>
   <script>
@@ -15,7 +18,7 @@
         return chart.width / chart.data.length;
       },
       init: function(config) {
-        chart.width = config.el.clientWidth;
+        chart.width = config.width;
         chart.data = config.data; 
         chart.yValue = config.yValue;
         
@@ -88,12 +91,12 @@
     };
 
     Polymer("cth-barchart", {
-      data: [{resourceCount: 5}],
-      ready: function() {
-        chart.init({el: this.$.el, data: this.data, yValue: this.yValue});
+      chartData: [{resourceCount: 5}],
+      widthChanged: function() {
+        chart.init({el: this.$.el, data: this.chartData, yValue: this.yValue, width: this.width});
       },
-      respChanged: function(){
-        chart.redraw({data: this.resp});
+      chartDataChanged: function(){
+        chart.redraw({data: this.chartData});
       }
     })
   </script>

@@ -1,101 +1,26 @@
 <link rel="import", href="../app/bower_components/polymer/polymer.html">
 <link rel="import", href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<link rel="import", href="./cth-barchart.html">
 
-<polymer-element name="cth-chart"
-                 attributes="yValue">
+<polymer-element name="cth-chart">
   <template>
-    <div id="el"></div>
+    <style>
+      :host { display: block; };
+    </style>
     <polymer-ajax url="test.json" auto response="{{resp}}"></polymer-ajax>
+    <cth-barchart yValue="resourceCount" width="{{width}}" chartData="{{results}}"></cth-barchart>
   </template>
   <script>
-    var chart = {
-      height: function() {
-        return chart.width / 3;
-      },
-      barSize: function(){
-        return chart.width / chart.data.length;
-      },
-      init: function(config) {
-        chart.width = config.el.clientWidth;
-        chart.data = config.data; 
-        chart.yValue = config.yValue;
-        
-        chart.svg = d3.select(config.el)
-          .append('svg')
-          .attr("width", chart.width)
-          .attr("height", chart.height());
-
-        chart.yScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
-           })])
-           .range([0, chart.height()]);
-
-        chart.barScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
-           })])
-          .range([chart.height(), 0]);
-
-        chart.svg.selectAll("rect")
-          .data(chart.data)
-          .enter()
-          .append("rect")
-          .attr("x", function(d,i){
-            return i * chart.barSize(); 
-          })
-         .attr("y", function(d){
-           return chart.barScale(d[chart.yValue]);
-         })
-         .attr("width", chart.barSize() * 0.9)
-         .attr("height", function(d){
-           return chart.yScale(d[chart.yValue]);
-         })
-         .attr("fill", "teal")
-      },
-      redraw: function(config) {
-        chart.data = config.data;
-       
-        bars = chart.svg.selectAll("rect")
-          .data(chart.data)
-
-        bars.enter()
-          .append("rect")
-          .attr("x", function(d,i){
-            return chart.width + chart.barSize(); 
-          })
-          .attr("y", function(d){
-            return chart.barScale(d[chart.yValue]);
-          })
-          .attr("width", chart.barSize() * 0.9)
-          .attr("height", function(d){
-            return chart.yScale(d[chart.yValue]);
-          })
-          .attr("fill", "teal");
-        
-        bars.transition()
-          .duration(500)
-          .attr("x", function(d,i){
-            return i * chart.barSize(); 
-          })
-          .attr("y", function(d){
-            return chart.barScale(d[chart.yValue]);
-          })
-          .attr("width", chart.barSize() * 0.9)
-          .attr("height", function(d){
-            return chart.yScale(d[chart.yValue]);
-          });
-      }
-    };
-
     Polymer("cth-chart", {
-      resp: [{resourceCount: 5}],
-      ready: function() {
-        chart.init({el: this.$.el, data: this.resp, yValue: this.yValue});
+      results: [{resourceCount: 5}],
+      respChanged: function() {
+        if(this.resp) {
+          this.results = this.resp;
+        }
       },
-      respChanged: function(){
-        chart.redraw({data: this.resp});
+      ready: function() {
+        this.width = this.clientWidth;
       }
-    })
+    });
   </script>
 </polymer-element>
