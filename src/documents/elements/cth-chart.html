@@ -9,98 +9,95 @@
 
   </template>
   <script>
-    Polymer("cth-chart", {
-      resp: [{resourceCount: 5}],
-      svg: null,
-      init: function() {
-        var width = this.width = this.$.el.clientWidth;
-        this.height = this.width / 3;
-        var respLength = this.resp.length;
-        var barSize = this.barSize = function(){
-          return width / respLength;
-        };
-        
-        console.log(barSize());
-        
-        this.svg = d3.select(this.$.el)
-                     .append('svg')
-                     .attr("width", this.width)
-                     .attr("height", this.height);
-
-        var yScale = this.yScale = d3.scale.linear()
-                         .domain([0, d3.max(this.resp, function(d){
-                           return d.resourceCount;
-                         })])
-                         .range([0, this.height]);
-
-        console.log(d3.max(this.resp, function(d){
-                           return d.resourceCount;
-                         }));
-
-        var barScale = this.barScale = d3.scale.linear()
-                           .domain([0, d3.max(this.resp, function(d){
-                             return d.resourceCount;
-                           })])
-                          .range([this.height, 0]);
-
-        var circles = this.svg
-                          .selectAll("rect")
-                          .data(this.resp)
-                          .enter()
-                          .append("rect")
-                          .attr("x", function(d,i){
-                            return i * barSize(); 
-                          })
-                          .attr("y", function(d){
-                            return barScale(d.resourceCount);
-                          })
-                          .attr("width", barSize() * 0.9)
-                          .attr("height", function(d){
-                            return yScale(d.resourceCount);
-                          })
-                          .attr("fill", "teal")
-                         
+    var chart = {
+      height: function() {
+        return chart.width / 3;
       },
-      ready: function() {
-        this.init();
+      barSize: function(){
+        return chart.width / chart.data.length;
       },
-      respChanged: function() {
-        var barScale = this.barScale,
-            yScale = this.yScale;
-            width = this.width;
+      init: function(config) {
+        console.log(config);
+        chart.width = config.el.clientWidth;
+        chart.data = config.data; 
+        
+        chart.svg = d3.select(config.el)
+          .append('svg')
+          .attr("width", chart.width)
+          .attr("height", chart.height());
+
+        chart.yScale = d3.scale.linear()
+          .domain([0, d3.max(chart.data, function(d){
+            return d.resourceCount;
+           })])
+           .range([0, chart.height()]);
+
+        chart.barScale = d3.scale.linear()
+          .domain([0, d3.max(chart.data, function(d){
+            return d.resourceCount;
+           })])
+          .range([chart.height(), 0]);
+
+        chart.svg.selectAll("rect")
+          .data(chart.data)
+          .enter()
+          .append("rect")
+          .attr("x", function(d,i){
+            return i * chart.barSize(); 
+          })
+         .attr("y", function(d){
+           return chart.barScale(d.resourceCount);
+         })
+         .attr("width", chart.barSize() * 0.9)
+         .attr("height", function(d){
+           return chart.yScale(d.resourceCount);
+         })
+         .attr("fill", "teal")
+      },
+      redraw: function(config) {
+        chart.data = config.data;
        
-        var barSize = this.width / this.resp.length;
-        console.log(this.resp);
-
-        bars = this.svg.selectAll("rect")
-          .data(this.resp)
+        bars = chart.svg.selectAll("rect")
+          .data(chart.data)
 
         bars.enter()
           .append("rect")
           .attr("x", function(d,i){
-            return width + barSize; 
+            return chart.width + chart.barSize(); 
           })
           .attr("y", function(d){
-            return barScale(d.resourceCount);
+            return chart.barScale(d.resourceCount);
           })
-          .attr("width", barSize * 0.9)
+          .attr("width", chart.barSize() * 0.9)
           .attr("height", function(d){
-            return yScale(d.resourceCount);
-          });
+            return chart.yScale(d.resourceCount);
+          })
+          .attr("fill", "teal");
         
         bars.transition()
           .duration(500)
           .attr("x", function(d,i){
-            return i * barSize; 
+            return i * chart.barSize(); 
           })
           .attr("y", function(d){
-            return barScale(d.resourceCount);
+            return chart.barScale(d.resourceCount);
           })
-          .attr("width", barSize * 0.9)
+          .attr("width", chart.barSize() * 0.9)
           .attr("height", function(d){
-            return yScale(d.resourceCount);
+            return chart.yScale(d.resourceCount);
           });
-      } 
+      }
+    };
+
+    Polymer("cth-chart", {
+      resp: [{resourceCount: 5}],
+      ready: function() {
+        console.log(this.$.el)
+        chart.init({el: this.$.el, data: this.resp});
+      },
+      respChanged: function(){
+        chart.redraw({data: this.resp});
+      }
     })
   </script>
 </polymer-element>
