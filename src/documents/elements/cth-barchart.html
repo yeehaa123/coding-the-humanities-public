@@ -4,10 +4,6 @@
 <polymer-element name="cth-barchart"
                  attributes="yValue chartData width">
   <template>
-    <style>
-      :host { display: block; };
-    </style>
-    <div id="el"></div>
   </template>
   <script>
     var chart = {
@@ -57,6 +53,10 @@
       },
       redraw: function(config) {
         chart.data = config.data;
+        chart.width = config.width || chart.width;
+
+        chart.svg
+          .attr("width", chart.width)
        
         bars = chart.svg.selectAll("rect")
           .data(chart.data)
@@ -93,7 +93,11 @@
     Polymer("cth-barchart", {
       chartData: [{resourceCount: 5}],
       widthChanged: function() {
-        chart.init({el: this.$.el, data: this.chartData, yValue: this.yValue, width: this.width});
+        if(!chart.width) {
+          chart.init({el: this.shadowRoot, data: this.chartData, yValue: this.yValue, width: this.width});
+        } else {
+          chart.redraw({data: this.chartData, width: this.width});
+        }
       },
       chartDataChanged: function(){
         chart.redraw({data: this.chartData});
