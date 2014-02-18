@@ -51,13 +51,27 @@
          })
          .attr("fill", "teal")
       },
-      redraw: function(config) {
-        chart.data = config.data;
+      resize: function(config) {
         chart.width = config.width || chart.width;
-
         chart.svg
           .attr("width", chart.width)
-       
+          .attr("height", chart.height)
+
+        chart.yScale = d3.scale.linear()
+          .domain([0, d3.max(chart.data, function(d){
+            return d[chart.yValue];
+           })])
+           .range([0, chart.height()]);
+
+        chart.barScale = d3.scale.linear()
+          .domain([0, d3.max(chart.data, function(d){
+            return d[chart.yValue];
+           })])
+          .range([chart.height(), 0]);
+      },
+      redraw: function(config) {
+        chart.data = config.data;
+
         bars = chart.svg.selectAll("rect")
           .data(chart.data)
 
@@ -91,16 +105,19 @@
     };
 
     Polymer("cth-barchart", {
+      timeOut: null,
       chartData: [{resourceCount: 5}],
       widthChanged: function() {
         if(!chart.width) {
           chart.init({el: this.shadowRoot, data: this.chartData, yValue: this.yValue, width: this.width});
         } else {
-          chart.redraw({data: this.chartData, width: this.width});
+          chart.resize({width: this.width});
+          chart.redraw({data: this.chartData});
         }
       },
       chartDataChanged: function(){
-        chart.redraw({data: this.chartData});
+        clearTimeout(this.timeOut);
+        this.timeOut = setTimeout(chart.redraw({data: this.chartData}), 100);
       }
     })
   </script>
