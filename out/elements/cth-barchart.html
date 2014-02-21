@@ -7,117 +7,109 @@
   </template>
   <script>
     var chart = {
-      height: function() {
-        return chart.width / 3;
+      height: function(width) {
+        return width / 3;
       },
-      barSize: function(){
-        return chart.width / chart.data.length;
-      },
-      init: function(config) {
-        chart.width = config.width;
-        chart.data = config.data; 
-        chart.yValue = config.yValue;
-        
-        chart.svg = d3.select(config.el)
+      barSize: function(width, dataLength){
+        return width / dataLength;
+      }
+    }
+
+    Polymer("cth-barchart", {
+      timeOut: null,
+      chartData: [{resourceCount: 5}],
+      init: function() {
+        var self = this;
+        this.height = chart.height(self.width);
+        this.barSize = chart.barSize(self.width, self.chartData.length);
+
+        console.log(this.shadowRoot);
+        this.svg = d3.select(self.shadowRoot)
           .append('svg')
-          .attr("width", chart.width)
-          .attr("height", chart.height());
+          .attr("width", self.width)
+          .attr("height", self.height);
 
-        chart.yScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
+        this.yScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
            })])
-           .range([0, chart.height()]);
+           .range([0, self.height]);
 
-        chart.barScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
+        this.barScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
            })])
-          .range([chart.height(), 0]);
+          .range([self.height, 0]);
 
-        chart.svg.selectAll("rect")
-          .data(chart.data)
+        this.svg.selectAll("rect")
+          .data(self.chartData)
           .enter()
           .append("rect")
           .attr("x", function(d,i){
-            return i * chart.barSize(); 
+            return i * self.barSize;
           })
          .attr("y", function(d){
-           return chart.barScale(d[chart.yValue]);
+           return self.barScale(d[self.yValue]);
          })
-         .attr("width", chart.barSize() * 0.9)
+         .attr("width", self.barSize * 0.9)
          .attr("height", function(d){
-           return chart.yScale(d[chart.yValue]);
+           return self.yScale(d[self.yValue]);
          })
          .attr("fill", "teal")
+        
+        this.initialized = true;
       },
-      resize: function(config) {
-        chart.width = config.width || chart.width;
-        chart.svg
-          .attr("width", chart.width)
-          .attr("height", chart.height)
-
-        chart.yScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
-           })])
-           .range([0, chart.height()]);
-
-        chart.barScale = d3.scale.linear()
-          .domain([0, d3.max(chart.data, function(d){
-            return d[chart.yValue];
-           })])
-          .range([chart.height(), 0]);
+      resize: function() {
+        var self = this;
+        this.height = chart.height(self.width);
+        this.svg
+          .attr("width", self.width)
       },
-      redraw: function(config) {
-        chart.data = config.data;
+      redraw: function() {
+        var self = this;
+        this.barSize = chart.barSize(self.width, self.chartData.length);
 
-        bars = chart.svg.selectAll("rect")
-          .data(chart.data)
+        bars = this.svg.selectAll("rect")
+          .data(self.chartData)
 
         bars.enter()
           .append("rect")
           .attr("x", function(d,i){
-            return chart.width + chart.barSize(); 
+            return self.width + self.barSize; 
           })
           .attr("y", function(d){
-            return chart.barScale(d[chart.yValue]);
+            return self.barScale(d[self.yValue]);
           })
-          .attr("width", chart.barSize() * 0.9)
+          .attr("width", self.barSize * 0.9)
           .attr("height", function(d){
-            return chart.yScale(d[chart.yValue]);
+            return self.yScale(d[self.yValue]);
           })
           .attr("fill", "teal");
         
         bars.transition()
           .duration(500)
           .attr("x", function(d,i){
-            return i * chart.barSize(); 
+            return i * self.barSize; 
           })
           .attr("y", function(d){
-            return chart.barScale(d[chart.yValue]);
+            return self.barScale(d[self.yValue]);
           })
-          .attr("width", chart.barSize() * 0.9)
+          .attr("width", self.barSize * 0.9)
           .attr("height", function(d){
-            return chart.yScale(d[chart.yValue]);
+            return self.yScale(d[self.yValue]);
           });
-      }
-    };
-
-    Polymer("cth-barchart", {
-      timeOut: null,
-      chartData: [{resourceCount: 5}],
+      },
       widthChanged: function() {
-        if(!chart.width) {
-          chart.init({el: this.shadowRoot, data: this.chartData, yValue: this.yValue, width: this.width});
+        if(!this.initialized) {
+          this.init();
         } else {
-          chart.resize({width: this.width});
-          chart.redraw({data: this.chartData});
+          this.resize();
+          this.redraw();
         }
       },
       chartDataChanged: function(){
         clearTimeout(this.timeOut);
-        this.timeOut = setTimeout(chart.redraw({data: this.chartData}), 100);
+        this.timeOut = setTimeout(this.redraw(), 100);
       }
     })
   </script>
