@@ -9,7 +9,7 @@ At the moment, there are no broadly available academic programming courses aimed
 
 1. Knowledge of programming helps students and researchers to understand the various technologically mediated objects that they are studying. 
 
-2. Developing custom tools, rather than using ready-made ones, can improve the actual practice of humanities research as well as (the quantity and quality) of its output.
+2. Developing custom tools, rather than using ready-made ones, can improve the actual practice of humanities research as well as (the quantity and quality of) its output.
 
 3. There is an ever-growing demand in the public and private sector for academics who can read and write code.
 
