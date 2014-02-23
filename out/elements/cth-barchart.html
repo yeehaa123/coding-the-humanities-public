@@ -1,115 +1,122 @@
 <link rel="import", href="../app/bower_components/polymer/polymer.html">
 <script src="../app/bower_components/d3/d3.js"></script>
+<script src="../app/bower_components/underscore/underscore.js"></script>
 
 <polymer-element name="cth-barchart"
                  attributes="yValue chartData width">
   <template>
   </template>
   <script>
-    var chart = {
-      height: function(width) {
-        return width / 3;
-      },
-      barSize: function(width, dataLength){
-        return width / dataLength;
-      }
-    }
-
     Polymer("cth-barchart", {
-      timeOut: null,
       chartData: [{resourceCount: 5}],
-      init: function() {
+      bars: function() {
+        return this.svg
+                   .selectAll("rect")
+                   .data(this.chartData);
+      },
+      barsEnter: function() {
         var self = this;
-        this.height = chart.height(self.width);
-        this.barSize = chart.barSize(self.width, self.chartData.length);
-
-        console.log(this.shadowRoot);
-        this.svg = d3.select(self.shadowRoot)
-          .append('svg')
-          .attr("width", self.width)
-          .attr("height", self.height);
-
-        this.yScale = d3.scale.linear()
-          .domain([0, d3.max(self.chartData, function(d){
-            return d[self.yValue];
-           })])
-           .range([0, self.height]);
-
-        this.barScale = d3.scale.linear()
-          .domain([0, d3.max(self.chartData, function(d){
-            return d[self.yValue];
-           })])
-          .range([self.height, 0]);
-
-        this.svg.selectAll("rect")
-          .data(self.chartData)
-          .enter()
+        return self.bars().enter()
           .append("rect")
           .attr("x", function(d,i){
-            return i * self.barSize;
+            return self.width + self.barSize();
           })
          .attr("y", function(d){
            return self.barScale(d[self.yValue]);
          })
-         .attr("width", self.barSize * 0.9)
+         .attr("width", self.barSize() * 0.9)
          .attr("height", function(d){
            return self.yScale(d[self.yValue]);
          })
          .attr("fill", "teal")
-        
-        this.initialized = true;
+      },
+      barSize: function() {
+        return this.width / this.chartData.length; 
+      },
+      height: function() {
+       return this.width / 3; 
+      },
+      labelsEnter: function() {
+        var self = this;
+        self.svg
+          .selectAll("text")
+          .data(self.chartData)
+          .enter()
+          .append("text")
+         .text(function(d) {
+           return d[self.yValue];
+          })
+          .attr("font-family", "sans-serif")
+          .attr("font-size", "11px")
+          .attr("fill", "white")
+          .attr("text-anchor", "middle")
+          .attr("x", function(d, i) {
+            return i * self.barSize() + (self.barSize() * 0.9) / 2;
+          })
+          .attr("y", function(d) {
+              return self.barScale(d[self.yValue]) + 20;
+          });
+      },
+      init: function() {
+        var self = this;
+
+        self.svg = d3.select(self.shadowRoot)
+          .append('svg')
+          .attr("width", self.width)
+          .attr("height", self.height());
+
+        self.yScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
+           })])
+           .range([0, self.height()]);
+
+        self.barScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
+           })])
+          .range([self.height(), 0]);
+
+        self.barsEnter().attr("x", function(d,i){
+          return i * self.barSize();
+        });
+
+        self.labelsEnter();
       },
       resize: function() {
-        var self = this;
-        this.height = chart.height(self.width);
         this.svg
-          .attr("width", self.width)
+          .attr("width", this.width)
       },
       redraw: function() {
         var self = this;
-        this.barSize = chart.barSize(self.width, self.chartData.length);
 
-        bars = this.svg.selectAll("rect")
-          .data(self.chartData)
+        self.barsEnter();
 
-        bars.enter()
-          .append("rect")
-          .attr("x", function(d,i){
-            return self.width + self.barSize; 
-          })
-          .attr("y", function(d){
-            return self.barScale(d[self.yValue]);
-          })
-          .attr("width", self.barSize * 0.9)
-          .attr("height", function(d){
-            return self.yScale(d[self.yValue]);
-          })
-          .attr("fill", "teal");
-        
-        bars.transition()
+        self.bars().transition()
           .duration(500)
           .attr("x", function(d,i){
-            return i * self.barSize; 
+            return i * self.barSize(); 
           })
           .attr("y", function(d){
             return self.barScale(d[self.yValue]);
           })
-          .attr("width", self.barSize * 0.9)
+          .attr("width", self.barSize() * 0.9)
           .attr("height", function(d){
             return self.yScale(d[self.yValue]);
           });
-      },
+          self.labelsEnter();
+      }, 
       widthChanged: function() {
         if(!this.initialized) {
           this.init();
+          this.initialized = true;
         } else {
           this.resize();
           this.redraw();
         }
       },
       chartDataChanged: function(){
-        clearTimeout(this.timeOut);
-        this.timeOut = setTimeout(this.redraw(), 100);
+        _.debounce(this.redraw(), 100);
       }
     })
   </script>
