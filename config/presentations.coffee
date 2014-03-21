@@ -14,15 +14,21 @@ module.exports = ->
     thatCamp:
       slides: ->
         @getCollection('presentationThatCamp').toJSON()
-    soundsignatures:
+    soundSignatures:
       slides: ->
-        @getcollection('presentationsoundsignatures').tojson()
+        @getCollection('presentationSoundSignatures').toJSON()
       titles: ->
-        collection = @getcollection('presentationsoundsignatures')
-        gettitles(collection)
+        collection = @getCollection('presentationSoundSignatures')
+        getTitles(collection)
     rijksKickOff:
       slides: ->
         @getCollection('presentationRijks').toJSON()
       titles: ->
         collection = @getCollection('presentationRijks')
+        getTitles(collection)
+    benjamedia:
+      slides: ->
+        @getCollection('presentationBenjamedia').toJSON()
+      titles: ->
+        collection = @getCollection('presentationBenjamedia')
         getTitles(collection)

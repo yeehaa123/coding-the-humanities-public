@@ -8,6 +8,8 @@ module.exports = ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'thatCamp'}, {order_prop: 1})
     presentationRijks: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'rijks'}, {order_prop: 1})
+    presentationBenjamedia: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'benjamedia'}, {order_prop: 1})
     presentationSoundSignatures: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'soundSignatures'}, {order_prop: 1})
     learnTopics: ->
@@ -17,4 +19,4 @@ module.exports = ->
     pages: ->
       @getCollection("html").findAllLive({isPage: true})
     presentations: ->
-      @getCollection("html").findAllLive({isPresentation: true})
+      @getCollection("html").findAllLive({isPresentation: true}, {date: -1})

@@ -1,21 +1,21 @@
 .presentation-card {
   @include row;
 }
-.card {
+.content {
   @include span-columns(10);
-  @include omega();
   @include row;
+  @include omega();
+}
+
+.card {
   position: relative;
   background-color: $cardBackgroundColor;
   color: $cardTextColor;
   padding: em(0);
   margin-bottom: em(24);
 
-  &:not(:first-child) {
-    @include shift(2);
-    @include media($mobile){
-      @include shift(0);
-    }
+  @include media($mobile){
+    @include shift(0);
   }
 
   &:last-child {

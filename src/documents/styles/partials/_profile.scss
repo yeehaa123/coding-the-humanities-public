@@ -1,10 +1,4 @@
 .profile {
-  @include span-columns(10);
-  @include omega();
-  
-  &:not(:first-child) {
-    @include shift(2);
-  }
   
   .profile-picture {
     overflow: hidden;
