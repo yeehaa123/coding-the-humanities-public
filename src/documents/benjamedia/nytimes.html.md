@@ -1,10 +1,10 @@
 ---
-title: Snow Fall 
-section-title: Benjamedia 
+title: NY Times
+section-title: Toolmaking 
 type: normal
-section: 1
-order_prop: 23
+section: 3
+order_prop: 63
 ---
 
-<a href="http://www.nytimes.com/projects/2012/snow-fall/"><img class="snowfall" src="./images/snowfall-small.jpg"></img></a>
+<a href="https://github.com/orgs/NYTimes/members"><img class="nytimes" src="./images/nytimes-devs-small.jpg"></img></a>
 

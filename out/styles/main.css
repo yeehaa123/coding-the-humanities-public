@@ -166,11 +166,23 @@ footer {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 82.94039%; }
+  width: 82.94039%;
+  *zoom: 1;
+  display: block;
+  margin-right: 0; }
   .content:last-child {
     margin-right: 0; }
+  .content:before, .content:after {
+    content: " ";
+    display: table; }
+  .content:after {
+    clear: both; }
+  @media screen and (max-width: 43.75em) {
+    .content {
+      width: 100%; } }
 
 .card {
+  position: relative;
   background-color: #93a1a1;
   color: #073642;
   padding: 0em;
@@ -509,6 +521,10 @@ rijks-search-widget {
     width: 650px; }
   .slide .storyboard {
     margin-top: -75px;
+    margin-left: -60px;
+    width: 650px; }
+  .slide .nytimes {
+    margin-top: -65px;
     margin-left: -60px;
     width: 650px; }
   .slide .mess {
