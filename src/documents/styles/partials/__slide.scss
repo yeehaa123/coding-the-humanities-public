@@ -42,8 +42,20 @@
     padding-top: 80px;
   }
 
-  .json, .whale {
+  .json, .whale, .snowfall {
     margin-top: -55px;
+    margin-left: -60px;
+    width: 650px;
+  }
+
+  .storyboard {
+    margin-top: -75px;
+    margin-left: -60px;
+    width: 650px;
+  }
+
+  .mess {
+    margin-top: -65px;
     margin-left: -60px;
     width: 650px;
   }
@@ -55,7 +67,9 @@
   }
 
   blockquote {
-    strong {
+    margin-left: em(-10);
+    
+    strong, em {
       color: $red;
     }
 

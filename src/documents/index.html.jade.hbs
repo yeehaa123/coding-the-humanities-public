@@ -4,8 +4,8 @@ layout: "default"
 isPage: true
 ---
 {{#each pages.data.posts}}
+!= partial("./posts/sidebar.html.jade.hbs", {{{toJSON this}}})
 article.content
-  != partial("./posts/sidebar.html.jade.hbs", {{{toJSON this}}})
   section.post
     header
       h1 {{title}}

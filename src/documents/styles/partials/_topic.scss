@@ -1,8 +1,6 @@
 .topic {
 
   header {
-    @include omega();
-
     span {
       display: none;
       @include media($mobile) {
@@ -22,7 +20,7 @@
     }
   }
 
-  section {
+  .card-content {
     @include shift(3);
     padding-left: em(24);
     @include media($mobile) {
@@ -34,7 +32,11 @@
     p {
       padding: em(0) em(8);
     }
+    .resources {
+      float: none;
+    }
   }
+
 
   @for $i from 0 to 7 {
     &[data-difficulty=level#{$i}] {

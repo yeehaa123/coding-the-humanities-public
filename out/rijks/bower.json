@@ -1,0 +1,31 @@
+{
+  "name": "rijks-polymer-elements",
+  "version": "0.1.0",
+  "homepage": "https://github.com/yeehaa123/rijks-polymer-elements",
+  "authors": [
+    "Yeehaa <medialoperations@gmail.com>"
+  ],
+  "description": "Polymer elements to declaratively use the Rijksmuseum API in your HTML and JavaScript",
+  "main": "index.js",
+  "keywords": [
+    "rijksmuseum",
+    "api",
+    "html",
+    "javascript",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer-ajax": "Polymer/polymer-ajax#~0.1.3",
+    "polymer": "~0.1.3",
+    "underscore": "~1.5.2"
+  }
+}

@@ -1,7 +1,6 @@
 .post {
   padding-left: em(16px, 16px);
   padding-right: em(16px, 16px);
-  @include span-columns(10);
   @include omega();
 
 

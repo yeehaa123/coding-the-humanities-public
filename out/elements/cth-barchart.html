@@ -1,0 +1,123 @@
+<link rel="import", href="../app/bower_components/polymer/polymer.html">
+<script src="../app/bower_components/d3/d3.js"></script>
+<script src="../app/bower_components/underscore/underscore.js"></script>
+
+<polymer-element name="cth-barchart"
+                 attributes="yValue chartData width">
+  <template>
+  </template>
+  <script>
+    Polymer("cth-barchart", {
+      chartData: [{resourceCount: 5}],
+      bars: function() {
+        return this.svg
+                   .selectAll("rect")
+                   .data(this.chartData);
+      },
+      barsEnter: function() {
+        var self = this;
+        return self.bars().enter()
+          .append("rect")
+          .attr("x", function(d,i){
+            return self.width + self.barSize();
+          })
+         .attr("y", function(d){
+           return self.barScale(d[self.yValue]);
+         })
+         .attr("width", self.barSize() * 0.9)
+         .attr("height", function(d){
+           return self.yScale(d[self.yValue]);
+         })
+         .attr("fill", "teal")
+      },
+      barSize: function() {
+        return this.width / this.chartData.length; 
+      },
+      height: function() {
+       return this.width / 3; 
+      },
+      labelsEnter: function() {
+        var self = this;
+        self.svg
+          .selectAll("text")
+          .data(self.chartData)
+          .enter()
+          .append("text")
+         .text(function(d) {
+           return d[self.yValue];
+          })
+          .attr("font-family", "sans-serif")
+          .attr("font-size", "11px")
+          .attr("fill", "white")
+          .attr("text-anchor", "middle")
+          .attr("x", function(d, i) {
+            return i * self.barSize() + (self.barSize() * 0.9) / 2;
+          })
+          .attr("y", function(d) {
+              return self.barScale(d[self.yValue]) + 20;
+          });
+      },
+      init: function() {
+        var self = this;
+
+        self.svg = d3.select(self.shadowRoot)
+          .append('svg')
+          .attr("width", self.width)
+          .attr("height", self.height());
+
+        self.yScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
+           })])
+           .range([0, self.height()]);
+
+        self.barScale = d3.scale.linear()
+          .domain([0, d3.max(self.chartData, function(d){
+            return d[self.yValue];
+           })])
+          .range([self.height(), 0]);
+
+        self.barsEnter().attr("x", function(d,i){
+          return i * self.barSize();
+        });
+
+        self.labelsEnter();
+      },
+      resize: function() {
+        this.svg
+          .attr("width", this.width)
+      },
+      redraw: function() {
+        var self = this;
+
+        self.barsEnter();
+
+        self.bars().transition()
+          .duration(500)
+          .attr("x", function(d,i){
+            return i * self.barSize(); 
+          })
+          .attr("y", function(d){
+            return self.barScale(d[self.yValue]);
+          })
+          .attr("width", self.barSize() * 0.9)
+          .attr("height", function(d){
+            return self.yScale(d[self.yValue]);
+          });
+          self.labelsEnter();
+      }, 
+      widthChanged: function() {
+        if(!this.initialized) {
+          this.init();
+          this.initialized = true;
+        } else {
+          this.resize();
+          this.redraw();
+        }
+      },
+      chartDataChanged: function(){
+        _.debounce(this.redraw(), 100);
+      }
+    })
+  </script>
+</polymer-element>

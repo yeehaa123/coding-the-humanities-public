@@ -3,12 +3,9 @@
 }
 .content {
   @include span-columns(10);
-  @include row;
-  @include omega();
 }
 
 .card {
-  position: relative;
   background-color: $cardBackgroundColor;
   color: $cardTextColor;
   padding: em(0);

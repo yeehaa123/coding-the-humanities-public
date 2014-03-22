@@ -1,0 +1,29 @@
+<link rel="import", href="../app/bower_components/polymer/polymer.html">
+<link rel="import", href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<link rel="import", href="./cth-barchart.html">
+
+<polymer-element name="cth-chart">
+  <template>
+    <style>
+      :host { display: block; };
+    </style>
+    <polymer-ajax url="test.json" auto response="{{resp}}"></polymer-ajax>
+    <cth-barchart yValue="resourceCount" width="{{width}}" chartData="{{results}}"></cth-barchart>
+  </template>
+  <script>
+    Polymer("cth-chart", {
+      results: [{resourceCount: 5}],
+      respChanged: function() {
+        if(this.resp) {
+          this.results = this.resp;
+        }
+      },
+      ready: function() {
+        this.width = this.clientWidth;
+      },
+      clientWidthChanged: function() {
+        this.width = this.clientWidth;
+      }
+    });
+  </script>
+</polymer-element>

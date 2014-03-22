@@ -1,0 +1,29 @@
+<link rel="import" href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<script src="../app/bower_components/underscore/underscore.js"></script>
+
+<polymer-element name="rijks-search" attributes="query imageOnly list">
+  <template>
+  <polymer-ajax url="{{baseUrl}}?{{key}}&format=json&q={{ serviceQuery }}&imgonly={{ imageOnly }}" auto="{{auto}}" handleAs="json" response="{{response}}"></polymer-ajax>
+  </template>
+  <script>
+    Polymer('rijks-search', {
+      baseUrl: "https://www.rijksmuseum.nl/api/en/collection",
+      key: "key=VkqhIcxT",
+      auto: false,
+      query: '',
+      response: null,
+      list: null,
+      queryChanged: _.throttle(function() {
+        if (this.query) {
+          this.auto = true;
+          this.serviceQuery = this.query;
+         } else {
+           this.list = null;
+        }
+      }, 1000),
+      responseChanged: function(){
+        this.list = this.response;
+      }
+    });
+  </script>
+</polymer-element>

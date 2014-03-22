@@ -1,0 +1,20 @@
+<polymer-element name="rijks-thumbnail" attributes="artwork">
+  <template>
+    <img width="128px" src="{{ artwork.webImage.url }}"/>
+  </template>
+  <script>
+    Polymer('rijks-thumbnail', {
+      observe: {
+        'artwork': function () {
+          if(this.artwork.webImage) {
+            this.artwork.webImage.url = this.artwork.webImage.url.replace("s0", "s128");
+          } else {
+            this.artwork.webImage = {
+              url: "http://www.random.org/analysis/randbitmap-wamp-section.png"
+            };
+          }
+        }
+      }
+    });
+  </script>
+</polymer-element>
