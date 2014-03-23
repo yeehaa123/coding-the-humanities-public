@@ -1,6 +1,6 @@
 ---
-title: NY Times
-section-title: Toolmaking 
+title: Toolmakers 
+section-title: Coding the Humanities 
 type: normal
 section: 3
 order_prop: 63

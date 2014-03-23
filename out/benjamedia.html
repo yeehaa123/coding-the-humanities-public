@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>The Scholar as Toolmaker</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="http://fonts.googleapis.com/css?family=Abel|Codystar" rel="stylesheet" type="text/css"/><link rel="stylesheet" href="./styles/main.css"/></head><body class="default"><div class="menu-panel default"><nav class="main-nav"><ul><li><a href="./learn.html">Learn</a></li><li><a href="./index.html">Blog</a></li><li><a href="./people.html">People</a></li><li><a href="./presentations.html">Presentations</a></li><li><a href="./vision.html">Vision</a></li></ul></nav></div><header class="site-header"><img src="./images/menu-button.svg" class="menu-button"/><h1><a href="./">Coding the Humanities</a></h1></header><div class="main">
+<!DOCTYPE html><html><head><title>The Scholar as Toolmaker</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="http://fonts.googleapis.com/css?family=Abel|Codystar" rel="stylesheet" type="text/css"/><link rel="stylesheet" href="./styles/main.css"/></head><body class="default"><div class="menu-panel default"><nav class="main-nav"><ul><li><a href="./index.html">Blog</a></li><li><a href="./learn.html">Learn</a></li><li><a href="./people.html">People</a></li><li><a href="./presentations.html">Presentations</a></li><li><a href="./vision.html">Vision</a></li></ul></nav></div><header class="site-header"><img src="./images/menu-button.svg" class="menu-button"/><h1><a href="./">Coding the Humanities</a></h1></header><div class="main">
   <div class="slides impress-not-supported">
     <div id="impress">
       
@@ -31,7 +31,7 @@
 
   <a href="#/the-right-tendency"><h2 class="section2">The Right Tendency</h2></a>
 
-  <a href="#/toolmaking"><h2 class="section3">Toolmaking</h2></a>
+  <a href="#/coding-the-humanities"><h2 class="section3">Coding the Humanities</h2></a>
 
   </section>
 </section>
@@ -135,10 +135,10 @@ its time. In other words, it is directly concerned with literary <em>technique</
 </section>
 
 <section class="card step slide quote section2" 
-         id="teaching" 
+         id="collaboration" 
          data-x="6800">
   <header>
-    <h1>Teaching</h1>
+    <h1>Collaboration</h1>
     
     
     <h2>The Right Tendency</h2>
@@ -151,7 +151,7 @@ character of a model: it must be able to instruct other writers in their
 production and secondly, it must be able to place an <strong>improved apparatus</strong>
 at their disposal. This apparatus will be better the more consumers it 
 brings in contact with the production process - in short, the more readers
-or spectators it turns into collaborators.&quot;</p>
+or spectators it turns into <strong>collaborators</strong>.&quot;</p>
 </blockquote>
 <p>(Benjamin 98)</p>
 
@@ -159,10 +159,10 @@ or spectators it turns into collaborators.&quot;</p>
 </section>
 
 <section class="card step slide section-title section3" 
-         id="toolmaking" 
+         id="coding-the-humanities" 
          data-x="7650">
   <header>
-    <h1>Toolmaking</h1>
+    <h1>Coding the Humanities</h1>
     
     
   </header>
@@ -172,18 +172,148 @@ or spectators it turns into collaborators.&quot;</p>
 </section>
 
 <section class="card step slide normal section3" 
-         id="ny-times" 
+         id="toolmakers" 
          data-x="8500">
   <header>
-    <h1>NY Times</h1>
+    <h1>Toolmakers</h1>
     
     
-    <h2>Toolmaking</h2>
+    <h2>Coding the Humanities</h2>
     
   </header>
   <section>
     <p><a href="https://github.com/orgs/NYTimes/members"><img class="nytimes" src="./images/nytimes-devs-small.jpg"></img></a></p>
 
+  </section>
+</section>
+
+<section class="card step slide normal section3" 
+         id="teaching" 
+         data-x="9350">
+  <header>
+    <h1>Teaching</h1>
+    
+    
+    <h2>Coding the Humanities</h2>
+    
+  </header>
+  <section>
+    <p><a href="http://ast.codingthehumanities.com"><img class="ast" src="./images/ast.jpg"></img></a></p>
+
+  </section>
+</section>
+
+<section class="card step slide normal section3" 
+         id="languages" 
+         data-x="10200">
+  <header>
+    <h1>Languages</h1>
+    
+    
+    <h2>Coding the Humanities</h2>
+    
+  </header>
+  <section>
+    <table class="comparison">
+  <thead>
+    <th>Imperative</th>
+    <th>Declarative</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 <span>Print</span> &quot;Yeehaa&quot;</td>
+      <td><span>&lt;h1&gt;</span>This is a Header...<span>&lt;/h1&gt;</span></td>
+    </tr>
+    <tr>
+      <td>20 <span>Goto</span> 10</td>
+      <td><span>&lt;p&gt;</span>... and a Paragraph<span>&lt;/p&gt;</span></td>
+    </tr>
+  </tbody>
+</table>
+  </section>
+</section>
+
+<section class="card step slide normal section3" 
+         id="imperative" 
+         data-x="11050">
+  <header>
+    <h1>Imperative</h1>
+    
+    
+    <h2>Coding the Humanities</h2>
+    
+  </header>
+  <section>
+    <div class="imperative">
+  <p>$(document).ready(function(){</p>
+  <p class="indent">  var words, text, wordsString;</p>
+  <p class="indent">  text = $(&#39;article&#39;).innerText();</p> 
+  <p class="indent">  words = filterWords(text, blacklist);</p>
+  <p class="indent">  wordsString = words.join(&quot;, &quot;);</p>
+  <p class="indent">  $(&#39;body&#39;).append(wordsString);
+  <p>});</p>
+</div>
+  </section>
+</section>
+
+<section class="card step slide normal section3" 
+         id="declarative" 
+         data-x="11900">
+  <header>
+    <h1>Declarative</h1>
+    
+    
+    <h2>Coding the Humanities</h2>
+    
+  </header>
+  <section>
+    <div class="declarative">
+<p>&lt;filterWords blacklist=&quot;{{blacklist}}&quot;&gt;&lt;/filterWords&gt;</p>
+</div>
+  </section>
+</section>
+
+<section class="card step slide normal " 
+         id="resources" 
+         data-x="12750">
+  <header>
+    <h1>Resources</h1>
+    
+    
+  </header>
+  <section>
+    <table class="resources">
+  <tbody>
+    <tr>
+      <td>Walter Benjamin</td>
+      <td>The Author as Producer</td>
+    </tr>
+    <tr>
+      <td rowspan="2">NY Times</td>
+      <td><a href="http://www.nytimes.com/projects/2012/snow-fall/">Snow Fall</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/orgs/NYTimes/members">Github</a></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Web Components</td>
+      <td><a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">HTML5 Rocks</a></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.polymer-project.org">Polymer Project</a></td>
+    </tr>
+    <tr>
+      <td rowspan="3">Coding the Humanities</td>
+      <td><a href="http://www.codingthehumanities.com">Project Site</a></td>
+    </tr>
+    <tr>
+      <td><a href="http://ast.codingthehumanities.com">Course Site</a></td>
+    </tr>
+    <tr>
+      <td><a href="http://benjamedia.herokuapp.com/mississippi.html">Benjamedia (soon...)</a></td>
+    </tr>
+  </tbody>
+</table>
   </section>
 </section>
 

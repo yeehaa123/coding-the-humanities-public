@@ -523,12 +523,12 @@ rijks-search-widget {
     margin-top: -75px;
     margin-left: -60px;
     width: 650px; }
-  .slide .nytimes {
+  .slide .nytimes, .slide .mess, .slide .ast {
     margin-top: -65px;
     margin-left: -60px;
     width: 650px; }
-  .slide .mess {
-    margin-top: -65px;
+  .slide .ast {
+    margin-top: -70px;
     margin-left: -60px;
     width: 650px; }
   .slide .dom-diagram {
@@ -562,6 +562,15 @@ rijks-search-widget {
     table-layout: fixed; }
     .slide table tr {
       height: 80px; }
+    .slide table.comparison {
+      margin-top: 55px;
+      margin-left: -65px; }
+    .slide table.resources {
+      font-size: 20px;
+      margin-top: -35px;
+      margin-left: -65px; }
+      .slide table.resources tr {
+        height: 2.5em; }
   .slide section {
     margin-left: 17.05961%;
     padding: 80px 0; }
@@ -631,8 +640,20 @@ rijks-search-widget {
   font-size: 3em;
   padding: 2.5em 0.625em; }
   .quote h1 span, .normal h1 span {
-    color: #dc322f;
     margin: 0.3125em; }
+.quote span, .normal span {
+  color: #dc322f; }
+
+.indent {
+  margin-left: 2.1875em; }
+
+.imperative p {
+  font-size: 1.625em;
+  margin-bottom: 0.625em; }
+
+.declarative {
+  margin-left: -1.875em;
+  margin-top: 7.5em; }
 
 body {
   position: relative;
