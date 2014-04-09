@@ -1,7 +1,7 @@
 ---
 title: "Marijn Koolen"
 order_prop: 2
-profile_picture: "http://b.vimeocdn.com/ts/160/337/160337101_640.jpg"
+profile_picture: https://lh4.googleusercontent.com/yjwGo-K2hPRPuDAM98JuqM73iHPTNux44WJDM2GYnQ=s192-p-no
 ---
 
 

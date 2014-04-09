@@ -1,13 +1,22 @@
 .profile {
+  @include span-columns(6);
+
+  header {
+    h1 {
+      font-size: em(16);
+    }
+  }
   
   .profile-picture {
     overflow: hidden;
     max-height: 360px;
 
+
     img {
       @include filter(sepia, 30%);
       max-width: 100%;
       min-width: 100%;
+      min-height: 250px;
 
       &:hover {
         @include filter(sepia, 100%);
@@ -18,11 +27,21 @@
    @include span-columns(10);
    @include shift(0);
    
+  header {
+    h1 {
+      font-size: em(18);
+    }
+  }
    &:not(:first-child) {
      @include shift(0);
    }
  
  }
+
+  &:nth-child(even) {
+    margin-right: em(0);
+    float: right; 
+  }
 }
 
 .presentation-card {

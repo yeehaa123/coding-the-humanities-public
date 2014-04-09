@@ -182,7 +182,6 @@ footer {
       width: 100%; } }
 
 .card {
-  position: relative;
   background-color: #93a1a1;
   color: #073642;
   padding: 0em;
@@ -322,34 +321,49 @@ rijks-search-widget {
   rijks-search-widget:last-child {
     margin-right: 0; }
 
-.profile .profile-picture {
-  overflow: hidden;
-  max-height: 360px; }
-  .profile .profile-picture img {
-    -webkit-filter: sepia(30%);
-    -moz-filter: sepia(30%);
-    -ms-filter: sepia(30%);
-    -o-filter: sepia(30%);
-    filter: sepia(30%);
-    max-width: 100%;
-    min-width: 100%; }
-    .profile .profile-picture img:hover {
-      -webkit-filter: sepia(100%);
-      -moz-filter: sepia(100%);
-      -ms-filter: sepia(100%);
-      -o-filter: sepia(100%);
-      filter: sepia(100%); }
-@media screen and (max-width: 43.75em) {
-  .profile {
-    display: block;
-    float: left;
-    margin-right: 2.84259%;
-    width: 100%;
-    margin-left: 0%; }
-    .profile:last-child {
-      margin-right: 0; }
-    .profile:not(:first-child) {
-      margin-left: 0%; } }
+.profile {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .profile:last-child {
+    margin-right: 0; }
+  .profile header h1 {
+    font-size: 1em; }
+  .profile .profile-picture {
+    overflow: hidden;
+    max-height: 360px; }
+    .profile .profile-picture img {
+      -webkit-filter: sepia(30%);
+      -moz-filter: sepia(30%);
+      -ms-filter: sepia(30%);
+      -o-filter: sepia(30%);
+      filter: sepia(30%);
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 250px; }
+      .profile .profile-picture img:hover {
+        -webkit-filter: sepia(100%);
+        -moz-filter: sepia(100%);
+        -ms-filter: sepia(100%);
+        -o-filter: sepia(100%);
+        filter: sepia(100%); }
+  @media screen and (max-width: 43.75em) {
+    .profile {
+      display: block;
+      float: left;
+      margin-right: 2.84259%;
+      width: 100%;
+      margin-left: 0%; }
+      .profile:last-child {
+        margin-right: 0; }
+      .profile header h1 {
+        font-size: 1.125em; }
+      .profile:not(:first-child) {
+        margin-left: 0%; } }
+  .profile:nth-child(even) {
+    margin-right: 0em;
+    float: right; }
 
 .presentation-card {
   margin-bottom: 1.5em; }
