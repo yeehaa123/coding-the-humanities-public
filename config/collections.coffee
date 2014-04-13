@@ -10,6 +10,8 @@ module.exports = ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'rijks'}, {order_prop: 1})
     presentationBenjamedia: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'benjamedia'}, {order_prop: 1})
+    presentationDarkHorse: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'towards-a-platform'}, {order_prop: 1})
     presentationSoundSignatures: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'soundSignatures'}, {order_prop: 1})
     learnTopics: ->

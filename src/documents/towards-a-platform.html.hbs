@@ -1,0 +1,37 @@
+---
+title: Towards A Platform
+event: Dark Horse meets Coding the Humanities
+date: 2014-4-14
+presenter: 
+  - Yeehaa
+layout: 'presentation'
+isPresentation: true
+description: >
+  Ira Allen and Rob Ryder are translating Walter Benjamin's radio plays for 
+  children into English. The medial form of these pieces, however, are as 
+  important as their verbal content. For that reason, we are currently 
+  exploring how to adapt these pieces to online, interactive pieces. Using 
+  Walter Benjamin's 'The Author as Producer' and the New York Times' 'Snow 
+  Fall' as inspiration, this presentation outlines the practical and 
+  theoretical problems specific to the humanities that we have encountered so
+  far.
+---
+
+{{#each presentations.darkHorse.slides }}
+<section class="card step slide {{type}} {{>slideSection}}" 
+         id="{{parameterize title}}" 
+         data-x="{{position @index}}">
+  <header>
+    <h1>{{title}}</h1>
+    {{#if subtitle}}
+    <h2>{{subtitle}}</h2>
+    {{/if}}
+    {{#if section-title}}
+    <h2>{{section-title}}</h2>
+    {{/if}}
+  </header>
+  <section>
+    {{{ contentRenderedWithoutLayouts }}}
+  </section>
+</section>
+{{/each}}

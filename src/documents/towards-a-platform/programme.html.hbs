@@ -1,0 +1,8 @@
+---
+title: programme
+type: programme
+order_prop: 10
+---
+{{#each presentations.darkHorse.titles}}
+  <a href="#/{{parameterize title}}"><h2 class="{{>slideSection}}">{{this.title}}</h2></a>
+{{/each}}

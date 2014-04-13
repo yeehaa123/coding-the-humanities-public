@@ -630,19 +630,31 @@ rijks-search-widget {
     .programme a > h2.section4 {
       background-color: #6c71c4; }
 
-.quote header h1, .normal header h1 {
+.quote header h1, .normal header h1, .text header h1, .table header h1 {
   font-size: 1.5em; }
-.quote header h2, .normal header h2 {
+.quote header h2, .normal header h2, .text header h2, .table header h2 {
   font-size: 1.125em;
   background-color: #073642;
   padding: 0.5625em 0; }
-.quote h1, .normal h1 {
+.quote h1, .normal h1, .text h1, .table h1 {
   font-size: 3em;
   padding: 2.5em 0.625em; }
-  .quote h1 span, .normal h1 span {
+  .quote h1 span, .normal h1 span, .text h1 span, .table h1 span {
     margin: 0.3125em; }
-.quote span, .normal span {
+.quote span, .normal span, .text span, .table span {
   color: #dc322f; }
+
+.text section {
+  padding: 125px 0 80px 0; }
+
+.table section {
+  padding: 80px 0; }
+.table .principles {
+  margin-top: -40px;
+  font-size: 20px;
+  table-layout: fixed; }
+  .table .principles tr {
+    height: 60px; }
 
 .indent {
   margin-left: 2.1875em; }

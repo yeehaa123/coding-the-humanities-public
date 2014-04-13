@@ -32,3 +32,9 @@ module.exports = ->
       titles: ->
         collection = @getCollection('presentationBenjamedia')
         getTitles(collection)
+    darkHorse:
+      slides: ->
+        @getCollection('presentationDarkHorse').toJSON()
+      titles: ->
+        collection = @getCollection('presentationDarkHorse')
+        getTitles(collection)
