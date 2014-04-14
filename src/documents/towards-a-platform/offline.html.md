@@ -19,7 +19,6 @@ order_prop: 49
       <td>Training</td>
       <td rowspan="5">
       <ul>
-        <li>Language-based</li>
         <li>Tool-focused</li>
         <li>User-centered</li>
         <li>Embedded Research</li>

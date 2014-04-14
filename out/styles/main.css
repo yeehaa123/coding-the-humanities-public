@@ -649,14 +649,19 @@ rijks-search-widget {
 
 .table section {
   padding: 80px 0; }
-.table .principles, .table .implementation, .table .subprojects {
+.table .principles, .table .implementation, .table .subprojects, .table .partners {
   margin-top: -40px;
   font-size: 20px;
   table-layout: fixed; }
-  .table .principles tr, .table .implementation tr, .table .subprojects tr {
+  .table .principles tr, .table .implementation tr, .table .subprojects tr, .table .partners tr {
     height: 60px; }
-  .table .principles li, .table .implementation li, .table .subprojects li {
+  .table .principles li, .table .implementation li, .table .subprojects li, .table .partners li {
     font-size: 20px; }
+.table .partners {
+  margin-top: -5px;
+  font-size: 18px; }
+  .table .partners tr {
+    height: 35px; }
 .table .implementation {
   margin-top: -15px; }
 .table .subprojects {

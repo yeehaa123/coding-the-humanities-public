@@ -1,0 +1,48 @@
+---
+title: Partners
+section-title: Collaboration
+type: table 
+section: 4
+order_prop: 83
+---
+<table class="partners">
+  <thead>
+    <th>Subproject</th>
+    <th>Partners</th>
+  </thead>
+  <tbody>
+    <colgroup>
+      <col width="40%/>
+      <col width="60%/>
+    </colgroup>
+    <tr>
+      <td rowspan="2">Platform for Learning and Research</td>
+      <td>Private: Bocoup, Dev Bootcamp, Dark Horse</td>
+    </tr>
+    <tr>
+      <td>Public: VU, Copenhagen, Humboldt Berlin</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Spaces for Embedded Research</td>
+      <td>Private: <span>**Dark Horse**</span>, Lustlab</td>
+    </tr>
+    <tr>
+      <td>Public: Rijksmuseum, HvA</td>
+    </tr>
+      <td rowspan="2">Interfaces and Data Visualization</td>
+      <td>Private: Hybrid Group, Weyeser, Lustlab, Lifely, Unc Inc</td>
+    </tr>
+    <tr>
+      <td>Public: Rijksmuseum, Tropenmuseum, Museum of Natural History</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Children, Women, and the Developing World</td>
+      <td>Private: Bocoup, Dev Bootcamp, Hybrid Group</td>
+    </tr>
+    <tr>
+      <td>Public: Tropenmuseum, Museum of Natural History</td>
+    </tr>
+  </tbody>
+</table>
+
+
