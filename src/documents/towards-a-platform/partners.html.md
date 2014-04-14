@@ -17,7 +17,7 @@ order_prop: 83
     </colgroup>
     <tr>
       <td rowspan="2">Platform for Learning and Research</td>
-      <td>Private: Bocoup, Dev Bootcamp, Dark Horse</td>
+      <td>Private: Bocoup, Dev Bootcamp, <span>**Dark Horse**</span></td>
     </tr>
     <tr>
       <td>Public: VU, Copenhagen, Humboldt Berlin</td>
