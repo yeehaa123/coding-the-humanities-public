@@ -1,6 +1,6 @@
 ---
 title: Elite
-section-title: Dillemas
+section-title: Dilemmas
 type: text 
 section: 1
 order_prop: 30

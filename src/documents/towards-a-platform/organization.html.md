@@ -1,6 +1,6 @@
 ---
 title: Organization
-section-title: Dillemas
+section-title: Dilemmas
 type: text 
 section: 1
 order_prop: 23

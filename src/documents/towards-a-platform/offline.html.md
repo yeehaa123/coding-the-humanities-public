@@ -24,7 +24,7 @@ order_prop: 49
         <li>Embedded Research</li>
         <li><span>Git</span></li>
         <li>Peer Organization and Evaluation</li>
-        <li><span>Webcomponents</span></li>
+        <li><span>Web Components</span></li>
       </ul>
       </td>
     </tr>

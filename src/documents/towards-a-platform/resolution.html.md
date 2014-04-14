@@ -22,7 +22,7 @@ order_prop: 33
       <td>Literacy</td>
     </tr>
     <tr>
-      <td>Massive</td>
+      <td>Numbers</td>
     </tr>
     <tr>
       <td>Elite</td>
