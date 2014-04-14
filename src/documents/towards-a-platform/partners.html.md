@@ -30,7 +30,7 @@ order_prop: 83
       <td>Public: Rijksmuseum, HvA</td>
     </tr>
       <td rowspan="2">Interfaces and Data Visualization</td>
-      <td>Private: Hybrid Group, Weyeser, Lustlab, Lifely, Unc Inc</td>
+      <td>Private: Hybrid Group, Weyeser, Lustlab, Lifely, Unc Inc, Sound and Vision</td>
     </tr>
     <tr>
       <td>Public: Rijksmuseum, Tropenmuseum, Museum of Natural History</td>

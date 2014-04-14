@@ -6,6 +6,6 @@ section: 1
 order_prop: 30
 ---
 
-Coding and knowledge production remain privileges of a <span>cultural</span> and <span>economic</span> elite?
+Coding and knowledge production remain privileges of a <span>cultural</span>, <span>technological</span> and <span>economic</span> elite?
 
 Resist or Embrace?

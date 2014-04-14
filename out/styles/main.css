@@ -658,7 +658,7 @@ rijks-search-widget {
   .table .principles li, .table .implementation li, .table .subprojects li, .table .partners li {
     font-size: 20px; }
 .table .partners {
-  margin-top: -5px;
+  margin-top: -15px;
   font-size: 18px; }
   .table .partners tr {
     height: 35px; }
