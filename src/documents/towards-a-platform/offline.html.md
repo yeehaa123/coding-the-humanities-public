@@ -1,0 +1,47 @@
+---
+title: Offline
+section-title: Platform
+type: table 
+section: 2
+order_prop: 49
+---
+<table class="implementation">
+  <thead>
+    <th>Value</th>
+    <th>Implementation</th>
+  </thead>
+  <tbody>
+    <colgroup>
+      <col width="40%/>
+      <col width="60%/>
+    </colgroup>
+    <tr>
+      <td>Training</td>
+      <td rowspan="5">
+      <ul>
+        <li>Language-based</li>
+        <li>Tool-focused</li>
+        <li>User-centered</li>
+        <li>Embedded Research</li>
+        <li><span>Git</span></li>
+        <li>Peer Organization and Evaluation</li>
+        <li><span>Webcomponents</span></li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Collaboration</td>
+    </tr>
+    <tr>
+      <td>Online</td>  
+    </tr>
+    <tr>
+      <td>Knowledge Production</td>
+    </tr>
+    <tr>
+      <td>Accessibility</td>
+    </tr>
+  </tbody>
+</table>
+
+

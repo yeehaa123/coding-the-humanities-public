@@ -649,12 +649,18 @@ rijks-search-widget {
 
 .table section {
   padding: 80px 0; }
-.table .principles {
+.table .principles, .table .implementation, .table .subprojects {
   margin-top: -40px;
   font-size: 20px;
   table-layout: fixed; }
-  .table .principles tr {
+  .table .principles tr, .table .implementation tr, .table .subprojects tr {
     height: 60px; }
+  .table .principles li, .table .implementation li, .table .subprojects li {
+    font-size: 20px; }
+.table .implementation {
+  margin-top: -15px; }
+.table .subprojects {
+  margin-top: 20px; }
 
 .indent {
   margin-left: 2.1875em; }

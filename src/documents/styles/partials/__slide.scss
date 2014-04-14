@@ -259,13 +259,24 @@
   section {
     padding: 80px 0;
   }
-  .principles {
+  .principles, .implementation, .subprojects {
     margin-top: -40px;
     font-size: 20px;
     table-layout: fixed;
     tr {
       height: 60px;
     }
+    li {
+      font-size: 20px;
+    }
+  }
+
+  .implementation {
+    margin-top: -15px;
+  }
+
+  .subprojects {
+    margin-top: 20px;
   }
 }
 .indent {
