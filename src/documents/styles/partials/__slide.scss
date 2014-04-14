@@ -259,7 +259,7 @@
   section {
     padding: 80px 0;
   }
-  .principles, .implementation, .subprojects, .partners {
+  .principles, .roles, .implementation, .subprojects, .partners {
     margin-top: -40px;
     font-size: 20px;
     table-layout: fixed;
@@ -279,6 +279,13 @@
     }
   }
 
+  .roles {
+    margin-top: 0px;
+    font-size: 20px;
+    tr {
+      height: 40px;
+    }
+  }
   .implementation {
     margin-top: -15px;
   }
