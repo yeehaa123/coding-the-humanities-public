@@ -1,0 +1,21 @@
+{
+  "name": "presentation-polymer-elements",
+  "version": "0.0.1",
+  "homepage": "https://github.com/yeehaa123/coding-the-humanities-public",
+  "authors": [
+    "Yeehaa <medialoperations@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#~0.1.3",
+    "polymer": "Polymer/polymer#~0.1.3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rijks-polymer-elements",
+  "version": "0.1.0",
+  "description": "Polymer elements to declaratively use the Rijksmuseum API in your HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yeehaa123/rijks-polymer-elements"
+  },
+  "keywords": [
+    "rijksmuseum",
+    "polymer",
+    "api",
+    "html",
+    "javascript"
+  ],
+  "author": "Jan Hein Hoogstad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeehaa123/rijks-polymer-elements/issues"
+  },
+  "homepage": "https://github.com/yeehaa123/rijks-polymer-elements"
+}

@@ -1,0 +1,33 @@
+{
+	"publishers": [{
+		"publisher": "Honkoop,_Jan_Leiden,_1779-1803",
+		"book_count": 9
+	}, {
+		"publisher": "Schouten,_Petrus_Amsterdam,_1744-1788",
+		"book_count": 9
+	}, {
+		"publisher": "Plaats,_Volkert_van_der_Harlingen,_1768-1801",
+		"book_count": 10
+	}, {
+		"publisher": "Burgh,_Jacobus_van_der_Amsterdam,_1783-1800",
+		"book_count": 11
+	}, {
+		"publisher": "Burgh,_Leonardus_van_der_Amsterdam,_1783-1800",
+		"book_count": 11
+	}, {
+		"publisher": "Meyer,_Pieter_(erven)_Amsterdam,_1781-1799",
+		"book_count": 12
+	}, {
+		"publisher": "S.l.s.n._Place_and_name_not_stated",
+		"book_count": 13
+	}, {
+		"publisher": "Warnars,_Gerrit_Amsterdam,_1768-1804",
+		"book_count": 16
+	}, {
+		"publisher": "Allart,_Johannes_Amsterdam,_1773-1811",
+		"book_count": 29
+	}, {
+		"publisher": "'sLands_Drukkerĳ_'s-Gravenhage,_1795-1806",
+		"book_count": 56
+	}]
+}
